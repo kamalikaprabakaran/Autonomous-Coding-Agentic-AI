@@ -48,9 +48,12 @@ The Autonomous Coding Agentic AI is designed as a modular, layered system where 
 
 Defines FastAPI route handlers. Each route delegates to a service; no business logic lives here. Currently exposes only `GET /health`.
 
-### `agents/` – LangGraph Agents *(future)*
-
-Contains LangGraph graph definitions for autonomous coding workflows: planning, code generation, testing, and self-correction loops.
+### `agents/` – Agent Brain (LangGraph)
+Contains LangGraph definitions representing autonomous coding workflows natively without executing raw queries on a system directly:
+- **`AgentState`**: A strongly typed explicit dictionary carrying variables like `task`, `plan`, `repository_summary`, `proposed_changes`.
+- **`nodes.py`**: Granular functions isolating agent states across steps including `planner_node`, `repository_explorer_node`, and `coder_node`.
+- **`llm.py`**: A foundational abstract provider logic ensuring tests use MockLLMs keeping API keys off the build line.
+- **Workflow Pipeline**: Sequentially routes nodes via `graph.py` to establish planning context safely before drafting proposals.
 
 ### `services/` – Business Logic
 

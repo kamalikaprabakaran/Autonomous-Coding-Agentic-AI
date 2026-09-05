@@ -1,0 +1,21 @@
+============================= test session starts =============================
+platform win32 -- Python 3.11.9, pytest-9.1.1, pluggy-1.6.0 -- D:\Autonomous Coding Agentic AI\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: D:\Autonomous Coding Agentic AI
+configfile: pytest.ini
+testpaths: backend/tests
+plugins: anyio-4.15.1, langsmith-0.12.1, asyncio-1.4.0
+asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+run-last-failure: rerun previous 1 failure (skipped 18 files)
+
+backend/tests/test_agent_llm.py::test_mock_llm_provider_determinisitic FAILED [100%]
+
+================================== FAILURES ===================================
+____________________ test_mock_llm_provider_determinisitic ____________________
+backend\tests\test_agent_llm.py:15: in test_mock_llm_provider_determinisitic
+    assert "Proposed changes:" in code_out
+E   AssertionError: assert 'Proposed changes:' in 'Deterministic default specific to the Mock LLM.'
+=========================== short test summary info ===========================
+FAILED backend/tests/test_agent_llm.py::test_mock_llm_provider_determinisitic
+============================== 1 failed in 1.00s ==============================

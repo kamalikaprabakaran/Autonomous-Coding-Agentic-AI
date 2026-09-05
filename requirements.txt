@@ -7,3 +7,6 @@ pytest>=7.4.0
 pytest-asyncio>=0.21.0
 tree-sitter>=0.21.0
 tree-sitter-python>=0.21.0
+
+langgraph>=0.1.18
+langchain-core>=0.2.22
