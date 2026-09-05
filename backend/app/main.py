@@ -1,7 +1,7 @@
 """FastAPI application entry point.
 
 Provides a factory function ``create_app`` that builds the application with
-lifespan-managed logging and a ``/health`` endpoint.
+lifespan-managed logging, Phase 1 API routers, and a ``/health`` endpoint.
 """
 
 import logging
@@ -10,8 +10,16 @@ from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
 
+from backend.app.api import agent_router, projects_router, tasks_router
 from backend.app.core.config import get_settings
+from backend.app.core.exceptions import NotFoundError, not_found_handler
 from backend.app.core.logging import setup_logging
+from backend.app.repositories.agent_run_repository import InMemoryAgentRunRepository
+from backend.app.repositories.project_repository import InMemoryProjectRepository
+from backend.app.repositories.task_repository import InMemoryTaskRepository
+from backend.app.services.agent_run_service import AgentRunService
+from backend.app.services.project_service import ProjectService
+from backend.app.services.task_service import TaskService
 
 
 logger = logging.getLogger(__name__)
@@ -30,7 +38,11 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
 
 
 def create_app() -> FastAPI:
-    """Build and return the FastAPI application instance."""
+    """Build and return the FastAPI application instance.
+
+    Each call creates fresh repository and service instances, ensuring
+    test isolation when ``create_app()`` is called per-test in conftest.
+    """
     settings = get_settings()
 
     application = FastAPI(
@@ -40,10 +52,32 @@ def create_app() -> FastAPI:
         lifespan=lifespan,
     )
 
-    @application.get("/health")
+    # ── Dependency injection via app.state ───────────────────────────
+    project_repo = InMemoryProjectRepository()
+    task_repo = InMemoryTaskRepository()
+    agent_run_repo = InMemoryAgentRunRepository()
+
+    project_service = ProjectService(project_repo)
+    task_service = TaskService(task_repo, project_service)
+    agent_run_service = AgentRunService(agent_run_repo)
+
+    application.state.project_service = project_service
+    application.state.task_service = task_service
+    application.state.agent_run_service = agent_run_service
+
+    # ── Exception handlers ───────────────────────────────────────────
+    application.add_exception_handler(NotFoundError, not_found_handler)
+
+    # ── Phase 0 health endpoint ──────────────────────────────────────
+    @application.get("/health", tags=["Health"])
     async def health_check() -> dict[str, str]:
         """Return application health status."""
         return {"status": "healthy"}
+
+    # ── Phase 1 API routers ──────────────────────────────────────────
+    application.include_router(projects_router)
+    application.include_router(tasks_router)
+    application.include_router(agent_router)
 
     return application
 

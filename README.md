@@ -4,9 +4,10 @@ A production-oriented autonomous coding agent that can understand software repos
 
 ## Current Phase
 
+**Phase 1 – Backend API Foundation** ✅
 **Phase 0 – Foundation** ✅
 
-Establishes the project skeleton, configuration management, structured logging, health endpoint, and test infrastructure.
+Phase 1 establishes the functional FastAPI backend allowing creation and tracking of Projects, Coding Tasks, and Agent Runs. Note that the persistence layer is entirely in-memory for this phase (to be swapped for Firebase in future iterations).
 
 ## Project Structure
 
@@ -14,17 +15,20 @@ Establishes the project skeleton, configuration management, structured logging, 
 autonomous-coding-agent/
 ├── backend/
 │   ├── app/
-│   │   ├── main.py          # FastAPI application & /health endpoint
+│   │   ├── main.py          # FastAPI application & entry point
 │   │   ├── core/
 │   │   │   ├── config.py     # Pydantic Settings configuration
+│   │   │   ├── exceptions.py # NotFoundError and handlers
 │   │   │   └── logging.py    # Structured logging setup
-│   │   ├── api/              # API routes (future)
+│   │   ├── api/              # API routers (/projects, /tasks, /agent)
 │   │   ├── agents/           # LangGraph agents (future)
+│   │   ├── models/           # Domain models (Project, CodingTask, AgentRun)
+│   │   ├── repositories/     # In-memory persistence layers
+│   │   ├── schemas/          # Pydantic request/response models
+│   │   ├── services/         # Business logic layer
 │   │   ├── tools/            # Agent tools (future)
-│   │   ├── services/         # Business logic (future)
-│   │   ├── models/           # Data models (future)
 │   │   └── utils/            # Shared utilities (future)
-│   └── tests/                # Pytest test suite
+│   └── tests/                # Comprehensive Pytest test suite
 ├── frontend/                 # React + TypeScript UI (future)
 ├── docker/                   # Container configs (future)
 ├── docs/
@@ -35,6 +39,24 @@ autonomous-coding-agent/
 ├── pytest.ini
 └── README.md
 ```
+
+## Available Endpoints
+
+The API is structured around REST principles.
+
+### Projects
+- `GET /projects`: List all managed projects
+- `POST /projects`: Create a new project
+- `GET /projects/{project_id}`: Retrieve a project
+
+### Tasks
+- `POST /tasks`: Create a new coding task attached to a project
+- `GET /tasks/{task_id}`: Retrieve a coding task by ID
+
+### Agent Runs
+- `GET /agent/status/{run_id}`: Retrieve agent execution status
+
+*Plus the standard `GET /health` and Swagger UI at `GET /docs`.*
 
 ## Setup
 
@@ -69,7 +91,24 @@ copy .env.example .env       # Windows
 uvicorn backend.app.main:app --reload --host 0.0.0.0 --port 8000
 ```
 
-The health endpoint will be available at: `http://localhost:8000/health`
+The Swagger UI will be available at: `http://localhost:8000/docs`
+The health endpoint is available at: `http://localhost:8000/health`
+
+## Example Usage
+
+Create a project:
+```bash
+curl -X POST "http://localhost:8000/projects" \
+  -H "Content-Type: application/json" \
+  -d '{"name": "Test Project", "description": "My first AI project"}'
+```
+
+Create a task for the project (using the returned UUID):
+```bash
+curl -X POST "http://localhost:8000/tasks" \
+  -H "Content-Type: application/json" \
+  -d '{"project_id": "<UUID_HERE>", "description": "Build an authentication service"}'
+```
 
 ## Running Tests
 
@@ -77,11 +116,17 @@ The health endpoint will be available at: `http://localhost:8000/health`
 pytest -v
 ```
 
+All 29 tests cover endpoints, business logic validation, 404 responses, and data models cleanly using isolated `app.state` instances.
+
+## Current Limitations
+
+- **Transient Storage**: The backend currently uses an in-memory repository layer. Restarting the server clears all projects and tasks. Firebase persistence will replace this in a future phase.
+- **Empty Agent Runs**: The agent endpoints exist to track status, but no AI is actually hooked up to execute runs (Phase 1 focus only).
+
 ## Future Phases
 
 | Phase | Scope |
 |-------|-------|
-| 1 | LLM provider abstraction & basic agent loop |
 | 2 | Tree-sitter code analysis & file tools |
 | 3 | Sandboxed code execution (Docker) |
 | 4 | GitHub integration & PR workflows |

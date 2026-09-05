@@ -14,7 +14,7 @@ def test_create_app_returns_fastapi_instance():
 def test_app_has_health_route():
     """The application should have a /health route registered."""
     application = create_app()
-    route_paths = [route.path for route in application.routes]
+    route_paths = [getattr(route, "path", None) for route in application.routes]
     assert "/health" in route_paths
 
 
