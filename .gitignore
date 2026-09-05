@@ -1,0 +1,48 @@
+# ──── Python ────
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+*.whl
+
+# ──── Virtual environments ────
+venv/
+.venv/
+env/
+
+# ──── IDE ────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ──── Environment ────
+.env
+.env.local
+.env.*.local
+
+# ──── OS ────
+.DS_Store
+Thumbs.db
+
+# ──── Testing / Coverage ────
+.pytest_cache/
+htmlcov/
+.coverage
+coverage.xml
+
+# ──── Node (future frontend) ────
+node_modules/
+frontend/build/
+frontend/dist/
+
+# ──── Docker (future) ────
+docker-compose.override.yml
+
+# ──── Misc ────
+*.log
