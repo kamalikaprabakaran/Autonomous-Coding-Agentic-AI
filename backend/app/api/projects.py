@@ -56,3 +56,27 @@ async def get_project(project_id: str, request: Request) -> ProjectResponse:
     service = _get_project_service(request)
     project = service.get_project(project_id)
     return ProjectResponse.model_validate(project)
+
+
+@router.get(
+    "/{project_id}/analysis",
+    summary="Analyze a project repository",
+    description="Analyze the project's repository and return structural and code insights.",
+    responses={404: {"description": "Project not found or invalid repository path"}},
+)
+async def analyze_project_repository(project_id: str, request: Request):
+    """Run full repository analysis on a project."""
+    service = _get_project_service(request)
+    project = service.get_project(project_id)
+    
+    if not project.repository_path:
+        from fastapi import HTTPException
+        raise HTTPException(status_code=404, detail="Project lacks a repository path")
+        
+    try:
+        analyzer = request.app.state.repository_analyzer
+        analysis = analyzer.analyze_repository(project.repository_path)
+        return analysis.model_dump()
+    except Exception as e:
+        from fastapi import HTTPException
+        raise HTTPException(status_code=404, detail=f"Failed to access repository: {str(e)}")

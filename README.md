@@ -4,10 +4,11 @@ A production-oriented autonomous coding agent that can understand software repos
 
 ## Current Phase
 
+**Phase 2 – Repository Intelligence** ✅
 **Phase 1 – Backend API Foundation** ✅
 **Phase 0 – Foundation** ✅
 
-Phase 1 establishes the functional FastAPI backend allowing creation and tracking of Projects, Coding Tasks, and Agent Runs. Note that the persistence layer is entirely in-memory for this phase (to be swapped for Firebase in future iterations).
+Phase 2 introduces a read-only analyzer subsystem powered by Tree-sitter for structural python code comprehension, and path-safe code discovery and search fallbacks.
 
 ## Project Structure
 
@@ -22,10 +23,11 @@ autonomous-coding-agent/
 │   │   │   └── logging.py    # Structured logging setup
 │   │   ├── api/              # API routers (/projects, /tasks, /agent)
 │   │   ├── agents/           # LangGraph agents (future)
-│   │   ├── models/           # Domain models (Project, CodingTask, AgentRun)
+│   │   ├── models/           # Domain models 
 │   │   ├── repositories/     # In-memory persistence layers
-│   │   ├── schemas/          # Pydantic request/response models
+│   │   ├── schemas/          # Pydantic request/response schemas
 │   │   ├── services/         # Business logic layer
+│   │   │   └── analyzer/     # Repository Intelligence subsystem
 │   │   ├── tools/            # Agent tools (future)
 │   │   └── utils/            # Shared utilities (future)
 │   └── tests/                # Comprehensive Pytest test suite
@@ -48,6 +50,7 @@ The API is structured around REST principles.
 - `GET /projects`: List all managed projects
 - `POST /projects`: Create a new project
 - `GET /projects/{project_id}`: Retrieve a project
+- `GET /projects/{project_id}/analysis`: Retrieve full repository metrics and AST summary
 
 ### Tasks
 - `POST /tasks`: Create a new coding task attached to a project

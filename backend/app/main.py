@@ -60,10 +60,14 @@ def create_app() -> FastAPI:
     project_service = ProjectService(project_repo)
     task_service = TaskService(task_repo, project_service)
     agent_run_service = AgentRunService(agent_run_repo)
+    
+    from backend.app.services.analyzer.analyzer import RepositoryAnalyzer
+    repository_analyzer = RepositoryAnalyzer()
 
     application.state.project_service = project_service
     application.state.task_service = task_service
     application.state.agent_run_service = agent_run_service
+    application.state.repository_analyzer = repository_analyzer
 
     # ── Exception handlers ───────────────────────────────────────────
     application.add_exception_handler(NotFoundError, not_found_handler)

@@ -52,12 +52,17 @@ Defines FastAPI route handlers. Each route delegates to a service; no business l
 
 Contains LangGraph graph definitions for autonomous coding workflows: planning, code generation, testing, and self-correction loops.
 
+### `services/` – Business Logic
+
+Coordinates workflows across agents and internal components.
+
+#### `analyzer/` – Repository Intelligence Subsystem
+A specialized service boundary that reads and analyzes codebases without modifying them:
+- **discovery**: Maps directory structures, bounding path traversals inside repository roots, caching file sizes and ignoring configured directories (`.venv`, `.git`, etc.).
+- **search**: Fast, boundary-aware search, invoking system `ripgrep` optionally via JSON schemas, and falling back to native Python `os.walk` if missing.
+- **parser**: Tree-sitter integration that analyzes `.py` files to discover AST level constructs (classes, methods, functions, imports). Safely catches parse failures or drops massive files (>1MB) without breaking standard traversal.
+
 ### `tools/` – Agent-Callable Tools *(future)*
-
-Individual, sandboxed capabilities the agents can invoke:
-
-- **File tools** – read, write, patch files
-- **Code execution** – run code inside a Docker sandbox
 - **Git tools** – commit, branch, diff, create PRs
 - **Code analysis** – Tree-sitter AST inspection
 
