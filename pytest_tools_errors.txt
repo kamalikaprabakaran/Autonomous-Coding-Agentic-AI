@@ -1,0 +1,90 @@
+FFFFFFFFFFFFF                                                            [100%]
+================================== FAILURES ===================================
+___________________________ test_read_file_success ____________________________
+backend\tests\test_tools_files.py:35: in test_read_file_success
+    assert res.success is True
+E   AssertionError: assert False is True
+E    +  where False = ToolResult(success=False, data=None, error='Security violation: Path boundary escape detected: app/main.py').success
+___________________________ test_read_file_missing ____________________________
+backend\tests\test_tools_files.py:43: in test_read_file_missing
+    assert "not found" in res.error.lower()
+E   AssertionError: assert 'not found' in 'security violation: path boundary escape detected: app/does_not_exist.py'
+E    +  where 'security violation: path boundary escape detected: app/does_not_exist.py' = <built-in method lower of str object at 0x000001D330ED79B0>()
+E    +    where <built-in method lower of str object at 0x000001D330ED79B0> = 'Security violation: Path boundary escape detected: app/does_not_exist.py'.lower
+E    +      where 'Security violation: Path boundary escape detected: app/does_not_exist.py' = ToolResult(success=False, data=None, error='Security violation: Path boundary escape detected: app/does_not_exist.py').error
+____________________________ test_read_file_binary ____________________________
+backend\tests\test_tools_files.py:50: in test_read_file_binary
+    assert "binary" in res.error.lower()
+E   AssertionError: assert 'binary' in 'security violation: path boundary escape detected: image.png'
+E    +  where 'security violation: path boundary escape detected: image.png' = <built-in method lower of str object at 0x000001D330E2BAD0>()
+E    +    where <built-in method lower of str object at 0x000001D330E2BAD0> = 'Security violation: Path boundary escape detected: image.png'.lower
+E    +      where 'Security violation: Path boundary escape detected: image.png' = ToolResult(success=False, data=None, error='Security violation: Path boundary escape detected: image.png').error
+__________________________ test_read_file_oversized ___________________________
+backend\tests\test_tools_files.py:57: in test_read_file_oversized
+    assert "too large" in res.error.lower()
+E   AssertionError: assert 'too large' in 'security violation: path boundary escape detected: huge.py'
+E    +  where 'security violation: path boundary escape detected: huge.py' = <built-in method lower of str object at 0x000001D330E2B910>()
+E    +    where <built-in method lower of str object at 0x000001D330E2B910> = 'Security violation: Path boundary escape detected: huge.py'.lower
+E    +      where 'Security violation: Path boundary escape detected: huge.py' = ToolResult(success=False, data=None, error='Security violation: Path boundary escape detected: huge.py').error
+_____________________________ test_write_file_new _____________________________
+backend\tests\test_tools_files.py:77: in test_write_file_new
+    assert res.success is True
+E   AssertionError: assert False is True
+E    +  where False = ToolResult(success=False, data=None, error='Security violation: Path boundary escape detected: app/new_file.txt').success
+__________________________ test_write_file_overwrite __________________________
+backend\tests\test_tools_files.py:85: in test_write_file_overwrite
+    assert res.success is True
+E   AssertionError: assert False is True
+E    +  where False = ToolResult(success=False, data=None, error='Security violation: Path boundary escape detected: app/main.py').success
+___________________________ test_edit_file_success ____________________________
+backend\tests\test_tools_files.py:103: in test_edit_file_success
+    assert res.success is True
+E   AssertionError: assert False is True
+E    +  where False = ToolResult(success=False, data=None, error='Security violation: Path boundary escape detected: tests/test_main.py').success
+__________________________ test_edit_file_not_found ___________________________
+backend\tests\test_tools_files.py:119: in test_edit_file_not_found
+    assert "Target text not found" in res.error
+E   AssertionError: assert 'Target text not found' in 'Security violation: Path boundary escape detected: tests/test_main.py'
+E    +  where 'Security violation: Path boundary escape detected: tests/test_main.py' = ToolResult(success=False, data=None, error='Security violation: Path boundary escape detected: tests/test_main.py').error
+__________________________ test_edit_file_ambiguous ___________________________
+backend\tests\test_tools_files.py:133: in test_edit_file_ambiguous
+    assert "Ambiguous replacement" in res.error
+E   AssertionError: assert 'Ambiguous replacement' in 'Security violation: Path boundary escape detected: app/ambiguous.txt'
+E    +  where 'Security violation: Path boundary escape detected: app/ambiguous.txt' = ToolResult(success=False, data=None, error='Security violation: Path boundary escape detected: app/ambiguous.txt').error
+_________________________ test_edit_file_missing_file _________________________
+backend\tests\test_tools_files.py:140: in test_edit_file_missing_file
+    assert "File not found" in res.error
+E   AssertionError: assert 'File not found' in 'Security violation: Path boundary escape detected: missing.txt'
+E    +  where 'Security violation: Path boundary escape detected: missing.txt' = ToolResult(success=False, data=None, error='Security violation: Path boundary escape detected: missing.txt').error
+___________________________ test_get_file_info_file ___________________________
+backend\tests\test_tools_files.py:146: in test_get_file_info_file
+    assert res.success is True
+E   AssertionError: assert False is True
+E    +  where False = ToolResult(success=False, data=None, error='Security violation: Path boundary escape detected: app/main.py').success
+________________________ test_get_file_info_directory _________________________
+backend\tests\test_tools_files.py:156: in test_get_file_info_directory
+    assert res.success is True
+E   AssertionError: assert False is True
+E    +  where False = ToolResult(success=False, data=None, error='Security violation: Path boundary escape detected: app').success
+_________________________ test_get_file_info_missing __________________________
+backend\tests\test_tools_files.py:168: in test_get_file_info_missing
+    assert "not found" in res.error.lower()
+E   AssertionError: assert 'not found' in 'security violation: path boundary escape detected: doesnotexist.py'
+E    +  where 'security violation: path boundary escape detected: doesnotexist.py' = <built-in method lower of str object at 0x000001D330F0DB30>()
+E    +    where <built-in method lower of str object at 0x000001D330F0DB30> = 'Security violation: Path boundary escape detected: doesnotexist.py'.lower
+E    +      where 'Security violation: Path boundary escape detected: doesnotexist.py' = ToolResult(success=False, data=None, error='Security violation: Path boundary escape detected: doesnotexist.py').error
+=========================== short test summary info ===========================
+FAILED backend/tests/test_tools_files.py::test_read_file_success - AssertionE...
+FAILED backend/tests/test_tools_files.py::test_read_file_missing - AssertionE...
+FAILED backend/tests/test_tools_files.py::test_read_file_binary - AssertionEr...
+FAILED backend/tests/test_tools_files.py::test_read_file_oversized - Assertio...
+FAILED backend/tests/test_tools_files.py::test_write_file_new - AssertionErro...
+FAILED backend/tests/test_tools_files.py::test_write_file_overwrite - Asserti...
+FAILED backend/tests/test_tools_files.py::test_edit_file_success - AssertionE...
+FAILED backend/tests/test_tools_files.py::test_edit_file_not_found - Assertio...
+FAILED backend/tests/test_tools_files.py::test_edit_file_ambiguous - Assertio...
+FAILED backend/tests/test_tools_files.py::test_edit_file_missing_file - Asser...
+FAILED backend/tests/test_tools_files.py::test_get_file_info_file - Assertion...
+FAILED backend/tests/test_tools_files.py::test_get_file_info_directory - Asse...
+FAILED backend/tests/test_tools_files.py::test_get_file_info_missing - Assert...
+13 failed in 0.55s

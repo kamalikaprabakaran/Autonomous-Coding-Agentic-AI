@@ -4,11 +4,12 @@ A production-oriented autonomous coding agent that can understand software repos
 
 ## Current Phase
 
+**Phase 3 – Coding Tool System** ✅
 **Phase 2 – Repository Intelligence** ✅
 **Phase 1 – Backend API Foundation** ✅
 **Phase 0 – Foundation** ✅
 
-Phase 2 introduces a read-only analyzer subsystem powered by Tree-sitter for structural python code comprehension, and path-safe code discovery and search fallbacks.
+Phase 3 implements the strictly bounded repository manipulation capabilities natively, creating structured objects for File Reading, File Listing, Fast Search iteration (via ripgrep fallback bounds), and Ambiguity-resilient file editing. These operate entirely sandboxed inside specific repository limits checking against path traversals.
 
 ## Project Structure
 

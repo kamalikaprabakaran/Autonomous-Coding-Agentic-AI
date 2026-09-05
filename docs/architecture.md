@@ -62,9 +62,16 @@ A specialized service boundary that reads and analyzes codebases without modifyi
 - **search**: Fast, boundary-aware search, invoking system `ripgrep` optionally via JSON schemas, and falling back to native Python `os.walk` if missing.
 - **parser**: Tree-sitter integration that analyzes `.py` files to discover AST level constructs (classes, methods, functions, imports). Safely catches parse failures or drops massive files (>1MB) without breaking standard traversal.
 
-### `tools/` – Agent-Callable Tools *(future)*
+### `tools/` – Agent-Callable Tools
+Individual, sandboxed capabilities the agents can invoke on isolated repositories:
+- **Interfaces**: Strongly-typed structures (`ToolResult`, `ListFilesInput`, etc).
+- **Tool Registry**: Base manager class where arbitrary tools combine by namespace and enforce validation natively.
+- **File Tools**: `list_files`, `read_file`, `write_file`, `edit_file`, and `get_file_info`. Protected recursively mapping boundary traversals (`../../`) to block system leakage, and applying smart parsing (dropping large files & binaries).
+- **Search Tool**: Harnesses AST searching from `search.py` wrapped directly into an accessible Agent Interface returning json output logs.
+
+### *Future capabilities (Phase 5+)*
 - **Git tools** – commit, branch, diff, create PRs
-- **Code analysis** – Tree-sitter AST inspection
+- **Code execution** - run code inside a Docker sandbox
 
 ### `services/` – Business Logic *(future)*
 

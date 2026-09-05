@@ -21,8 +21,9 @@ def resolve_safe_path(repo_path: str, target_path: str) -> Path:
     try:
         base = Path(repo_path).resolve(strict=True)
         # We don't use strict=True for target because it might not exist yet
-        # in some use cases, but for discovery it usually exists.
-        target = Path(target_path).resolve()
+        # Anchor relative paths to the base directory (absolute paths will ignore base).
+        target = (base / target_path).resolve()
+
         
         # Verify the target is relative to the base repository path
         if not target.is_relative_to(base):
