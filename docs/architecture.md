@@ -55,6 +55,11 @@ Contains LangGraph definitions representing autonomous coding workflows natively
 - **`llm.py`**: A foundational abstract provider logic ensuring tests use MockLLMs keeping API keys off the build line.
 - **Workflow Pipeline**: Sequentially routes nodes via `graph.py` to establish planning context safely before drafting proposals.
 
+### `execution/` – Code Sandbox (Docker)
+Handles explicit orchestration mapping local bounds into temporary isolated Docker limits natively protecting host execution.
+- **`docker_executor.py`**: Interacts dynamically configuring bindings dropping Network capability securely parsing limits strictly.
+- **`service.py`**: The safe Business rules layer handling timeouts mapping ExecutionResult correctly masking internal Docker exceptions entirely.
+
 ### `services/` – Business Logic
 
 Coordinates workflows across agents and internal components.

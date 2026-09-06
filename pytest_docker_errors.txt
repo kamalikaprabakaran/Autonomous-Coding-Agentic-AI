@@ -1,0 +1,91 @@
+============================= test session starts =============================
+platform win32 -- Python 3.11.9, pytest-9.1.1, pluggy-1.6.0 -- D:\Autonomous Coding Agentic AI\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: D:\Autonomous Coding Agentic AI
+configfile: pytest.ini
+testpaths: backend/tests
+plugins: anyio-4.15.1, langsmith-0.12.1, asyncio-1.4.0
+asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 7 items
+run-last-failure: rerun previous 7 failures (skipped 20 files)
+
+backend/tests/test_docker_executor.py::test_executor_successful_command FAILED [ 14%]
+backend/tests/test_docker_executor.py::test_executor_failing_command FAILED [ 28%]
+backend/tests/test_docker_executor.py::test_executor_timeout FAILED      [ 42%]
+backend/tests/test_docker_executor.py::test_executor_invalid_repo FAILED [ 57%]
+backend/tests/test_execution_api.py::test_api_run_success FAILED         [ 71%]
+backend/tests/test_execution_api.py::test_api_run_service_failure FAILED [ 85%]
+backend/tests/test_execution_security.py::test_execution_blocks_host_directories FAILED [100%]
+
+================================== FAILURES ===================================
+______________________ test_executor_successful_command _______________________
+backend\tests\test_docker_executor.py:39: in test_executor_successful_command
+    res = executor.execute(req)
+          ^^^^^^^^^^^^^^^^^^^^^
+backend\app\execution\docker_executor.py:38: in execute
+    repo_path = resolve_safe_path(req.repository_path)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: resolve_safe_path() missing 1 required positional argument: 'target_path'
+________________________ test_executor_failing_command ________________________
+backend\tests\test_docker_executor.py:53: in test_executor_failing_command
+    res = executor.execute(req)
+          ^^^^^^^^^^^^^^^^^^^^^
+backend\app\execution\docker_executor.py:38: in execute
+    repo_path = resolve_safe_path(req.repository_path)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: resolve_safe_path() missing 1 required positional argument: 'target_path'
+____________________________ test_executor_timeout ____________________________
+backend\tests\test_docker_executor.py:72: in test_executor_timeout
+    res = executor.execute(req)
+          ^^^^^^^^^^^^^^^^^^^^^
+backend\app\execution\docker_executor.py:38: in execute
+    repo_path = resolve_safe_path(req.repository_path)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: resolve_safe_path() missing 1 required positional argument: 'target_path'
+_________________________ test_executor_invalid_repo __________________________
+backend\tests\test_docker_executor.py:87: in test_executor_invalid_repo
+    res = executor.execute(req)
+          ^^^^^^^^^^^^^^^^^^^^^
+backend\app\execution\docker_executor.py:38: in execute
+    repo_path = resolve_safe_path(req.repository_path)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: resolve_safe_path() missing 1 required positional argument: 'target_path'
+____________________________ test_api_run_success _____________________________
+backend\tests\test_execution_api.py:18: in test_api_run_success
+    assert response.status_code == 200
+           ^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'coroutine' object has no attribute 'status_code'
+________________________ test_api_run_service_failure _________________________
+backend\tests\test_execution_api.py:36: in test_api_run_service_failure
+    assert response.status_code == 500
+           ^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'coroutine' object has no attribute 'status_code'
+___________________ test_execution_blocks_host_directories ____________________
+backend\tests\test_execution_security.py:17: in test_execution_blocks_host_directories
+    result = executor.execute(req)
+             ^^^^^^^^^^^^^^^^^^^^^
+backend\app\execution\docker_executor.py:38: in execute
+    repo_path = resolve_safe_path(req.repository_path)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: resolve_safe_path() missing 1 required positional argument: 'target_path'
+============================== warnings summary ===============================
+venv\Lib\site-packages\starlette\testclient.py:53
+  D:\Autonomous Coding Agentic AI\venv\Lib\site-packages\starlette\testclient.py:53: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = Callable[[], AbstractContextManager[anyio.abc.BlockingPortal]]
+
+backend/tests/test_execution_api.py::test_api_run_service_failure
+  C:\Program Files\Python311\Lib\unittest\mock.py:589: RuntimeWarning: coroutine 'AsyncClient.post' was never awaited
+    self._mock_side_effect = value
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED backend/tests/test_docker_executor.py::test_executor_successful_command
+FAILED backend/tests/test_docker_executor.py::test_executor_failing_command
+FAILED backend/tests/test_docker_executor.py::test_executor_timeout - TypeErr...
+FAILED backend/tests/test_docker_executor.py::test_executor_invalid_repo - Ty...
+FAILED backend/tests/test_execution_api.py::test_api_run_success - AttributeE...
+FAILED backend/tests/test_execution_api.py::test_api_run_service_failure - At...
+FAILED backend/tests/test_execution_security.py::test_execution_blocks_host_directories
+======================== 7 failed, 2 warnings in 0.56s ========================

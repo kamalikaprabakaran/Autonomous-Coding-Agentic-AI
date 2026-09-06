@@ -1,0 +1,21 @@
+FROM python:3.11-slim
+
+# The Agent Sandbox Execution Environment
+# Keeps a minimal footprint, avoiding excessive dependencies unless agent execution requires them.
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+# Add a non-root user for security
+RUN useradd -m -s /bin/bash sandboxuser
+
+USER sandboxuser
+WORKDIR /sandbox
+
+# This image doesn't pre-install the local agent. 
+# It solely acts as an isolated standard execution environment.
+# Tools like pytest can be passed via command line.
+RUN pip install --no-cache-dir pytest==8.0.2
+
+ENTRYPOINT ["/bin/bash", "-c"]

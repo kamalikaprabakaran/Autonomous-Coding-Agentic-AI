@@ -1,0 +1,29 @@
+============================= test session starts =============================
+platform win32 -- Python 3.11.9, pytest-9.1.1, pluggy-1.6.0 -- D:\Autonomous Coding Agentic AI\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: D:\Autonomous Coding Agentic AI
+configfile: pytest.ini
+testpaths: backend/tests
+plugins: anyio-4.15.1, langsmith-0.12.1, asyncio-1.4.0
+asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 2 items
+run-last-failure: rerun previous 2 failures (skipped 21 files)
+
+backend/tests/test_docker_executor.py::test_executor_invalid_repo FAILED [ 50%]
+backend/tests/test_execution_security.py::test_execution_blocks_host_directories FAILED [100%]
+
+================================== FAILURES ===================================
+_________________________ test_executor_invalid_repo __________________________
+backend\tests\test_docker_executor.py:115: in test_executor_invalid_repo
+    assert "does not exist" in res.error
+E   assert 'does not exist' in "[WinError 3] The system cannot find the path specified: '\\\\var\\\\does\\\\not\\\\exist\\\\999'"
+E    +  where "[WinError 3] The system cannot find the path specified: '\\\\var\\\\does\\\\not\\\\exist\\\\999'" = ExecutionResult(success=False, exit_code=None, stdout='', stderr='', timed_out=False, duration_seconds=0.0, error="[WinError 3] The system cannot find the path specified: '\\\\var\\\\does\\\\not\\\\exist\\\\999'").error
+___________________ test_execution_blocks_host_directories ____________________
+backend\tests\test_execution_security.py:21: in test_execution_blocks_host_directories
+    assert "Repository boundary violation" in result.error
+E   assert 'Repository boundary violation' in "[WinError 3] The system cannot find the path specified: 'D:\\\\Autonomous Coding Agentic AI\\\\..\\\\..\\\\windows\\\\system32'"
+E    +  where "[WinError 3] The system cannot find the path specified: 'D:\\\\Autonomous Coding Agentic AI\\\\..\\\\..\\\\windows\\\\system32'" = ExecutionResult(success=False, exit_code=None, stdout='', stderr='', timed_out=False, duration_seconds=0.0, error="[WinError 3] The system cannot find the path specified: 'D:\\\\Autonomous Coding Agentic AI\\\\..\\\\..\\\\windows\\\\system32'").error
+=========================== short test summary info ===========================
+FAILED backend/tests/test_docker_executor.py::test_executor_invalid_repo - as...
+FAILED backend/tests/test_execution_security.py::test_execution_blocks_host_directories
+============================== 2 failed in 0.21s ==============================

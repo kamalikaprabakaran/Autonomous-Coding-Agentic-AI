@@ -1,0 +1,81 @@
+============================= test session starts =============================
+platform win32 -- Python 3.11.9, pytest-9.1.1, pluggy-1.6.0 -- D:\Autonomous Coding Agentic AI\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: D:\Autonomous Coding Agentic AI
+configfile: pytest.ini
+testpaths: backend/tests
+plugins: anyio-4.15.1, langsmith-0.12.1, asyncio-1.4.0
+asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 5 items
+run-last-failure: rerun previous 5 failures (skipped 21 files)
+
+backend/tests/test_docker_executor.py::test_executor_successful_command FAILED [ 20%]
+backend/tests/test_docker_executor.py::test_executor_failing_command FAILED [ 40%]
+backend/tests/test_docker_executor.py::test_executor_timeout FAILED      [ 60%]
+backend/tests/test_docker_executor.py::test_executor_invalid_repo FAILED [ 80%]
+backend/tests/test_execution_security.py::test_execution_blocks_host_directories FAILED [100%]
+
+================================== FAILURES ===================================
+______________________ test_executor_successful_command _______________________
+backend\tests\test_docker_executor.py:41: in test_executor_successful_command
+    assert res.success is True
+E   assert False is True
+E    +  where False = ExecutionResult(success=False, exit_code=None, stdout='', stderr='', timed_out=False, duration_seconds=0.0, error="Credentials store error: StoreError('docker-credential-desktop not installed or not available in PATH')").success
+________________________ test_executor_failing_command ________________________
+backend\tests\test_docker_executor.py:55: in test_executor_failing_command
+    assert res.success is True # It executed gracefully
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   assert False is True
+E    +  where False = ExecutionResult(success=False, exit_code=None, stdout='', stderr='', timed_out=False, duration_seconds=0.0, error="Credentials store error: StoreError('docker-credential-desktop not installed or not available in PATH')").success
+____________________________ test_executor_timeout ____________________________
+backend\tests\test_docker_executor.py:75: in test_executor_timeout
+    assert res.timed_out is True
+E   assert False is True
+E    +  where False = ExecutionResult(success=False, exit_code=None, stdout='', stderr='', timed_out=False, duration_seconds=0.0, error="Credentials store error: StoreError('docker-credential-desktop not installed or not available in PATH')").timed_out
+_________________________ test_executor_invalid_repo __________________________
+backend\tests\test_docker_executor.py:87: in test_executor_invalid_repo
+    res = executor.execute(req)
+          ^^^^^^^^^^^^^^^^^^^^^
+backend\app\execution\docker_executor.py:39: in execute
+    repo_path = resolve_safe_path(req.repository_path, ".")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend\app\services\analyzer\discovery.py:22: in resolve_safe_path
+    base = Path(repo_path).resolve(strict=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Program Files\Python311\Lib\pathlib.py:993: in resolve
+    s = os.path.realpath(self, strict=strict)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen ntpath>:696: in realpath
+    ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: '\\var\\does\\not\\exist\\999'
+___________________ test_execution_blocks_host_directories ____________________
+backend\tests\test_execution_security.py:17: in test_execution_blocks_host_directories
+    result = executor.execute(req)
+             ^^^^^^^^^^^^^^^^^^^^^
+backend\app\execution\docker_executor.py:39: in execute
+    repo_path = resolve_safe_path(req.repository_path, ".")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend\app\services\analyzer\discovery.py:22: in resolve_safe_path
+    base = Path(repo_path).resolve(strict=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Program Files\Python311\Lib\pathlib.py:993: in resolve
+    s = os.path.realpath(self, strict=strict)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen ntpath>:696: in realpath
+    ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\Autonomous Coding Agentic AI\\..\\..\\windows\\system32'
+============================== warnings summary ===============================
+backend/tests/test_docker_executor.py::test_executor_successful_command
+backend/tests/test_docker_executor.py::test_executor_failing_command
+backend/tests/test_docker_executor.py::test_executor_timeout
+  D:\Autonomous Coding Agentic AI\venv\Lib\site-packages\docker\credentials\store.py:21: UserWarning: docker-credential-desktop not installed or not available in PATH
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED backend/tests/test_docker_executor.py::test_executor_successful_command
+FAILED backend/tests/test_docker_executor.py::test_executor_failing_command
+FAILED backend/tests/test_docker_executor.py::test_executor_timeout - assert ...
+FAILED backend/tests/test_docker_executor.py::test_executor_invalid_repo - Fi...
+FAILED backend/tests/test_execution_security.py::test_execution_blocks_host_directories
+======================== 5 failed, 3 warnings in 0.50s ========================

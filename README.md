@@ -4,6 +4,8 @@ A production-oriented autonomous coding agent that can understand software repos
 
 ## Current Phase
 
+**Phase 5 – Sandboxed Code Execution** ✅
+
 **Phase 4 – Initial Agent Brain (LangGraph)** ✅
 
 **Phase 3 – Coding Tool System** ✅

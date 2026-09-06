@@ -19,6 +19,13 @@ class Settings(BaseSettings):
     HOST: str = "0.0.0.0"
     PORT: int = 8000
 
+    # Sandbox Execution Configuration
+    SANDBOX_IMAGE: str = "autonomous-agent-sandbox:latest"
+    SANDBOX_TIMEOUT_SECONDS: int = 30
+    SANDBOX_MEMORY_LIMIT: str = "512m"
+    SANDBOX_CPU_LIMIT: float = 1.0 # NanoCPUs multiplier
+    SANDBOX_NETWORK_ENABLED: bool = False
+
     model_config = {
         "env_file": ".env",
         "env_file_encoding": "utf-8",
