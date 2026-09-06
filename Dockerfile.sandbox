@@ -17,5 +17,3 @@ WORKDIR /sandbox
 # It solely acts as an isolated standard execution environment.
 # Tools like pytest can be passed via command line.
 RUN pip install --no-cache-dir pytest==8.0.2
-
-ENTRYPOINT ["/bin/bash", "-c"]
