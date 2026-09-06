@@ -25,6 +25,13 @@ class MockLLMProvider(BaseLLMProvider):
         prompt_lower = prompt.lower()
         
         if "coder" in system_lower:
+            if "failed" in prompt_lower or "failure" in prompt_lower or "stderr" in prompt_lower or "correction" in prompt_lower:
+                return (
+                    "Corrected proposed changes:\n"
+                    "- Fixed syntax in `foo.py`\n"
+                    "- Passed tests successfully."
+                )
+            
             return (
                 "Proposed changes:\n"
                 "- Modify `foo.py` to add `bar()`\n"

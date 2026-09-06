@@ -13,6 +13,9 @@ class AgentState(TypedDict):
     
     # Workflow State
     current_step: str
+    iteration_count: int
+    max_iterations: int
+    final_status: Optional[str]
     
     # Planner Module
     plan: Optional[str]
@@ -23,6 +26,12 @@ class AgentState(TypedDict):
     
     # Coder Module
     proposed_changes: Optional[str]
+    
+    # Execution & Evaluation Loop
+    execution_result: Optional[dict]
+    evaluation_result: Optional[dict]
+    failure_feedback: Optional[dict]
+    correction_history: Annotated[list[dict], operator.add]
     
     # Communication / Error Handling
     messages: Annotated[list[str], operator.add]

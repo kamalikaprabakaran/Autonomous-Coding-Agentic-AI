@@ -1,0 +1,77 @@
+﻿
+--- Running Scenario 1---
+
+==================================================
+SCENARIO: 1. SUCCESS ON FIRST ATTEMPT
+==================================================
+Final Status: success
+Iteration Count: 1
+Execution Result:
+  {'success': True, 'exit_code': 0, 'stdout': '', 'stderr': '', 'timed_out': False, 'error': None}
+Evaluation Result:
+  {'passed': True, 'feedback': None}
+Failure Feedback:
+  None
+Correction History:
+  Attempt 1: Success? True
+
+Length of messages: 6
+
+--- Running Scenario 2---
+
+==================================================
+SCENARIO: 2. FAILURE THEN CORRECTION
+==================================================
+Final Status: success
+Iteration Count: 2
+Execution Result:
+  {'success': True, 'exit_code': 0, 'stdout': '', 'stderr': '', 'timed_out': False, 'error': None}
+Evaluation Result:
+  {'passed': True, 'feedback': None}
+Failure Feedback:
+  None
+Correction History:
+  Attempt 1: Success? False
+  Attempt 2: Success? True
+
+Length of messages: 9
+
+--- Running Scenario 3---
+
+==================================================
+SCENARIO: 3. MAXIMUM ITERATIONS (LIMIT 3)
+==================================================
+Final Status: failed
+Iteration Count: 3
+Execution Result:
+  {'success': False, 'exit_code': 1, 'stdout': '', 'stderr': 'Simulated error', 'timed_out': False, 'error': None}
+Evaluation Result:
+  {'passed': False, 'feedback': {'success': False, 'exit_code': 1, 'stdout': '', 'stderr': 'Simulated error', 'timed_out': False, 'error': None}}
+Failure Feedback:
+  {'status': 'failed', 'exit_code': 1, 'stdout': '', 'stderr': 'Simulated error', 'error': None, 'timed_out': False}
+Correction History:
+  Attempt 1: Success? False
+  Attempt 2: Success? False
+  Attempt 3: Success? False
+
+Length of messages: 12
+
+--- Running Scenario 4---
+
+==================================================
+SCENARIO: 4. EXECUTOR FAILURE
+==================================================
+Final Status: failed
+Iteration Count: 3
+Execution Result:
+  {'success': False, 'exit_code': -1, 'stdout': '', 'stderr': '', 'timed_out': False, 'error': 'Docker execution completely crashed'}
+Evaluation Result:
+  {'passed': False, 'feedback': {'success': False, 'exit_code': -1, 'stdout': '', 'stderr': '', 'timed_out': False, 'error': 'Docker execution completely crashed'}}
+Failure Feedback:
+  {'status': 'failed', 'exit_code': -1, 'stdout': '', 'stderr': '', 'error': 'Docker execution completely crashed', 'timed_out': False}
+Correction History:
+  Attempt 1: Success? False
+  Attempt 2: Success? False
+  Attempt 3: Success? False
+
+Length of messages: 12

@@ -48,7 +48,7 @@ def test_coder_produces_proposal():
     out = coder_node(state, llm)
     assert out["current_step"] == "coder"
     assert "Proposed changes:" in out["proposed_changes"]
-    assert out["messages"][0] == "Coder proposed changes."
+    assert out["messages"][0] == "Coder proposed changes (Iteration 1)."
     
     # Ensures it did not try to write files. The proposal string is just a string.
     assert isinstance(out["proposed_changes"], str)
