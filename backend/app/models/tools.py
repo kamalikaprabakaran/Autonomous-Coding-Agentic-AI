@@ -44,3 +44,35 @@ class SearchCodeInput(BaseModel):
 class GetFileInfoInput(BaseModel):
     """Input for GetFileInfoTool."""
     path: str = Field(description="Relative path of the file to get metadata for.")
+
+
+# Inputs for Git Tools
+
+class GitStatusInput(BaseModel):
+    """Input for GitStatusTool. Uses the repository path from context."""
+    pass
+
+
+class GitDiffInput(BaseModel):
+    """Input for GitDiffTool."""
+    staged: bool = Field(
+        default=False,
+        description="If True, return staged (index) diff. If False, return working-tree diff.",
+    )
+
+
+class GitBranchInput(BaseModel):
+    """Input for GitBranchTool. Retrieves the current branch name."""
+    pass
+
+
+class GitStageInput(BaseModel):
+    """Input for GitStageTool."""
+    paths: list[str] = Field(
+        description="List of relative file paths to stage. Path traversal is rejected."
+    )
+
+
+class GitCommitInput(BaseModel):
+    """Input for GitCommitTool."""
+    message: str = Field(description="Commit message. Must not be empty.")
