@@ -12,3 +12,4 @@ langgraph>=0.1.18
 langchain-core>=0.2.22
 
 docker>=7.1.0
+firebase-admin>=6.0.0

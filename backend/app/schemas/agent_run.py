@@ -15,6 +15,7 @@ class AgentRunResponse(BaseModel):
     task_id: str
     status: AgentRunStatus
     iteration_count: int
+    owner_id: Optional[str] = None
     started_at: datetime
     completed_at: Optional[datetime]
 

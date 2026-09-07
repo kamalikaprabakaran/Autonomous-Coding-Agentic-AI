@@ -46,3 +46,11 @@ docker-compose.override.yml
 
 # ──── Misc ────
 *.log
+
+# Firebase Admin SDK credentials
+firebase-service-account.json
+*-firebase-adminsdk-*.json
+
+# Firebase Admin SDK credentials
+firebase-service-account.json
+*-firebase-adminsdk-*.json

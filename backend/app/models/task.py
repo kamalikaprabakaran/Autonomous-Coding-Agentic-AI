@@ -2,6 +2,7 @@
 
 from datetime import datetime, timezone
 from enum import Enum
+from typing import Optional
 from uuid import uuid4
 
 from pydantic import BaseModel, Field
@@ -23,4 +24,5 @@ class CodingTask(BaseModel):
     project_id: str
     description: str
     status: TaskStatus = TaskStatus.PENDING
+    owner_id: Optional[str] = None
     created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))

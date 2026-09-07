@@ -27,3 +27,7 @@ class InMemoryProjectRepository:
     def list_all(self) -> list[Project]:
         """Return all stored projects."""
         return list(self._store.values())
+
+    def list_by_owner(self, owner_id: str) -> list[Project]:
+        """Return projects owned by the specified user."""
+        return [p for p in self._store.values() if p.owner_id == owner_id]

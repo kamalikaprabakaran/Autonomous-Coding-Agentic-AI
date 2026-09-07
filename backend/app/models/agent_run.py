@@ -24,5 +24,6 @@ class AgentRun(BaseModel):
     task_id: str
     status: AgentRunStatus = AgentRunStatus.PENDING
     iteration_count: int = 0
+    owner_id: Optional[str] = None
     started_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
     completed_at: Optional[datetime] = None

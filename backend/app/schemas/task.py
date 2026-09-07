@@ -1,6 +1,7 @@
 """Pydantic request/response schemas for coding tasks."""
 
 from datetime import datetime
+from typing import Optional
 
 from pydantic import BaseModel, Field
 
@@ -21,6 +22,7 @@ class TaskResponse(BaseModel):
     project_id: str
     description: str
     status: TaskStatus
+    owner_id: Optional[str] = None
     created_at: datetime
 
     model_config = {"from_attributes": True}

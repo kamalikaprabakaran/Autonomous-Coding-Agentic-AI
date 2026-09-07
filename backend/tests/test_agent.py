@@ -10,7 +10,7 @@ async def test_get_agent_run_status(client, app):
     """GET /agent/status/{id} should return a valid run when it exists."""
     # Directly seed an agent run via the service (no POST endpoint in Phase 1)
     service = app.state.agent_run_service
-    run = service.create_run(task_id="some-task-id")
+    run = service.create_run(task_id="some-task-id", owner_id="mock_test_user")
 
     response = await client.get(f"/agent/status/{run.id}")
     assert response.status_code == 200

@@ -15,5 +15,6 @@ class Project(BaseModel):
     description: str = ""
     repository_path: Optional[str] = None
     repository_url: Optional[str] = None
+    owner_id: Optional[str] = None
     created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
     updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))

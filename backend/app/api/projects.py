@@ -1,8 +1,10 @@
 """Project API endpoints."""
 
-from fastapi import APIRouter, Request, status
+from fastapi import APIRouter, Request, status, Depends
 
 from backend.app.schemas.project import ProjectCreate, ProjectResponse
+from backend.app.auth.dependencies import get_current_user
+from backend.app.auth.models import AuthenticatedUser
 
 router = APIRouter(prefix="/projects", tags=["Projects"])
 
@@ -19,14 +21,20 @@ def _get_project_service(request: Request):
     summary="Create a project",
     description="Create a new software project to be managed by the agent.",
 )
-async def create_project(body: ProjectCreate, request: Request) -> ProjectResponse:
+async def create_project(
+    body: ProjectCreate, 
+    request: Request,
+    current_user: AuthenticatedUser = Depends(get_current_user)
+) -> ProjectResponse:
     """Create a new project."""
     service = _get_project_service(request)
+    owner_id = current_user.uid if current_user else None
     project = service.create_project(
         name=body.name,
         description=body.description,
         repository_path=body.repository_path,
         repository_url=body.repository_url,
+        owner_id=owner_id,
     )
     return ProjectResponse.model_validate(project)
 
@@ -37,10 +45,14 @@ async def create_project(body: ProjectCreate, request: Request) -> ProjectRespon
     summary="List all projects",
     description="Return every project currently stored.",
 )
-async def list_projects(request: Request) -> list[ProjectResponse]:
+async def list_projects(
+    request: Request,
+    current_user: AuthenticatedUser = Depends(get_current_user)
+) -> list[ProjectResponse]:
     """Return all projects."""
     service = _get_project_service(request)
-    projects = service.list_projects()
+    owner_id = current_user.uid if current_user else None
+    projects = service.list_projects(owner_id=owner_id)
     return [ProjectResponse.model_validate(p) for p in projects]
 
 
@@ -51,10 +63,15 @@ async def list_projects(request: Request) -> list[ProjectResponse]:
     description="Return a single project by its unique id.",
     responses={404: {"description": "Project not found"}},
 )
-async def get_project(project_id: str, request: Request) -> ProjectResponse:
+async def get_project(
+    project_id: str, 
+    request: Request,
+    current_user: AuthenticatedUser = Depends(get_current_user)
+) -> ProjectResponse:
     """Return a project by id."""
     service = _get_project_service(request)
-    project = service.get_project(project_id)
+    owner_id = current_user.uid if current_user else None
+    project = service.get_project(project_id, owner_id=owner_id)
     return ProjectResponse.model_validate(project)
 
 

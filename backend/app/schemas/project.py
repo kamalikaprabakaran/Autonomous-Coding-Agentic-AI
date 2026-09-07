@@ -23,6 +23,7 @@ class ProjectResponse(BaseModel):
     description: str
     repository_path: Optional[str]
     repository_url: Optional[str]
+    owner_id: Optional[str] = None
     created_at: datetime
     updated_at: datetime
 

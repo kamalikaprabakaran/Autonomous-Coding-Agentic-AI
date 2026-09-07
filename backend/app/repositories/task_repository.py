@@ -27,3 +27,7 @@ class InMemoryTaskRepository:
     def list_all(self) -> list[CodingTask]:
         """Return all stored tasks."""
         return list(self._store.values())
+
+    def list_by_owner(self, owner_id: str) -> list[CodingTask]:
+        """Return tasks owned by the specified user."""
+        return [t for t in self._store.values() if t.owner_id == owner_id]

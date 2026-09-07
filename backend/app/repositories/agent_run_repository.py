@@ -27,3 +27,7 @@ class InMemoryAgentRunRepository:
     def list_all(self) -> list[AgentRun]:
         """Return all stored agent runs."""
         return list(self._store.values())
+
+    def list_by_owner(self, owner_id: str) -> list[AgentRun]:
+        """Return agent runs owned by the specified user."""
+        return [r for r in self._store.values() if r.owner_id == owner_id]
