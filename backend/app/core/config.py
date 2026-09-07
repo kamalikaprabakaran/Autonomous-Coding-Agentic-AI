@@ -26,6 +26,9 @@ class Settings(BaseSettings):
     SANDBOX_CPU_LIMIT: float = 1.0 # NanoCPUs multiplier
     SANDBOX_NETWORK_ENABLED: bool = False
 
+    # CORS Configuration
+    CORS_ORIGINS: list[str] = ["http://localhost:5173", "http://127.0.0.1:5173"]
+
     model_config = {
         "env_file": ".env",
         "env_file_encoding": "utf-8",
