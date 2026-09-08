@@ -3,11 +3,29 @@ import { vi, describe, it, expect } from 'vitest';
 import App from './App';
 import * as apiService from './services/api';
 
+vi.mock('firebase/app', () => ({
+    initializeApp: vi.fn(),
+    getApps: vi.fn(() => []),
+    getApp: vi.fn(),
+}));
+
+vi.mock('firebase/auth', () => ({
+    getAuth: vi.fn(),
+    onAuthStateChanged: vi.fn((_: any, cb: any) => {
+        cb(null);
+        return vi.fn(); // unsubscribe function
+    }),
+    signInWithEmailAndPassword: vi.fn(),
+    createUserWithEmailAndPassword: vi.fn(),
+    signOut: vi.fn(),
+}));
+
 vi.mock('./services/api', () => ({
     api: {
         getHealth: vi.fn(),
     },
 }));
+
 
 describe('Frontend Application Foundation', () => {
     it('renders Layout and Sidebar correctly', async () => {

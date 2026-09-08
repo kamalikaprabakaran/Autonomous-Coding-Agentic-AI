@@ -1,5 +1,6 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { useAuth } from '../../auth/useAuth';
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     return (
@@ -55,9 +56,51 @@ const Sidebar: React.FC = () => {
 };
 
 const Header: React.FC = () => {
+    const { currentUser, signOut } = useAuth();
+    const navigate = useNavigate();
+
+    const handleSignOut = async () => {
+        try {
+            await signOut();
+            navigate('/login');
+        } catch (error) {
+            console.error("Failed to log out", error);
+        }
+    };
+
     return (
-        <header style={{ height: '60px', backgroundColor: '#ffffff', borderBottom: '1px solid #e5e7eb', display: 'flex', alignItems: 'center', padding: '0 2rem' }}>
+        <header style={{
+            height: '60px',
+            backgroundColor: '#ffffff',
+            borderBottom: '1px solid #e5e7eb',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            padding: '0 2rem'
+        }}>
             <h2 style={{ margin: 0, fontSize: '1.125rem', color: '#374151', fontWeight: 500 }}>Dashboard</h2>
+            {currentUser && (
+                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                    <span style={{ color: '#4b5563', fontSize: '0.875rem' }}>
+                        Signed in as: <strong>{currentUser.email}</strong>
+                    </span>
+                    <button
+                        onClick={handleSignOut}
+                        style={{
+                            padding: '0.375rem 0.75rem',
+                            backgroundColor: '#fee2e2',
+                            color: '#991b1b',
+                            border: 'none',
+                            borderRadius: '0.375rem',
+                            cursor: 'pointer',
+                            fontSize: '0.875rem',
+                            fontWeight: 500
+                        }}
+                    >
+                        Log out
+                    </button>
+                </div>
+            )}
         </header>
     );
 };
