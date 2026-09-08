@@ -9,13 +9,25 @@ export interface Project {
     updated_at: string;
 }
 
+export interface ProjectCreate {
+    name: string;
+    description?: string;
+    repository_path?: string | null;
+    repository_url?: string | null;
+}
+
 export interface Task {
     id: string;
     project_id: string;
     description: string;
-    status: 'PENDING' | 'IN_PROGRESS' | 'COMPLETED' | 'FAILED';
+    status: 'PENDING' | 'RUNNING' | 'COMPLETED' | 'FAILED';
     owner_id: string | null;
     created_at: string;
+}
+
+export interface TaskCreate {
+    project_id: string;
+    description: string;
 }
 
 export interface AgentRun {

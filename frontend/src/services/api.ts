@@ -1,4 +1,5 @@
 import { auth } from './firebase';
+import { Project, ProjectCreate, Task, TaskCreate } from '../types';
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
 
@@ -46,4 +47,15 @@ async function fetchWrapper<T>(endpoint: string, options: RequestInit = {}): Pro
 
 export const api = {
     getHealth: () => fetchWrapper<{ status: string }>('/health'),
+    getProjects: () => fetchWrapper<Project[]>('/projects'),
+    getProject: (id: string) => fetchWrapper<Project>(`/projects/${id}`),
+    createProject: (data: ProjectCreate) => fetchWrapper<Project>('/projects', {
+        method: 'POST',
+        body: JSON.stringify(data),
+    }),
+    getTask: (id: string) => fetchWrapper<Task>(`/tasks/${id}`),
+    createTask: (data: TaskCreate) => fetchWrapper<Task>('/tasks', {
+        method: 'POST',
+        body: JSON.stringify(data),
+    }),
 };

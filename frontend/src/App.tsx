@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
 import HomePage from './pages/HomePage';
 import ProjectsPage from './pages/ProjectsPage';
+import ProjectDetailsPage from './pages/ProjectDetailsPage';
 import TasksPage from './pages/TasksPage';
 import AgentPage from './pages/AgentPage';
 import LoginPage from './pages/LoginPage';
@@ -21,7 +22,9 @@ const App: React.FC = () => {
                         <Route path="/login" element={<PublicRoute><LoginPage /></PublicRoute>} />
                         <Route path="/signup" element={<PublicRoute><SignupPage /></PublicRoute>} />
                         <Route path="/projects" element={<ProtectedRoute><ProjectsPage /></ProtectedRoute>} />
+                        <Route path="/projects/:projectId" element={<ProtectedRoute><ProjectDetailsPage /></ProtectedRoute>} />
                         <Route path="/tasks" element={<ProtectedRoute><TasksPage /></ProtectedRoute>} />
+                        <Route path="/tasks/:taskId" element={<ProtectedRoute><TasksPage /></ProtectedRoute>} />
                         <Route path="/agent" element={<ProtectedRoute><AgentPage /></ProtectedRoute>} />
                     </Routes>
                 </Layout>
