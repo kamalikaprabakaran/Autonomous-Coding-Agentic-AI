@@ -125,8 +125,11 @@ def evaluator_node(state: AgentState) -> dict:
     success = exec_res.get("success", False)
     
     eval_res = {
-        "passed": success,
-        "feedback": exec_res if not success else None
+        "tests_passed": success,
+        "execution_error": exec_res.get("error") if not success else None,
+        "evaluator_feedback": exec_res.get("stderr") if not success else None,
+        "iteration_count": iteration,
+        "passed": success
     }
     
     feedback = None

@@ -206,6 +206,22 @@ const AgentRunPage: React.FC = () => {
                         {agentRun.completed_at ? new Date(agentRun.completed_at).toLocaleString() : '—'}
                     </span>
 
+                    {agentRun.duration_seconds !== undefined && agentRun.duration_seconds > 0 && (
+                        <>
+                            <strong style={{ color: '#374151' }}>Execution Duration</strong>
+                            <span style={{ color: '#6b7280' }}>{agentRun.duration_seconds.toFixed(2)}s</span>
+                        </>
+                    )}
+
+                    {agentRun.error_summary && (
+                        <>
+                            <strong style={{ color: '#991b1b' }}>Error Summary</strong>
+                            <span style={{ color: '#ef4444', whiteSpace: 'pre-wrap', fontFamily: 'monospace' }}>
+                                {agentRun.error_summary}
+                            </span>
+                        </>
+                    )}
+
                     <strong style={{ color: '#374151' }}>Live Updates</strong>
                     <span style={{ color: isTerminal ? '#065f46' : '#2563eb' }}>
                         {isTerminal ? 'Polling concluded.' : 'Polling for status updates every 3s...'}

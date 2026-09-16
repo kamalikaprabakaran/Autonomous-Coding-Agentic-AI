@@ -38,4 +38,7 @@ export interface AgentRun {
     owner_id: string | null;
     started_at: string;
     completed_at: string | null;
+    duration_seconds?: number;
+    error_summary?: string | null;
+    final_status?: string | null;
 }

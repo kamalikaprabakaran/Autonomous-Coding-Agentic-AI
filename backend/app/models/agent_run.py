@@ -27,3 +27,6 @@ class AgentRun(BaseModel):
     owner_id: Optional[str] = None
     started_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
     completed_at: Optional[datetime] = None
+    duration_seconds: float = 0.0
+    error_summary: Optional[str] = None
+    final_status: Optional[str] = None

@@ -18,5 +18,8 @@ class AgentRunResponse(BaseModel):
     owner_id: Optional[str] = None
     started_at: datetime
     completed_at: Optional[datetime]
+    duration_seconds: float = 0.0
+    error_summary: Optional[str] = None
+    final_status: Optional[str] = None
 
     model_config = {"from_attributes": True}

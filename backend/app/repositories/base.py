@@ -8,6 +8,7 @@ from typing import Protocol, Optional
 from backend.app.models.project import Project
 from backend.app.models.task import CodingTask
 from backend.app.models.agent_run import AgentRun
+from backend.app.models.event import AgentEvent
 
 
 class ProjectRepositoryProtocol(Protocol):
@@ -38,3 +39,8 @@ class AgentRunRepositoryProtocol(Protocol):
     def list_all(self) -> list[AgentRun]: ...
     
     def list_by_owner(self, owner_id: str) -> list[AgentRun]: ...
+
+class EventRepositoryProtocol(Protocol):
+    def add(self, event: AgentEvent) -> AgentEvent: ...
+    
+    def list_by_run(self, run_id: str) -> list[AgentEvent]: ...

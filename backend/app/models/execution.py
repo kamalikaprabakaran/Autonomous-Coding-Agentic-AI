@@ -11,6 +11,7 @@ class ExecutionRequest(BaseModel):
     memory_limit: Optional[str] = None
     cpu_limit: Optional[float] = None
     network_enabled: Optional[bool] = None
+    run_id: Optional[str] = None
 
 
 class ExecutionResult(BaseModel):
