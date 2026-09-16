@@ -81,10 +81,15 @@ async def get_project(
     description="Analyze the project's repository and return structural and code insights.",
     responses={404: {"description": "Project not found or invalid repository path"}},
 )
-async def analyze_project_repository(project_id: str, request: Request):
+async def analyze_project_repository(
+    project_id: str, 
+    request: Request,
+    current_user: AuthenticatedUser = Depends(get_current_user)
+):
     """Run full repository analysis on a project."""
     service = _get_project_service(request)
-    project = service.get_project(project_id)
+    owner_id = current_user.uid if current_user else None
+    project = service.get_project(project_id, owner_id=owner_id)
     
     if not project.repository_path:
         from fastapi import HTTPException

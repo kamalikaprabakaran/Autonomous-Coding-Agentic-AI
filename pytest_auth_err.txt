@@ -1,0 +1,65 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.11.9, pytest-9.1.1, pluggy-1.6.0 -- D:\Autonomous Coding Agentic AI\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: D:\Autonomous Coding Agentic AI
+configfile: pytest.ini
+plugins: anyio-4.15.1, langsmith-0.12.1, asyncio-1.4.0
+asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 5 items
+
+backend/tests/test_api_auth.py::test_api_unauthenticated_test_mode FAILED [ 20%]
+backend/tests/test_api_auth.py::test_api_authenticated_project_creation PASSED [ 40%]
+backend/tests/test_api_auth.py::test_api_cross_user_isolation PASSED     [ 60%]
+backend/tests/test_api_auth.py::test_api_authenticated_task_creation PASSED [ 80%]
+backend/tests/test_api_auth.py::test_api_analysis_endpoint_idor ERROR    [100%]
+
+=================================== ERRORS ====================================
+______________ ERROR at setup of test_api_analysis_endpoint_idor ______________
+file D:\Autonomous Coding Agentic AI\backend\tests\test_api_auth.py, line 76
+  @pytest.mark.asyncio
+  async def test_api_analysis_endpoint_idor(app, client, mocker):
+      """Verify that User B cannot analyze a project owned by User A safely."""
+      # Mock analyzer to prevent actual disk operations
+      mocker.patch("backend.app.services.analyzer.analyzer.RepositoryAnalyzer.analyze_repository")
+
+      app.dependency_overrides[get_current_user_optional] = lambda: AuthenticatedUser(uid="user_A")
+      resp_a = await client.post("/projects", json={"name": "Project A to Analyze", "repository_path": "."})
+      assert resp_a.status_code == 201
+      proj_id = resp_a.json()["id"]
+
+      # User A can analyze their own project
+      resp_a_analyze = await client.get(f"/projects/{proj_id}/analysis")
+      assert resp_a_analyze.status_code == 200
+
+      # User B tries to analyze User A's project
+      app.dependency_overrides[get_current_user_optional] = lambda: AuthenticatedUser(uid="user_B")
+      resp_b_analyze = await client.get(f"/projects/{proj_id}/analysis")
+      assert resp_b_analyze.status_code == 404
+
+      app.dependency_overrides.clear()
+E       fixture 'mocker' not found
+>       available fixtures: _asyncio_loop_factory, _class_scoped_runner, _function_scoped_runner, _module_scoped_runner, _package_scoped_runner, _session_scoped_runner, anyio_backend, anyio_backend_name, anyio_backend_options, app, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, client, doctest_namespace, event_loop_policy, free_tcp_port, free_tcp_port_factory, free_udp_port, free_udp_port_factory, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, subtests, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, unused_tcp_port, unused_tcp_port_factory, unused_udp_port, unused_udp_port_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+D:\Autonomous Coding Agentic AI\backend\tests\test_api_auth.py:76
+================================== FAILURES ===================================
+_____________________ test_api_unauthenticated_test_mode ______________________
+
+client = <httpx.AsyncClient object at 0x000001DDFD19A890>
+
+    @pytest.mark.asyncio
+    async def test_api_unauthenticated_test_mode(client):
+        """In test mode, omitting the Auth header returns gracefully without 401. Current tests rely on this."""
+        response = await client.post(
+            "/projects",
+            json={"name": "No Auth Project"}
+        )
+>       assert response.status_code == 201
+E       assert 401 == 201
+E        +  where 401 = <Response [401 Unauthorized]>.status_code
+
+backend\tests\test_api_auth.py:16: AssertionError
+=========================== short test summary info ===========================
+FAILED backend/tests/test_api_auth.py::test_api_unauthenticated_test_mode - a...
+ERROR backend/tests/test_api_auth.py::test_api_analysis_endpoint_idor
+==================== 1 failed, 3 passed, 1 error in 0.28s =====================

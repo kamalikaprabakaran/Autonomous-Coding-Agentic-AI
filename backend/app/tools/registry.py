@@ -51,9 +51,15 @@ class ToolRegistry:
         start_t = time.monotonic()
         if event_repo and run_id:
             try:
+                # Sanitize arguments to prevent secrets or massive string blobs
+                safe_args = args.copy()
+                for key in ["content", "old_text", "new_text", "code_snippet"]:
+                    if key in safe_args and isinstance(safe_args[key], str):
+                        safe_args[key] = "<redacted_or_truncated>"
+                        
                 event_repo.add(AgentEvent(
                     run_id=run_id, event_type=AgentEventType.TOOL_CALLED,
-                    tool_name=name, metadata={"args": str(args)} # Stringified for safety
+                    tool_name=name, metadata={"args": str(safe_args)}
                 ))
             except Exception:
                 pass

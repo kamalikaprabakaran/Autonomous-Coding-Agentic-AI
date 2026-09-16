@@ -7,8 +7,9 @@ from backend.app.auth.models import AuthenticatedUser
 
 
 @pytest.mark.asyncio
-async def test_api_unauthenticated_test_mode(client):
+async def test_api_unauthenticated_test_mode(client, monkeypatch):
     """In test mode, omitting the Auth header returns gracefully without 401. Current tests rely on this."""
+    monkeypatch.setenv("FIREBASE_TESTING", "true")
     response = await client.post(
         "/projects",
         json={"name": "No Auth Project"}
@@ -69,5 +70,25 @@ async def test_api_authenticated_task_creation(app, client):
     )
     assert task_resp.status_code == 201
     assert task_resp.json()["owner_id"] == "test_owner"
+    
+    
+    app.dependency_overrides.clear()
+
+@pytest.mark.asyncio
+async def test_api_analysis_endpoint_idor(app, client):
+    """Verify that User B cannot analyze a project owned by User A safely."""
+    app.dependency_overrides[get_current_user_optional] = lambda: AuthenticatedUser(uid="user_A")
+    resp_a = await client.post("/projects", json={"name": "Project A to Analyze", "repository_path": "."})
+    assert resp_a.status_code == 201
+    proj_id = resp_a.json()["id"]
+    
+    # User A can analyze their own project
+    resp_a_analyze = await client.get(f"/projects/{proj_id}/analysis")
+    assert resp_a_analyze.status_code == 200
+    
+    # User B tries to analyze User A's project
+    app.dependency_overrides[get_current_user_optional] = lambda: AuthenticatedUser(uid="user_B")
+    resp_b_analyze = await client.get(f"/projects/{proj_id}/analysis")
+    assert resp_b_analyze.status_code == 404
     
     app.dependency_overrides.clear()

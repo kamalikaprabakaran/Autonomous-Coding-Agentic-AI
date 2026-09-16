@@ -1,0 +1,64 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.11.9, pytest-9.1.1, pluggy-1.6.0 -- D:\Autonomous Coding Agentic AI\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: D:\Autonomous Coding Agentic AI
+configfile: pytest.ini
+plugins: anyio-4.15.1, langsmith-0.12.1, asyncio-1.4.0
+asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 5 items
+
+backend/tests/test_api_auth.py::test_api_unauthenticated_test_mode FAILED [ 20%]
+backend/tests/test_api_auth.py::test_api_authenticated_project_creation PASSED [ 40%]
+backend/tests/test_api_auth.py::test_api_cross_user_isolation PASSED     [ 60%]
+backend/tests/test_api_auth.py::test_api_authenticated_task_creation PASSED [ 80%]
+backend/tests/test_api_auth.py::test_api_analysis_endpoint_idor FAILED   [100%]
+
+================================== FAILURES ===================================
+_____________________ test_api_unauthenticated_test_mode ______________________
+
+client = <httpx.AsyncClient object at 0x0000017FD58E54D0>
+
+    @pytest.mark.asyncio
+    async def test_api_unauthenticated_test_mode(client):
+        """In test mode, omitting the Auth header returns gracefully without 401. Current tests rely on this."""
+        response = await client.post(
+            "/projects",
+            json={"name": "No Auth Project"}
+        )
+>       assert response.status_code == 201
+E       assert 401 == 201
+E        +  where 401 = <Response [401 Unauthorized]>.status_code
+
+backend\tests\test_api_auth.py:16: AssertionError
+_______________________ test_api_analysis_endpoint_idor _______________________
+
+app = <fastapi.applications.FastAPI object at 0x0000017FD59E0D50>
+client = <httpx.AsyncClient object at 0x0000017FD59CD1D0>
+
+    @pytest.mark.asyncio
+    async def test_api_analysis_endpoint_idor(app, client):
+        """Verify that User B cannot analyze a project owned by User A safely."""
+        # Build a stub analyzer to prevent actual disk operations being run
+        class StubAnalyzer:
+            def analyze_repository(self, path):
+                from backend.app.models.analyzer import RepositoryAnalysis, DirectoryNode
+                return RepositoryAnalysis(tree=DirectoryNode(name=".", type="directory"))
+    
+        app.state.repository_analyzer = StubAnalyzer()
+    
+        app.dependency_overrides[get_current_user_optional] = lambda: AuthenticatedUser(uid="user_A")
+        resp_a = await client.post("/projects", json={"name": "Project A to Analyze", "repository_path": "."})
+        assert resp_a.status_code == 201
+        proj_id = resp_a.json()["id"]
+    
+        # User A can analyze their own project
+        resp_a_analyze = await client.get(f"/projects/{proj_id}/analysis")
+>       assert resp_a_analyze.status_code == 200
+E       assert 404 == 200
+E        +  where 404 = <Response [404 Not Found]>.status_code
+
+backend\tests\test_api_auth.py:94: AssertionError
+=========================== short test summary info ===========================
+FAILED backend/tests/test_api_auth.py::test_api_unauthenticated_test_mode - a...
+FAILED backend/tests/test_api_auth.py::test_api_analysis_endpoint_idor - asse...
+========================= 2 failed, 3 passed in 0.29s =========================
