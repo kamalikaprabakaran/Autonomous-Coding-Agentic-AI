@@ -65,3 +65,28 @@ def test_get_firestore_client(mock_firestore, mock_admin, monkeypatch):
     client = get_firestore_client()
     mock_firestore.client.assert_called_once()
     assert client == mock_firestore.client.return_value
+
+@patch("backend.app.firebase.client.firebase_admin")
+@patch("backend.app.firebase.client.credentials.Certificate")
+def test_explicit_credentials_loaded_correctly(mock_cert, mock_admin, monkeypatch, tmp_path):
+    """When GOOGLE_APPLICATION_CREDENTIALS exists, it explicitly uses credentials.Certificate"""
+    monkeypatch.setenv("FIREBASE_TESTING", "False")
+    
+    # Create a fake credentials file
+    fake_cred = tmp_path / "fake-service-account.json"
+    fake_cred.write_text("{}")
+    monkeypatch.setenv("GOOGLE_APPLICATION_CREDENTIALS", str(fake_cred))
+    
+    mock_admin._apps = {}
+    initialize_firebase()
+    
+    mock_cert.assert_called_once_with(str(fake_cred.resolve()))
+    mock_admin.initialize_app.assert_called_once_with(credential=mock_cert.return_value, options=None)
+
+def test_missing_credential_file_raises_error(monkeypatch):
+    """If GOOGLE_APPLICATION_CREDENTIALS is set but file doesn't exist, raise clear config error"""
+    monkeypatch.setenv("FIREBASE_TESTING", "False")
+    monkeypatch.setenv("GOOGLE_APPLICATION_CREDENTIALS", "/does/not/exist/fake-key.json")
+    
+    with pytest.raises(FirebaseConfigError, match="Credential file not found at"):
+        initialize_firebase()

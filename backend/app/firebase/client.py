@@ -30,13 +30,22 @@ def initialize_firebase() -> None:
         )
 
     try:
+        options = {}
         if settings.FIREBASE_PROJECT_ID:
-            firebase_admin.initialize_app(options={"projectId": settings.FIREBASE_PROJECT_ID})
-        else:
-            # We initialize without explicit credentials parameter, which uses ADC 
-            # (GOOGLE_APPLICATION_CREDENTIALS) implicitly.
-            firebase_admin.initialize_app()
+            options["projectId"] = settings.FIREBASE_PROJECT_ID
+
+        cred = None
+        if settings.GOOGLE_APPLICATION_CREDENTIALS:
+            from pathlib import Path
+            cred_path = Path(settings.GOOGLE_APPLICATION_CREDENTIALS).resolve()
+            if not cred_path.is_file():
+                raise FirebaseConfigError(f"Credential file not found at {cred_path}")
+            cred = credentials.Certificate(str(cred_path))
+
+        firebase_admin.initialize_app(credential=cred, options=options if options else None)
     except Exception as e:
+        if isinstance(e, FirebaseConfigError):
+            raise
         raise FirebaseConfigError(f"Failed to initialize Firebase Admin SDK: {e}")
 
 

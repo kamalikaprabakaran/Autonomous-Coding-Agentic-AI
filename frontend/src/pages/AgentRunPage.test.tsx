@@ -137,7 +137,7 @@ describe('AgentRunPage Rendering Tests', () => {
 describe('AgentRunPage Polling Tests', () => {
     beforeEach(() => {
         vi.resetAllMocks();
-        vi.useFakeTimers();
+        vi.useFakeTimers({ toFake: ['setInterval', 'clearInterval'] });
     });
 
     afterEach(() => {
@@ -163,7 +163,7 @@ describe('AgentRunPage Polling Tests', () => {
 
         // Advance timers by the polling interval to trigger the next fetch
         await act(async () => {
-            vi.advanceTimersByTime(3000);
+            await vi.advanceTimersByTimeAsync(3000);
         });
 
         await waitFor(() => {
