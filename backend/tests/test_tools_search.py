@@ -3,7 +3,7 @@
 from pathlib import Path
 from backend.app.tools.search_tools import SearchCodeTool
 
-FIXTURE_PATH = Path("backend/tests/fixtures/fixture_project").resolve()
+FIXTURE_PATH = (Path(__file__).parent / "fixtures" / "fixture_project").resolve()
 
 
 def test_search_tool_success():

@@ -8,7 +8,7 @@ from pathlib import Path
 from backend.app.services.analyzer.analyzer import RepositoryAnalyzer
 from backend.app.main import app as main_app
 
-FIXTURE_PATH = str(Path("backend/tests/fixtures/fixture_project").resolve())
+FIXTURE_PATH = str((Path(__file__).parent / "fixtures" / "fixture_project").resolve())
 
 def test_full_repository_analysis():
     """The complete pipeline properly summarizes a repository."""

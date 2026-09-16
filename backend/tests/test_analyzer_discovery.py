@@ -5,7 +5,7 @@ from pathlib import Path
 
 from backend.app.services.analyzer.discovery import list_files, build_file_tree, is_binary, is_ignored, resolve_safe_path, SecurityError
 
-FIXTURE_PATH = Path("backend/tests/fixtures/fixture_project").resolve()
+FIXTURE_PATH = (Path(__file__).parent / "fixtures" / "fixture_project").resolve()
 
 def test_resolve_safe_path_success():
     """Valid path within repo should resolve correctly."""

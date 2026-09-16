@@ -4,7 +4,7 @@ from pathlib import Path
 
 from backend.app.services.analyzer.parser import analyze_python_file
 
-FIXTURE_PATH = Path("backend/tests/fixtures/fixture_project").resolve()
+FIXTURE_PATH = (Path(__file__).parent / "fixtures" / "fixture_project").resolve()
 
 def test_analyze_valid_python_file():
     """Functions, classes, imports, and methods are extracted correctly."""

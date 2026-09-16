@@ -9,7 +9,7 @@ from backend.app.services.analyzer.analyzer import RepositoryAnalyzer
 from backend.app.tools.registry import ToolRegistry
 from backend.app.tools.file_tools import ReadFileTool
 
-FIXTURE_PATH = str(Path("backend/tests/fixtures/fixture_project").resolve())
+FIXTURE_PATH = str((Path(__file__).parent / "fixtures" / "fixture_project").resolve())
 
 
 def test_graph_executes_successfully_with_mock():

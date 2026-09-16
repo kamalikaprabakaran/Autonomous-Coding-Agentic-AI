@@ -4,7 +4,7 @@ from pathlib import Path
 
 from backend.app.services.analyzer.search import search_code, _python_fallback_search
 
-FIXTURE_PATH = Path("backend/tests/fixtures/fixture_project").resolve()
+FIXTURE_PATH = (Path(__file__).parent / "fixtures" / "fixture_project").resolve()
 
 def test_search_code_finds_term():
     """Standard search locates term."""

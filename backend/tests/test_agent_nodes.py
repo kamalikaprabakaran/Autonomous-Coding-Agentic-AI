@@ -7,7 +7,7 @@ from backend.app.services.analyzer.analyzer import RepositoryAnalyzer
 from backend.app.tools.registry import ToolRegistry
 
 
-FIXTURE_PATH = str(Path("backend/tests/fixtures/fixture_project").resolve())
+FIXTURE_PATH = str((Path(__file__).parent / "fixtures" / "fixture_project").resolve())
 
 
 def test_planner_node_receives_task():

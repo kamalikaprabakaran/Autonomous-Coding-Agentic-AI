@@ -8,7 +8,7 @@ from backend.app.tools.file_tools import (
     ListFilesTool, ReadFileTool, WriteFileTool, EditFileTool, GetFileInfoTool
 )
 
-FIXTURE_PATH = Path("backend/tests/fixtures/fixture_project").resolve()
+FIXTURE_PATH = (Path(__file__).parent / "fixtures" / "fixture_project").resolve()
 
 
 @pytest.fixture
