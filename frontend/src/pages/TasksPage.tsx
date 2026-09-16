@@ -9,6 +9,7 @@ const TasksPage: React.FC = () => {
     const { taskId } = useParams<{ taskId?: string }>();
     const [task, setTask] = useState<Task | null>(null);
     const [loading, setLoading] = useState(false);
+    const [startingAgent, setStartingAgent] = useState(false);
     const [error, setError] = useState<string | null>(null);
     const [errorStatus, setErrorStatus] = useState<number | null>(null);
     const [searchInput, setSearchInput] = useState('');
@@ -48,6 +49,20 @@ const TasksPage: React.FC = () => {
         if (errorStatus === 403) return 'You do not have permission to view this task.';
         if (errorStatus === 401) return 'Authentication required.';
         return error || 'An unexpected error occurred. Please try again.';
+    };
+
+    const handleStartAgent = async () => {
+        if (!task) return;
+        setStartingAgent(true);
+        setError(null);
+        try {
+            const run = await api.startAgent(task.id);
+            window.location.href = `/agent/${run.id}`;
+        } catch (err: any) {
+            setError(err.message || 'Failed to start agent.');
+        } finally {
+            setStartingAgent(false);
+        }
     };
 
     // No taskId — show search form
@@ -187,18 +202,31 @@ const TasksPage: React.FC = () => {
                 boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1)'
             }}>
                 <h2 style={{ margin: '0 0 1rem 0', color: '#111827', fontSize: '1.25rem' }}>Agent Execution</h2>
-                <div style={{
-                    backgroundColor: '#fef3c7',
-                    color: '#92400e',
-                    padding: '1rem',
-                    borderRadius: '0.375rem',
-                    fontSize: '0.875rem',
-                    marginBottom: '1rem'
-                }}>
-                    <strong style={{ display: 'block', marginBottom: '0.25rem' }}>No Agent Start Endpoint Available</strong>
-                    The backend does not currently expose a REST endpoint to start an agent run.
-                    Agent runs are initiated internally by the system.
+
+                <div style={{ marginBottom: '1.5rem' }}>
+                    <button
+                        onClick={handleStartAgent}
+                        disabled={startingAgent || task.status === 'COMPLETED'}
+                        style={{
+                            padding: '0.75rem 1.5rem',
+                            backgroundColor: startingAgent ? '#9ca3af' : '#10b981',
+                            color: '#ffffff',
+                            border: 'none',
+                            borderRadius: '0.375rem',
+                            cursor: startingAgent ? 'not-allowed' : 'pointer',
+                            fontWeight: 'bold',
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '0.5rem'
+                        }}
+                    >
+                        {startingAgent ? 'Starting Agent...' : 'Start New Agent Run'}
+                    </button>
+                    {error && startingAgent === false && (
+                        <p style={{ color: '#ef4444', fontSize: '0.875rem', marginTop: '0.5rem' }}>{error}</p>
+                    )}
                 </div>
+
                 <p style={{ margin: '0 0 1rem 0', fontSize: '0.875rem', color: '#4b5563' }}>
                     If a run has already been created for this task, enter its Run ID below to check its status:
                 </p>

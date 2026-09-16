@@ -8,6 +8,11 @@ from pydantic import BaseModel
 from backend.app.models.agent_run import AgentRunStatus
 
 
+class StartAgentRequest(BaseModel):
+    """Schema for initializing a new agent run."""
+    task_id: str
+
+
 class AgentRunResponse(BaseModel):
     """Schema for agent run API responses."""
 

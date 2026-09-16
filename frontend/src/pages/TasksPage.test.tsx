@@ -169,6 +169,6 @@ describe('TasksPage Tests', () => {
             expect(screen.getByText(/Agent Execution/i)).toBeInTheDocument();
         });
 
-        expect(screen.getByText(/No Agent Start Endpoint Available/i)).toBeInTheDocument();
+        expect(screen.getByRole('button', { name: /Start New Agent Run/i })).toBeInTheDocument();
     });
 });

@@ -59,4 +59,8 @@ export const api = {
         body: JSON.stringify(data),
     }),
     getAgentStatus: (runId: string) => fetchWrapper<AgentRun>(`/agent/status/${runId}`),
+    startAgent: (taskId: string) => fetchWrapper<AgentRun>('/agent/run', {
+        method: 'POST',
+        body: JSON.stringify({ task_id: taskId }),
+    }),
 };
