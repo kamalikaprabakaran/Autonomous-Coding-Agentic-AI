@@ -1,0 +1,1269 @@
+﻿
+> frontend@0.0.0 test
+> vitest run --run
+
+
+[1m[7m[36m RUN [39m[27m[22m [36mv2.1.9 [39m[90mD:/Autonomous Coding Agentic AI/frontend[39m
+
+node.exe : 
+[90mstderr[2m | src/p
+ages/ProjectDetailsPage
+.test.tsx[2m > 
+[22m[2mTask Creation 
+within Project 
+Details[2m > 
+[22m[2mrenders task 
+creation form within 
+project details
+At line:1 char:1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo 
+...
++ ~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: ([90mstderr[   
+ 2m...project detai    
+ls:String) [], Rem    
+oteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+[22m[39mΓÜá∩╕Å React 
+Router Future Flag 
+Warning: React Router 
+will begin wrapping 
+state updates in `React
+.startTransition` in 
+v7. You can use the 
+`v7_startTransition` 
+future flag to opt-in 
+early. For more 
+information, see https:
+//reactrouter.com/v6/up
+grading/future#v7_start
+transition.
+ΓÜá∩╕Å React Router 
+Future Flag Warning: 
+Relative route 
+resolution within 
+Splat routes is 
+changing in v7. You 
+can use the 
+`v7_relativeSplatPath` 
+future flag to opt-in 
+early. For more 
+information, see https:
+//reactrouter.com/v6/up
+grading/future#v7_relat
+ivesplatpath.
+
+[90mstderr[2m | src/p
+ages/ProjectsPage.test.
+tsx[2m > 
+[22m[2mProjects 
+Dashboard UI Tests[2m 
+> [22m[2mrenders 
+loading state initially
+[22m[39mΓÜá∩╕Å React 
+Router Future Flag 
+Warning: React Router 
+will begin wrapping 
+state updates in `React
+.startTransition` in 
+v7. You can use the 
+`v7_startTransition` 
+future flag to opt-in 
+early. For more 
+information, see https:
+//reactrouter.com/v6/up
+grading/future#v7_start
+transition.
+ΓÜá∩╕Å React Router 
+Future Flag Warning: 
+Relative route 
+resolution within 
+Splat routes is 
+changing in v7. You 
+can use the 
+`v7_relativeSplatPath` 
+future flag to opt-in 
+early. For more 
+information, see https:
+//reactrouter.com/v6/up
+grading/future#v7_relat
+ivesplatpath.
+
+[90mstderr[2m | src/p
+ages/AgentRunPage.test.
+tsx[2m > 
+[22m[2mAgentRunPage 
+Polling Tests[2m > 
+[22m[2mrenders 
+placeholder entry when 
+runId is missing
+[22m[39mΓÜá∩╕Å React 
+Router Future Flag 
+Warning: React Router 
+will begin wrapping 
+state updates in `React
+.startTransition` in 
+v7. You can use the 
+`v7_startTransition` 
+future flag to opt-in 
+early. For more 
+information, see https:
+//reactrouter.com/v6/up
+grading/future#v7_start
+transition.
+ΓÜá∩╕Å React Router 
+Future Flag Warning: 
+Relative route 
+resolution within 
+Splat routes is 
+changing in v7. You 
+can use the 
+`v7_relativeSplatPath` 
+future flag to opt-in 
+early. For more 
+information, see https:
+//reactrouter.com/v6/up
+grading/future#v7_relat
+ivesplatpath.
+
+[90mstderr[2m | src/p
+ages/TasksPage.test.tsx
+[2m > 
+[22m[2mTasksPage 
+Tests[2m > 
+[22m[2mrenders 
+search form when no 
+taskId is provided
+[22m[39mΓÜá∩╕Å React 
+Router Future Flag 
+Warning: React Router 
+will begin wrapping 
+state updates in `React
+.startTransition` in 
+v7. You can use the 
+`v7_startTransition` 
+future flag to opt-in 
+early. For more 
+information, see https:
+//reactrouter.com/v6/up
+grading/future#v7_start
+transition.
+ΓÜá∩╕Å React Router 
+Future Flag Warning: 
+Relative route 
+resolution within 
+Splat routes is 
+changing in v7. You 
+can use the 
+`v7_relativeSplatPath` 
+future flag to opt-in 
+early. For more 
+information, see https:
+//reactrouter.com/v6/up
+grading/future#v7_relat
+ivesplatpath.
+
+ [32mΓ£ô[39m src/pages/ProjectsPage.test.tsx [2m([22m[2m5 tests[22m[2m)[22m[90m 291[2mms[22m[39m
+ [32mΓ£ô[39m src/pages/ProjectDetailsPage.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[33m 321[2mms[22m[39m
+[90mstderr[2m | src/a
+uth/Auth.test.tsx[2m 
+> [22m[2mAuthenticati
+on UI Tests[2m > 
+[22m[2mrenders Login 
+page
+[22m[39mΓÜá∩╕Å React 
+Router Future Flag 
+Warning: React Router 
+will begin wrapping 
+state updates in `React
+.startTransition` in 
+v7. You can use the 
+`v7_startTransition` 
+future flag to opt-in 
+early. For more 
+information, see https:
+//reactrouter.com/v6/up
+grading/future#v7_start
+transition.
+ΓÜá∩╕Å React Router 
+Future Flag Warning: 
+Relative route 
+resolution within 
+Splat routes is 
+changing in v7. You 
+can use the 
+`v7_relativeSplatPath` 
+future flag to opt-in 
+early. For more 
+information, see https:
+//reactrouter.com/v6/up
+grading/future#v7_relat
+ivesplatpath.
+
+ [32mΓ£ô[39m src/App.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[90m 208[2mms[22m[39m
+ [32mΓ£ô[39m src/auth/Auth.test.tsx [2m([22m[2m5 tests[22m[2m)[22m[90m 268[2mms[22m[39m
+ [31mΓ¥»[39m src/pages/TasksPage.test.tsx [2m([22m[2m9 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m[33m 1366[2mms[22m[39m
+[31m   [31m├ù[31m TasksPage Tests[2m > [22mshows generic error state on server error[33m 1025[2mms[22m[31m[39m
+[31m     ΓåÆ Unable to find an element with the text: /unexpected error occurred/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div>[31m
+    [36m<div[31m
+      [33mstyle[31m=[32m"padding: 2rem; max-width: 800px; margin: 0px auto;"[31m
+    [36m>[31m
+      [36m<a[31m
+        [33mhref[31m=[32m"/tasks"[31m
+        [33mstyle[31m=[32m"color: rgb(59, 130, 246); text-decoration: none; display: inline-block; margin-bottom: 1.5rem;"[31m
+      [36m>[31m
+        [0mΓåÉ Back to Task Search[0m
+      [36m</a>[31m
+      [36m<div[31m
+        [33mstyle[31m=[32m"padding: 1rem; background-color: rgb(254, 226, 226); color: rgb(153, 27, 27); border-radius: 0.375rem; margin-bottom: 1rem;"[31m
+      [36m>[31m
+        [36m<strong>[31m
+          [0mError:[0m
+        [36m</strong>[31m
+        [0m [0m
+        [0mInternal server error[0m
+      [36m</div>[31m
+    [36m</div>[31m
+  [36m</div>[31m
+[36m</body>[31m
+
+Ignored nodes: comments, script, style
+[36m<html>[31m
+  [36m<head />[31m
+  [36m<body>[31m
+    [36m<div>[31m
+      [36m<div[31m
+        [33mstyle[31m=[32m"padding: 2rem; max-width: 800px; margin: 0px auto;"[31m
+      [36m>[31m
+        [36m<a[31m
+          [33mhref[31m=[32m"/tasks"[31m
+          [33mstyle[31m=[32m"color: rgb(59, 130, 246); text-decoration: none; display: inline-block; margin-bottom: 1.5rem;"[31m
+        [36m>[31m
+          [0mΓåÉ Back to Task Search[0m
+        [36m</a>[31m
+        [36m<div[31m
+          [33mstyle[31m=[32m"padding: 1rem; background-color: rgb(254, 226, 226); color: rgb(153, 27, 27); border-radius: 0.375rem; margin-bottom: 1rem;"[31m
+        [36m>[31m
+          [36m<strong>[31m
+            [0mError:[0m
+          [36m</strong>[31m
+          [0m [0m
+          [0mInternal server error[0m
+        [36m</div>[31m
+      [36m</div>[31m
+    [36m</div>[31m
+  [36m</body>[31m
+[36m</html>[31m[39m
+[90mstderr[2m | src/p
+ages/AgentRunPage.test.
+tsx[2m > 
+[22m[2mAgentRunPage 
+Polling Tests[2m > 
+[22m[2mstarts 
+polling and shows 
+initial loading state 
+for non-cached run
+[22m[39mError: 
+Uncaught 
+[ReferenceError: 
+clearInterval is not 
+defined]
+    at reportException 
+(D:\Autonomous Coding 
+Agentic AI\frontend\nod
+e_modules\jsdom\lib\jsd
+om\living\helpers\runti
+me-script-errors.js:66:
+24)
+    at innerInvokeEvent
+Listeners 
+(D:\Autonomous Coding 
+Agentic AI\frontend\nod
+e_modules\jsdom\lib\jsd
+om\living\events\EventT
+arget-impl.js:353:9)
+    at 
+invokeEventListeners 
+(D:\Autonomous Coding 
+Agentic AI\frontend\nod
+e_modules\jsdom\lib\jsd
+om\living\events\EventT
+arget-impl.js:286:3)
+    at HTMLUnknownEleme
+ntImpl._dispatch 
+(D:\Autonomous Coding 
+Agentic AI\frontend\nod
+e_modules\jsdom\lib\jsd
+om\living\events\EventT
+arget-impl.js:233:9)
+    at HTMLUnknownEleme
+ntImpl.dispatchEvent 
+(D:\Autonomous Coding 
+Agentic AI\frontend\nod
+e_modules\jsdom\lib\jsd
+om\living\events\EventT
+arget-impl.js:104:17)
+    at HTMLUnknownEleme
+nt.dispatchEvent 
+(D:\Autonomous Coding 
+Agentic AI\frontend\nod
+e_modules\jsdom\lib\jsd
+om\living\generated\Eve
+ntTarget.js:241:34)
+    at Object.invokeGua
+rdedCallbackDev 
+(D:\Autonomous Coding 
+Agentic AI\frontend\nod
+e_modules\react-dom\cjs
+\react-dom.development.
+js:4213:16)
+    at 
+invokeGuardedCallback 
+(D:\Autonomous Coding 
+Agentic AI\frontend\nod
+e_modules\react-dom\cjs
+\react-dom.development.
+js:4277:31)
+    at reportUncaughtEr
+rorInDEV 
+(D:\Autonomous Coding 
+Agentic AI\frontend\nod
+e_modules\react-dom\cjs
+\react-dom.development.
+js:22877:5)
+    at captureCommitPha
+seError (D:\Autonomous 
+Coding Agentic AI\front
+end\node_modules\react-
+dom\cjs\react-dom.devel
+opment.js:27165:5) 
+ReferenceError: 
+clearInterval is not 
+defined
+    at stopPolling 
+[90m(D:\Autonomous 
+Coding Agentic AI\front
+end\[39msrc\pages\Agen
+tRunPage.tsx:20:13[90m
+)[39m
+    at 
+[90mD:\Autonomous 
+Coding Agentic AI\front
+end\[39msrc\pages\Agen
+tRunPage.tsx:60:13
+    at 
+safelyCallDestroy 
+[90m(D:\Autonomous 
+Coding Agentic AI\front
+end\[39mnode_modules\
+[4mreact-dom[24m\cjs\r
+eact-dom.development.js
+:22971:5[90m)[39m
+    at commitHookEffect
+ListUnmount 
+[90m(D:\Autonomous 
+Coding Agentic AI\front
+end\[39mnode_modules\
+[4mreact-dom[24m\cjs\r
+eact-dom.development.js
+:23139:11[90m)[39m
+    at commitPassiveUnm
+ountInsideDeletedTreeOn
+Fiber 
+[90m(D:\Autonomous 
+Coding Agentic AI\front
+end\[39mnode_modules\
+[4mreact-dom[24m\cjs\r
+eact-dom.development.js
+:25140:11[90m)[39m
+    at commitPassiveUnm
+ountEffectsInsideOfDele
+tedTree_begin 
+[90m(D:\Autonomous 
+Coding Agentic AI\front
+end\[39mnode_modules\
+[4mreact-dom[24m\cjs\r
+eact-dom.development.js
+:25087:5[90m)[39m
+    at commitPassiveUnm
+ountEffects_begin 
+[90m(D:\Autonomous 
+Coding Agentic AI\front
+end\[39mnode_modules\
+[4mreact-dom[24m\cjs\r
+eact-dom.development.js
+:24995:11[90m)[39m
+    at commitPassiveUnm
+ountEffects 
+[90m(D:\Autonomous 
+Coding Agentic AI\front
+end\[39mnode_modules\
+[4mreact-dom[24m\cjs\r
+eact-dom.development.js
+:24980:3[90m)[39m
+    at flushPassiveEffe
+ctsImpl 
+[90m(D:\Autonomous 
+Coding Agentic AI\front
+end\[39mnode_modules\
+[4mreact-dom[24m\cjs\r
+eact-dom.development.js
+:27077:3[90m)[39m
+    at 
+flushPassiveEffects 
+[90m(D:\Autonomous 
+Coding Agentic AI\front
+end\[39mnode_modules\
+[4mreact-dom[24m\cjs\r
+eact-dom.development.js
+:27023:14[90m)[39m
+The above error 
+occurred in the 
+<AgentRunPage> 
+component:
+
+    at AgentRunPage 
+(D:\Autonomous Coding 
+Agentic AI\frontend\src
+\pages\AgentRunPage.tsx
+:16:57)
+    at Router 
+(D:\Autonomous Coding 
+Agentic AI\frontend\nod
+e_modules\react-router\
+dist\umd\react-router.d
+evelopment.js:1203:17)
+    at BrowserRouter 
+(D:\Autonomous Coding 
+Agentic AI\frontend\nod
+e_modules\react-router-
+dom\dist\umd\react-rout
+er-dom.development.js:6
+88:7)
+
+Consider adding an 
+error boundary to your 
+tree to customize 
+error handling 
+behavior.
+Visit https://reactjs.o
+rg/link/error-boundarie
+s to learn more about 
+error boundaries.
+
+[90mstderr[2m | src/p
+ages/AgentRunPage.test.
+tsx[2m > 
+[22m[2mAgentRunPage 
+Polling Tests[2m > 
+[22m[2mshows 
+back-link to parent 
+task when run is loaded
+[22m[39mError: 
+Uncaught 
+[ReferenceError: 
+clearInterval is not 
+defined]
+    at reportException 
+(D:\Autonomous Coding 
+Agentic AI\frontend\nod
+e_modules\jsdom\lib\jsd
+om\living\helpers\runti
+me-script-errors.js:66:
+24)
+    at innerInvokeEvent
+Listeners 
+(D:\Autonomous Coding 
+Agentic AI\frontend\nod
+e_modules\jsdom\lib\jsd
+om\living\events\EventT
+arget-impl.js:353:9)
+    at 
+invokeEventListeners 
+(D:\Autonomous Coding 
+Agentic AI\frontend\nod
+e_modules\jsdom\lib\jsd
+om\living\events\EventT
+arget-impl.js:286:3)
+    at HTMLUnknownEleme
+ntImpl._dispatch 
+(D:\Autonomous Coding 
+Agentic AI\frontend\nod
+e_modules\jsdom\lib\jsd
+om\living\events\EventT
+arget-impl.js:233:9)
+    at HTMLUnknownEleme
+ntImpl.dispatchEvent 
+(D:\Autonomous Coding 
+Agentic AI\frontend\nod
+e_modules\jsdom\lib\jsd
+om\living\events\EventT
+arget-impl.js:104:17)
+    at HTMLUnknownEleme
+nt.dispatchEvent 
+(D:\Autonomous Coding 
+Agentic AI\frontend\nod
+e_modules\jsdom\lib\jsd
+om\living\generated\Eve
+ntTarget.js:241:34)
+    at Object.invokeGua
+rdedCallbackDev 
+(D:\Autonomous Coding 
+Agentic AI\frontend\nod
+e_modules\react-dom\cjs
+\react-dom.development.
+js:4213:16)
+    at 
+invokeGuardedCallback 
+(D:\Autonomous Coding 
+Agentic AI\frontend\nod
+e_modules\react-dom\cjs
+\react-dom.development.
+js:4277:31)
+    at reportUncaughtEr
+rorInDEV 
+(D:\Autonomous Coding 
+Agentic AI\frontend\nod
+e_modules\react-dom\cjs
+\react-dom.development.
+js:22877:5)
+    at captureCommitPha
+seError (D:\Autonomous 
+Coding Agentic AI\front
+end\node_modules\react-
+dom\cjs\react-dom.devel
+opment.js:27165:5) 
+ReferenceError: 
+clearInterval is not 
+defined
+    at stopPolling 
+[90m(D:\Autonomous 
+Coding Agentic AI\front
+end\[39msrc\pages\Agen
+tRunPage.tsx:20:13[90m
+)[39m
+    at 
+[90mD:\Autonomous 
+Coding Agentic AI\front
+end\[39msrc\pages\Agen
+tRunPage.tsx:60:13
+    at 
+safelyCallDestroy 
+[90m(D:\Autonomous 
+Coding Agentic AI\front
+end\[39mnode_modules\
+[4mreact-dom[24m\cjs\r
+eact-dom.development.js
+:22971:5[90m)[39m
+    at commitHookEffect
+ListUnmount 
+[90m(D:\Autonomous 
+Coding Agentic AI\front
+end\[39mnode_modules\
+[4mreact-dom[24m\cjs\r
+eact-dom.development.js
+:23139:11[90m)[39m
+    at commitPassiveUnm
+ountInsideDeletedTreeOn
+Fiber 
+[90m(D:\Autonomous 
+Coding Agentic AI\front
+end\[39mnode_modules\
+[4mreact-dom[24m\cjs\r
+eact-dom.development.js
+:25140:11[90m)[39m
+    at commitPassiveUnm
+ountEffectsInsideOfDele
+tedTree_begin 
+[90m(D:\Autonomous 
+Coding Agentic AI\front
+end\[39mnode_modules\
+[4mreact-dom[24m\cjs\r
+eact-dom.development.js
+:25087:5[90m)[39m
+    at commitPassiveUnm
+ountEffects_begin 
+[90m(D:\Autonomous 
+Coding Agentic AI\front
+end\[39mnode_modules\
+[4mreact-dom[24m\cjs\r
+eact-dom.development.js
+:24995:11[90m)[39m
+    at commitPassiveUnm
+ountEffects 
+[90m(D:\Autonomous 
+Coding Agentic AI\front
+end\[39mnode_modules\
+[4mreact-dom[24m\cjs\r
+eact-dom.development.js
+:24980:3[90m)[39m
+    at flushPassiveEffe
+ctsImpl 
+[90m(D:\Autonomous 
+Coding Agentic AI\front
+end\[39mnode_modules\
+[4mreact-dom[24m\cjs\r
+eact-dom.development.js
+:27077:3[90m)[39m
+    at 
+flushPassiveEffects 
+[90m(D:\Autonomous 
+Coding Agentic AI\front
+end\[39mnode_modules\
+[4mreact-dom[24m\cjs\r
+eact-dom.development.js
+:27023:14[90m)[39m
+The above error 
+occurred in the 
+<AgentRunPage> 
+component:
+
+    at AgentRunPage 
+(D:\Autonomous Coding 
+Agentic AI\frontend\src
+\pages\AgentRunPage.tsx
+:16:57)
+    at Router 
+(D:\Autonomous Coding 
+Agentic AI\frontend\nod
+e_modules\react-router\
+dist\umd\react-router.d
+evelopment.js:1203:17)
+    at BrowserRouter 
+(D:\Autonomous Coding 
+Agentic AI\frontend\nod
+e_modules\react-router-
+dom\dist\umd\react-rout
+er-dom.development.js:6
+88:7)
+
+Consider adding an 
+error boundary to your 
+tree to customize 
+error handling 
+behavior.
+Visit https://reactjs.o
+rg/link/error-boundarie
+s to learn more about 
+error boundaries.
+
+[90mstderr[2m | src/p
+ages/AgentRunPage.test.
+tsx[2m > 
+[22m[2mAgentRunPage 
+Polling Tests[2m > 
+[22m[2mdisplays 
+Agent Execution 
+Details heading when 
+run is loaded
+[22m[39mError: 
+Uncaught 
+[ReferenceError: 
+clearInterval is not 
+defined]
+    at reportException 
+(D:\Autonomous Coding 
+Agentic AI\frontend\nod
+e_modules\jsdom\lib\jsd
+om\living\helpers\runti
+me-script-errors.js:66:
+24)
+    at innerInvokeEvent
+Listeners 
+(D:\Autonomous Coding 
+Agentic AI\frontend\nod
+e_modules\jsdom\lib\jsd
+om\living\events\EventT
+arget-impl.js:353:9)
+    at 
+invokeEventListeners 
+(D:\Autonomous Coding 
+Agentic AI\frontend\nod
+e_modules\jsdom\lib\jsd
+om\living\events\EventT
+arget-impl.js:286:3)
+    at HTMLUnknownEleme
+ntImpl._dispatch 
+(D:\Autonomous Coding 
+Agentic AI\frontend\nod
+e_modules\jsdom\lib\jsd
+om\living\events\EventT
+arget-impl.js:233:9)
+    at HTMLUnknownEleme
+ntImpl.dispatchEvent 
+(D:\Autonomous Coding 
+Agentic AI\frontend\nod
+e_modules\jsdom\lib\jsd
+om\living\events\EventT
+arget-impl.js:104:17)
+    at HTMLUnknownEleme
+nt.dispatchEvent 
+(D:\Autonomous Coding 
+Agentic AI\frontend\nod
+e_modules\jsdom\lib\jsd
+om\living\generated\Eve
+ntTarget.js:241:34)
+    at Object.invokeGua
+rdedCallbackDev 
+(D:\Autonomous Coding 
+Agentic AI\frontend\nod
+e_modules\react-dom\cjs
+\react-dom.development.
+js:4213:16)
+    at 
+invokeGuardedCallback 
+(D:\Autonomous Coding 
+Agentic AI\frontend\nod
+e_modules\react-dom\cjs
+\react-dom.development.
+js:4277:31)
+    at reportUncaughtEr
+rorInDEV 
+(D:\Autonomous Coding 
+Agentic AI\frontend\nod
+e_modules\react-dom\cjs
+\react-dom.development.
+js:22877:5)
+    at captureCommitPha
+seError (D:\Autonomous 
+Coding Agentic AI\front
+end\node_modules\react-
+dom\cjs\react-dom.devel
+opment.js:27165:5) 
+ReferenceError: 
+clearInterval is not 
+defined
+    at stopPolling 
+[90m(D:\Autonomous 
+Coding Agentic AI\front
+end\[39msrc\pages\Agen
+tRunPage.tsx:20:13[90m
+)[39m
+    at 
+[90mD:\Autonomous 
+Coding Agentic AI\front
+end\[39msrc\pages\Agen
+tRunPage.tsx:60:13
+    at 
+safelyCallDestroy 
+[90m(D:\Autonomous 
+Coding Agentic AI\front
+end\[39mnode_modules\
+[4mreact-dom[24m\cjs\r
+eact-dom.development.js
+:22971:5[90m)[39m
+    at commitHookEffect
+ListUnmount 
+[90m(D:\Autonomous 
+Coding Agentic AI\front
+end\[39mnode_modules\
+[4mreact-dom[24m\cjs\r
+eact-dom.development.js
+:23139:11[90m)[39m
+    at commitPassiveUnm
+ountInsideDeletedTreeOn
+Fiber 
+[90m(D:\Autonomous 
+Coding Agentic AI\front
+end\[39mnode_modules\
+[4mreact-dom[24m\cjs\r
+eact-dom.development.js
+:25140:11[90m)[39m
+    at commitPassiveUnm
+ountEffectsInsideOfDele
+tedTree_begin 
+[90m(D:\Autonomous 
+Coding Agentic AI\front
+end\[39mnode_modules\
+[4mreact-dom[24m\cjs\r
+eact-dom.development.js
+:25087:5[90m)[39m
+    at commitPassiveUnm
+ountEffects_begin 
+[90m(D:\Autonomous 
+Coding Agentic AI\front
+end\[39mnode_modules\
+[4mreact-dom[24m\cjs\r
+eact-dom.development.js
+:24995:11[90m)[39m
+    at commitPassiveUnm
+ountEffects 
+[90m(D:\Autonomous 
+Coding Agentic AI\front
+end\[39mnode_modules\
+[4mreact-dom[24m\cjs\r
+eact-dom.development.js
+:24980:3[90m)[39m
+    at flushPassiveEffe
+ctsImpl 
+[90m(D:\Autonomous 
+Coding Agentic AI\front
+end\[39mnode_modules\
+[4mreact-dom[24m\cjs\r
+eact-dom.development.js
+:27077:3[90m)[39m
+    at 
+flushPassiveEffects 
+[90m(D:\Autonomous 
+Coding Agentic AI\front
+end\[39mnode_modules\
+[4mreact-dom[24m\cjs\r
+eact-dom.development.js
+:27023:14[90m)[39m
+The above error 
+occurred in the 
+<AgentRunPage> 
+component:
+
+    at AgentRunPage 
+(D:\Autonomous Coding 
+Agentic AI\frontend\src
+\pages\AgentRunPage.tsx
+:16:57)
+    at Router 
+(D:\Autonomous Coding 
+Agentic AI\frontend\nod
+e_modules\react-router\
+dist\umd\react-router.d
+evelopment.js:1203:17)
+    at BrowserRouter 
+(D:\Autonomous Coding 
+Agentic AI\frontend\nod
+e_modules\react-router-
+dom\dist\umd\react-rout
+er-dom.development.js:6
+88:7)
+
+Consider adding an 
+error boundary to your 
+tree to customize 
+error handling 
+behavior.
+Visit https://reactjs.o
+rg/link/error-boundarie
+s to learn more about 
+error boundaries.
+
+ [31mΓ¥»[39m src/pages/AgentRunPage.test.tsx [2m([22m[2m11 tests[22m[2m | [22m[31m9 failed[39m[2m)[22m[33m 40277[2mms[22m[39m
+[31m   [31m├ù[31m AgentRunPage Polling Tests[2m > [22mrenders PENDING status and polls while RUNNING[33m 5036[2mms[22m[31m[39m
+[31m     ΓåÆ Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".[39m
+[31m   [31m├ù[31m AgentRunPage Polling Tests[2m > [22mclears polling upon terminal state COMPLETED[33m 5013[2mms[22m[31m[39m
+[31m     ΓåÆ Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".[39m
+[31m   [31m├ù[31m AgentRunPage Polling Tests[2m > [22mclears polling gracefully upon API resolution errors[33m 5024[2mms[22m[31m[39m
+[31m     ΓåÆ Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".[39m
+[31m   [31m├ù[31m AgentRunPage Polling Tests[2m > [22mshows RUNNING status with pulse indicator for non-terminal state[33m 5013[2mms[22m[31m[39m
+[31m     ΓåÆ Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".[39m
+[31m   [31m├ù[31m AgentRunPage Polling Tests[2m > [22mshows FAILED status and stops polling[33m 5014[2mms[22m[31m[39m
+[31m     ΓåÆ Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".[39m
+[31m   [31m├ù[31m AgentRunPage Polling Tests[2m > [22mshows completed_at timestamp when run completed[33m 5009[2mms[22m[31m[39m
+[31m     ΓåÆ Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".[39m
+[31m   [31m├ù[31m AgentRunPage Polling Tests[2m > [22mstarts polling and shows initial loading state for non-cached run[90m 28[2mms[22m[31m[39m
+[31m     ΓåÆ clearInterval is not defined[39m
+[31m   [31m├ù[31m AgentRunPage Polling Tests[2m > [22mshows back-link to parent task when run is loaded[33m 5013[2mms[22m[31m[39m
+[31m     ΓåÆ Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".[39m
+[31m     ΓåÆ clearInterval is not defined[39m
+[31m   [31m├ù[31m AgentRunPage Polling Tests[2m > [22mdisplays Agent Execution Details heading when run is loaded[33m 5015[2mms[22m[31m[39m
+[31m     ΓåÆ Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".[39m
+[31m     ΓåÆ clearInterval is not defined[39m
+
+[31mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»
+[1m[7m Failed Tests 
+10 [27m[22mΓÄ»ΓÄ»ΓÄ»Γ
+Ä»ΓÄ»ΓÄ»ΓÄ»[39m
+
+[31m[1m[7m FAIL 
+[27m[22m[39m src/pag
+es/AgentRunPage.test.ts
+x[2m > 
+[22mAgentRunPage 
+Polling Tests[2m > 
+[22mrenders PENDING 
+status and polls while 
+RUNNING
+[31m[1m[7m FAIL 
+[27m[22m[39m src/pag
+es/AgentRunPage.test.ts
+x[2m > 
+[22mAgentRunPage 
+Polling Tests[2m > 
+[22mclears polling 
+upon terminal state 
+COMPLETED
+[31m[1m[7m FAIL 
+[27m[22m[39m src/pag
+es/AgentRunPage.test.ts
+x[2m > 
+[22mAgentRunPage 
+Polling Tests[2m > 
+[22mclears polling 
+gracefully upon API 
+resolution errors
+[31m[1m[7m FAIL 
+[27m[22m[39m src/pag
+es/AgentRunPage.test.ts
+x[2m > 
+[22mAgentRunPage 
+Polling Tests[2m > 
+[22mshows RUNNING 
+status with pulse 
+indicator for 
+non-terminal state
+[31m[1m[7m FAIL 
+[27m[22m[39m src/pag
+es/AgentRunPage.test.ts
+x[2m > 
+[22mAgentRunPage 
+Polling Tests[2m > 
+[22mshows FAILED 
+status and stops 
+polling
+[31m[1m[7m FAIL 
+[27m[22m[39m src/pag
+es/AgentRunPage.test.ts
+x[2m > 
+[22mAgentRunPage 
+Polling Tests[2m > 
+[22mshows 
+completed_at timestamp 
+when run completed
+[31m[1m[7m FAIL 
+[27m[22m[39m src/pag
+es/AgentRunPage.test.ts
+x[2m > 
+[22mAgentRunPage 
+Polling Tests[2m > 
+[22mshows back-link 
+to parent task when 
+run is loaded
+[31m[1m[7m FAIL 
+[27m[22m[39m src/pag
+es/AgentRunPage.test.ts
+x[2m > 
+[22mAgentRunPage 
+Polling Tests[2m > 
+[22mdisplays Agent 
+Execution Details 
+heading when run is 
+loaded
+[31m[1mError[22m: 
+Test timed out in 
+5000ms.
+If this is a 
+long-running test, 
+pass a timeout value 
+as the last argument 
+or configure it 
+globally with 
+"testTimeout".[39m
+[31m[2mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ
+»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»Γ
+Ä»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»
+ΓÄ»ΓÄ»ΓÄ»[1/12]ΓÄ»[22m
+[39m
+
+[31m[1m[7m FAIL 
+[27m[22m[39m src/pag
+es/AgentRunPage.test.ts
+x[2m > 
+[22mAgentRunPage 
+Polling Tests[2m > 
+[22mstarts polling 
+and shows initial 
+loading state for 
+non-cached run
+[31m[1m[7m FAIL 
+[27m[22m[39m src/pag
+es/AgentRunPage.test.ts
+x[2m > 
+[22mAgentRunPage 
+Polling Tests[2m > 
+[22mshows back-link 
+to parent task when 
+run is loaded
+[31m[1m[7m FAIL 
+[27m[22m[39m src/pag
+es/AgentRunPage.test.ts
+x[2m > 
+[22mAgentRunPage 
+Polling Tests[2m > 
+[22mdisplays Agent 
+Execution Details 
+heading when run is 
+loaded
+[31m[1mReferenceError
+[22m: clearInterval 
+is not defined[39m
+[36m [2mΓ¥»[22m 
+stopPolling src/pages/A
+gentRunPage.tsx:[2m20:
+13[22m[39m
+    [90m 18| [39m    
+[35mconst[39m 
+stopPolling 
+[33m=[39m () 
+[33m=>[39m {
+    [90m 19| [39m    
+    [35mif[39m (inter
+valRef[33m.[39mcurren
+t) {
+    [90m 20| [39m    
+        [34mclearInter
+val[39m(intervalRef[3
+3m.[39mcurrent)[33m;
+[39m
+    [90m   | [39m    
+        [31m^[39m
+    [90m 21| [39m    
+        intervalRef[33
+m.[39mcurrent 
+[33m=[39m [35mnull[
+39m[33m;[39m
+    [90m 22| [39m    
+    }
+[90m [2mΓ¥»[22m src/
+pages/AgentRunPage.tsx:
+[2m60:13[22m[39m
+[90m [2mΓ¥»[22m 
+safelyCallDestroy node_
+modules/react-dom/cjs/r
+eact-dom.development.js
+:[2m22971:5[22m[39m
+[90m [2mΓ¥»[22m comm
+itHookEffectListUnmount
+ node_modules/react-dom
+/cjs/react-dom.developm
+ent.js:[2m23139:11[22
+m[39m
+[90m [2mΓ¥»[22m comm
+itPassiveUnmountInsideD
+eletedTreeOnFiber node_
+modules/react-dom/cjs/r
+eact-dom.development.js
+:[2m25140:11[22m[39m
+[90m [2mΓ¥»[22m comm
+itPassiveUnmountEffects
+InsideOfDeletedTree_beg
+in node_modules/react-d
+om/cjs/react-dom.develo
+pment.js:[2m25087:5[2
+2m[39m
+[90m [2mΓ¥»[22m comm
+itPassiveUnmountEffects
+_begin node_modules/rea
+ct-dom/cjs/react-dom.de
+velopment.js:[2m24995:
+11[22m[39m
+[90m [2mΓ¥»[22m comm
+itPassiveUnmountEffects
+ node_modules/react-dom
+/cjs/react-dom.developm
+ent.js:[2m24980:3[22m
+[39m
+[90m [2mΓ¥»[22m flus
+hPassiveEffectsImpl nod
+e_modules/react-dom/cjs
+/react-dom.development.
+js:[2m27077:3[22m[39
+m
+[90m [2mΓ¥»[22m 
+flushPassiveEffects nod
+e_modules/react-dom/cjs
+/react-dom.development.
+js:[2m27023:14[22m[3
+9m
+
+[31m[2mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ
+»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»Γ
+Ä»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»
+ΓÄ»ΓÄ»ΓÄ»[2/12]ΓÄ»[22m
+[39m
+
+[31m[1m[7m FAIL 
+[27m[22m[39m src/pag
+es/TasksPage.test.tsx[
+2m > [22mTasksPage 
+Tests[2m > [22mshows 
+generic error state on 
+server error
+[31m[1mTestingLibrary
+ElementError[22m: 
+Unable to find an 
+element with the text: 
+/unexpected error 
+occurred/i. This could 
+be because the text is 
+broken up by multiple 
+elements. In this 
+case, you can provide 
+a function for your 
+text matcher to make 
+your matcher more 
+flexible.
+
+Ignored nodes: 
+comments, script, style
+[36m<body>[31m
+  [36m<div>[31m
+    [36m<div[31m
+      [33mstyle[31m=
+[32m"padding: 2rem; 
+max-width: 800px; 
+margin: 0px auto;"[31m
+    [36m>[31m
+      [36m<a[31m
+        [33mhref[31m=
+[32m"/tasks"[31m
+        [33mstyle[31m
+=[32m"color: rgb(59, 
+130, 246); 
+text-decoration: none; 
+display: inline-block; 
+margin-bottom: 
+1.5rem;"[31m
+      [36m>[31m
+        [0mΓåÉ Back 
+to Task Search[0m
+      [36m</a>[31m
+      [36m<div[31m
+        [33mstyle[31m
+=[32m"padding: 1rem; 
+background-color: 
+rgb(254, 226, 226); 
+color: rgb(153, 27, 
+27); border-radius: 
+0.375rem; 
+margin-bottom: 
+1rem;"[31m
+      [36m>[31m
+        
+[36m<strong>[31m
+          
+[0mError:[0m
+        
+[36m</strong>[31m
+        [0m [0m
+        [0mInternal 
+server error[0m
+      [36m</div>[31m
+    [36m</div>[31m
+  [36m</div>[31m
+[36m</body>[31m
+
+Ignored nodes: 
+comments, script, style
+[36m<html>[31m
+  [36m<head />[31m
+  [36m<body>[31m
+    [36m<div>[31m
+      [36m<div[31m
+        [33mstyle[31m
+=[32m"padding: 2rem; 
+max-width: 800px; 
+margin: 0px auto;"[31m
+      [36m>[31m
+        [36m<a[31m
+          [33mhref[31
+m=[32m"/tasks"[31m
+          [33mstyle[3
+1m=[32m"color: 
+rgb(59, 130, 246); 
+text-decoration: none; 
+display: inline-block; 
+margin-bottom: 
+1.5rem;"[31m
+        [36m>[31m
+          [0mΓåÉ Back 
+to Task Search[0m
+        [36m</a>[31m
+        [36m<div[31m
+          [33mstyle[3
+1m=[32m"padding: 
+1rem; 
+background-color: 
+rgb(254, 226, 226); 
+color: rgb(153, 27, 
+27); border-radius: 
+0.375rem; 
+margin-bottom: 
+1rem;"[31m
+        [36m>[31m
+          
+[36m<strong>[31m
+            
+[0mError:[0m
+          
+[36m</strong>[31m
+          [0m [0m
+          [0mInternal 
+server error[0m
+        
+[36m</div>[31m
+      [36m</div>[31m
+    [36m</div>[31m
+  [36m</body>[31m
+[36m</html>[31m[39m
+[90m [2mΓ¥»[22m 
+Proxy.waitForWrapper no
+de_modules/@testing-lib
+rary/dom/dist/wait-for.
+js:[2m163:27[22m[39m
+[36m [2mΓ¥»[22m src/
+pages/TasksPage.test.ts
+x:[2m96:15[22m[39m
+    [90m 94| [39m    
+    [34mrenderWithRout
+er[39m([33m<[39m[33
+mTasksPage[39m [33m/
+[39m[33m>[39m)[33m;
+[39m
+    [90m 95| [39m
+    [90m 96| [39m    
+    [35mawait[39m 
+[34mwaitFor[39m(() 
+[33m=>[39m {
+    [90m   | [39m    
+          [31m^[39m
+    [90m 97| [39m    
+        [34mexpect[39
+m(screen[33m.[39m[34
+mgetByText[39m([36m/u
+nexpected error occurre
+d/i[39m))[33m.[39m[
+34mtoB[39mΓÇª
+    [90m 98| [39m    
+    })[33m;[39m
+
+[31m[2mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ
+»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»Γ
+Ä»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»
+ΓÄ»ΓÄ»ΓÄ»[3/12]ΓÄ»[22m
+[39m
+
+[2m Test Files [22m [1m[31m2 failed[39m[22m[2m | [22m[1m[32m4 passed[39m[22m[90m (6)[39m
+[2m      Tests [22m [1m[31m10 failed[39m[22m[2m | [22m[1m[32m26 passed[39m[22m[90m (36)[39m
+[2m   Start at [22m 09:23:23
+[2m   Duration [22m 42.87s[2m (transform 1.05s, setup 1.00s, collect 3.47s, tests 42.73s, environment 6.94s, prepare 1.48s)[22m
+

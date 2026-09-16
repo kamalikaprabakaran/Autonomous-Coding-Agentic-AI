@@ -1,0 +1,2137 @@
+﻿
+[1m[7m[36m RUN [39m[27m[22m [36mv2.1.9 [39m[90mD:/Autonomous Coding Agentic AI/frontend[39m
+
+node.exe : 
+[90mstderr[2m | src/p
+ages/ProjectsPage.test.
+tsx[2m > 
+[22m[2mProjects 
+Dashboard UI Tests[2m 
+> [22m[2mrenders 
+loading state initially
+At line:1 char:1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo 
+...
++ ~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: ([90mstderr[   
+ 2m...state initial    
+ly:String) [], Rem    
+oteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+[22m[39mΓÜá∩╕Å React 
+Router Future Flag 
+Warning: React Router 
+will begin wrapping 
+state updates in `React
+.startTransition` in 
+v7. You can use the 
+`v7_startTransition` 
+future flag to opt-in 
+early. For more 
+information, see https:
+//reactrouter.com/v6/up
+grading/future#v7_start
+transition.
+ΓÜá∩╕Å React Router 
+Future Flag Warning: 
+Relative route 
+resolution within 
+Splat routes is 
+changing in v7. You 
+can use the 
+`v7_relativeSplatPath` 
+future flag to opt-in 
+early. For more 
+information, see https:
+//reactrouter.com/v6/up
+grading/future#v7_relat
+ivesplatpath.
+
+[90mstderr[2m | src/p
+ages/ProjectDetailsPage
+.test.tsx[2m > 
+[22m[2mTask Creation 
+within Project 
+Details[2m > 
+[22m[2mrenders task 
+creation form within 
+project details
+[22m[39mΓÜá∩╕Å React 
+Router Future Flag 
+Warning: React Router 
+will begin wrapping 
+state updates in `React
+.startTransition` in 
+v7. You can use the 
+`v7_startTransition` 
+future flag to opt-in 
+early. For more 
+information, see https:
+//reactrouter.com/v6/up
+grading/future#v7_start
+transition.
+ΓÜá∩╕Å React Router 
+Future Flag Warning: 
+Relative route 
+resolution within 
+Splat routes is 
+changing in v7. You 
+can use the 
+`v7_relativeSplatPath` 
+future flag to opt-in 
+early. For more 
+information, see https:
+//reactrouter.com/v6/up
+grading/future#v7_relat
+ivesplatpath.
+
+[90mstderr[2m | src/p
+ages/AgentRunPage.test.
+tsx[2m > 
+[22m[2mAgentRunPage 
+Rendering Tests[2m > 
+[22m[2mrenders 
+placeholder entry when 
+runId is missing
+[22m[39mΓÜá∩╕Å React 
+Router Future Flag 
+Warning: React Router 
+will begin wrapping 
+state updates in `React
+.startTransition` in 
+v7. You can use the 
+`v7_startTransition` 
+future flag to opt-in 
+early. For more 
+information, see https:
+//reactrouter.com/v6/up
+grading/future#v7_start
+transition.
+ΓÜá∩╕Å React Router 
+Future Flag Warning: 
+Relative route 
+resolution within 
+Splat routes is 
+changing in v7. You 
+can use the 
+`v7_relativeSplatPath` 
+future flag to opt-in 
+early. For more 
+information, see https:
+//reactrouter.com/v6/up
+grading/future#v7_relat
+ivesplatpath.
+
+ [32mΓ£ô[39m src/pages/AgentRunPage.test.tsx[2m > [22mAgentRunPage Rendering Tests[2m > [22mrenders placeholder entry when runId is missing
+ [32mΓ£ô[39m src/pages/AgentRunPage.test.tsx[2m > [22mAgentRunPage Rendering Tests[2m > [22mstarts polling and shows initial loading state for non-cached run
+ [32mΓ£ô[39m src/pages/ProjectsPage.test.tsx[2m > [22mProjects Dashboard UI Tests[2m > [22mrenders loading state initially
+ [32mΓ£ô[39m src/pages/ProjectsPage.test.tsx[2m > [22mProjects Dashboard UI Tests[2m > [22mrenders empty project state when no projects exist
+ [32mΓ£ô[39m src/pages/AgentRunPage.test.tsx[2m > [22mAgentRunPage Rendering Tests[2m > [22mshows RUNNING status with polling message
+ [32mΓ£ô[39m src/pages/ProjectsPage.test.tsx[2m > [22mProjects Dashboard UI Tests[2m > [22mrenders project list populated with API data
+ [32mΓ£ô[39m src/pages/ProjectsPage.test.tsx[2m > [22mProjects Dashboard UI Tests[2m > [22mdisplays error state correctly
+ [32mΓ£ô[39m src/pages/AgentRunPage.test.tsx[2m > [22mAgentRunPage Rendering Tests[2m > [22mshows FAILED status and polling concluded message
+[90mstderr[2m | src/p
+ages/TasksPage.test.tsx
+[2m > 
+[22m[2mTasksPage 
+Tests[2m > 
+[22m[2mrenders 
+search form when no 
+taskId is provided
+[22m[39mΓÜá∩╕Å React 
+Router Future Flag 
+Warning: React Router 
+will begin wrapping 
+state updates in `React
+.startTransition` in 
+v7. You can use the 
+`v7_startTransition` 
+future flag to opt-in 
+early. For more 
+information, see https:
+//reactrouter.com/v6/up
+grading/future#v7_start
+transition.
+ΓÜá∩╕Å React Router 
+Future Flag Warning: 
+Relative route 
+resolution within 
+Splat routes is 
+changing in v7. You 
+can use the 
+`v7_relativeSplatPath` 
+future flag to opt-in 
+early. For more 
+information, see https:
+//reactrouter.com/v6/up
+grading/future#v7_relat
+ivesplatpath.
+
+ [32mΓ£ô[39m src/pages/TasksPage.test.tsx[2m > [22mTasksPage Tests[2m > [22mrenders search form when no taskId is provided
+ [32mΓ£ô[39m src/pages/TasksPage.test.tsx[2m > [22mTasksPage Tests[2m > [22mshows loading state while fetching task
+ [32mΓ£ô[39m src/pages/ProjectDetailsPage.test.tsx[2m > [22mTask Creation within Project Details[2m > [22mrenders task creation form within project details
+ [32mΓ£ô[39m src/pages/AgentRunPage.test.tsx[2m > [22mAgentRunPage Rendering Tests[2m > [22mshows COMPLETED status with iteration count
+ [32mΓ£ô[39m src/pages/TasksPage.test.tsx[2m > [22mTasksPage Tests[2m > [22mrenders task details on successful API response
+ [32mΓ£ô[39m src/pages/AgentRunPage.test.tsx[2m > [22mAgentRunPage Rendering Tests[2m > [22mshows back-link to parent task when run is loaded
+ [32mΓ£ô[39m src/App.test.tsx[2m > [22mFrontend Application Foundation[2m > [22mrenders Layout and Sidebar correctly
+ [32mΓ£ô[39m src/pages/ProjectsPage.test.tsx[2m > [22mProjects Dashboard UI Tests[2m > [22mallows opening create project modal and creating project
+ [32mΓ£ô[39m src/pages/TasksPage.test.tsx[2m > [22mTasksPage Tests[2m > [22mshows 404 error state when task is not found
+ [32mΓ£ô[39m src/pages/TasksPage.test.tsx[2m > [22mTasksPage Tests[2m > [22mshows generic error state on server error
+ [32mΓ£ô[39m src/pages/ProjectDetailsPage.test.tsx[2m > [22mTask Creation within Project Details[2m > [22mhandles successful task creation seamlessly
+ [32mΓ£ô[39m src/App.test.tsx[2m > [22mFrontend Application Foundation[2m > [22mrenders HomePage appropriately and mocks health API successfully
+ [32mΓ£ô[39m src/App.test.tsx[2m > [22mFrontend Application Foundation[2m > [22mrenders API connection error state
+ [32mΓ£ô[39m src/pages/AgentRunPage.test.tsx[2m > [22mAgentRunPage Rendering Tests[2m > [22mdisplays Agent Execution Details heading when run is loaded
+ [32mΓ£ô[39m src/pages/AgentRunPage.test.tsx[2m > [22mAgentRunPage Rendering Tests[2m > [22mshows error state on API failure
+ [32mΓ£ô[39m src/pages/AgentRunPage.test.tsx[2m > [22mAgentRunPage Rendering Tests[2m > [22mclears interval on component unmount without throwing (no-runId path)
+ [32mΓ£ô[39m src/pages/TasksPage.test.tsx[2m > [22mTasksPage Tests[2m > [22mshows COMPLETED status badge with correct styling
+ [32mΓ£ô[39m src/pages/ProjectDetailsPage.test.tsx[2m > [22mTask Creation within Project Details[2m > [22mhandles failed task creation correctly and maintains error blocks
+ [32mΓ£ô[39m src/pages/TasksPage.test.tsx[2m > [22mTasksPage Tests[2m > [22mshows FAILED status badge
+[90mstderr[2m | src/a
+uth/Auth.test.tsx[2m 
+> [22m[2mAuthenticati
+on UI Tests[2m > 
+[22m[2mrenders Login 
+page
+[22m[39mΓÜá∩╕Å React 
+Router Future Flag 
+Warning: React Router 
+will begin wrapping 
+state updates in `React
+.startTransition` in 
+v7. You can use the 
+`v7_startTransition` 
+future flag to opt-in 
+early. For more 
+information, see https:
+//reactrouter.com/v6/up
+grading/future#v7_start
+transition.
+ΓÜá∩╕Å React Router 
+Future Flag Warning: 
+Relative route 
+resolution within 
+Splat routes is 
+changing in v7. You 
+can use the 
+`v7_relativeSplatPath` 
+future flag to opt-in 
+early. For more 
+information, see https:
+//reactrouter.com/v6/up
+grading/future#v7_relat
+ivesplatpath.
+
+ [32mΓ£ô[39m src/pages/TasksPage.test.tsx[2m > [22mTasksPage Tests[2m > [22mshows back-link to parent project after loading task
+ [32mΓ£ô[39m src/pages/TasksPage.test.tsx[2m > [22mTasksPage Tests[2m > [22mshows agent execution section on task details page
+ [32mΓ£ô[39m src/auth/Auth.test.tsx[2m > [22mAuthentication UI Tests[2m > [22mrenders Login page
+ [32mΓ£ô[39m src/auth/Auth.test.tsx[2m > [22mAuthentication UI Tests[2m > [22mrenders Signup page
+ [32mΓ£ô[39m src/auth/Auth.test.tsx[2m > [22mAuthentication UI Tests[2m > [22mdisplays error on failed login
+ [32mΓ£ô[39m src/auth/Auth.test.tsx[2m > [22mAuthentication UI Tests[2m > [22mredirects unauthenticated users from protected route
+ [32mΓ£ô[39m src/auth/Auth.test.tsx[2m > [22mAuthentication UI Tests[2m > [22mrenders protected child component for authenticated users
+ [31m├ù[39m src/pages/AgentRunPage.test.tsx[2m > [22mAgentRunPage Polling Tests[2m > [22mrenders PENDING status and polls while RUNNING[33m 1016[2mms[22m[39m
+[31m   ΓåÆ Found multiple elements with the text: /PENDING/i
+
+Here are the matching elements:
+
+Ignored nodes: comments, script, style
+[36m<span>[31m
+  [0mPENDING[0m
+[36m</span>[31m
+
+Ignored nodes: comments, script, style
+[36m<span[31m
+  [33mstyle[31m=[32m"color: rgb(107, 114, 128); font-family: monospace;"[31m
+[36m>[31m
+  [0mrun-pending[0m
+[36m</span>[31m
+
+(If this is intentional, then use the `*AllBy*` variant of the query (like `queryAllByText`, `getAllByText`, or `findAllByText`)).
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div>[31m
+    [36m<div[31m
+      [33mstyle[31m=[32m"padding: 2rem; font-family: sans-serif; max-width: 800px; margin: 0px auto;"[31m
+    [36m>[31m
+      [36m<div[31m
+        [33mstyle[31m=[32m"margin-bottom: 1.5rem;"[31m
+      [36m>[31m
+        [36m<a[31m
+          [33mhref[31m=[32m"/tasks/task-1"[31m
+          [33mstyle[31m=[32m"color: rgb(59, 130, 246); text-decoration: none;"[31m
+        [36m>[31m
+          [0mΓåÉ Back to Parent Task[0m
+        [36m</a>[31m
+      [36m</div>[31m
+      [36m<div[31m
+        [33mstyle[31m=[32m"background-color: rgb(255, 255, 255); padding: 1.5rem; border-radius: 0.5rem; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1); border-top: 4px solid rgb(146, 64, 14);"[31m
+      [36m>[31m
+        [36m<div[31m
+          [33mstyle[31m=[32m"display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;"[31m
+        [36m>[31m
+          [36m<div>[31m
+            [36m<h1[31m
+              [33mstyle[31m=[32m"margin: 0px 0px 0.25rem 0px; color: rgb(17, 24, 39); font-size: 1.5rem;"[31m
+            [36m>[31m
+              [0mAgent Execution Details[0m
+            [36m</h1>[31m
+            [36m<span[31m
+              [33mstyle[31m=[32m"color: rgb(107, 114, 128); font-size: 0.875rem;"[31m
+            [36m>[31m
+              [0mWaiting for agent execution[0m
+            [36m</span>[31m
+          [36m</div>[31m
+          [36m<div[31m
+            [33mstyle[31m=[32m"display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; border-radius: 9999px; background-color: rgb(254, 243, 199); color: rgb(146, 64, 14); font-weight: bold;"[31m
+          [36m>[31m
+            [36m<span>[31m
+              [0mΓÅ│[0m
+            [36m</span>[31m
+            [36m<span>[31m
+              [0mPENDING[0m
+            [36m</span>[31m
+            [36m<span[31m
+              [33mclass[31m=[32m"animate-pulse"[31m
+              [33mstyle[31m=[32m"width: 8px; height: 8px; background-color: rgb(146, 64, 14); border-radius: 50%; display: inline-block; margin-left: 0.25rem;"[31m
+            [36m/>[31m
+          [36m</div>[31m
+        [36m</div>[31m
+        [36m<div[31m
+          [33mstyle[31m=[32m"display: grid; grid-template-columns: minmax(140px, auto) 1fr; gap: 1rem 2rem; font-size: 0.875rem; background-color: rgb(249, 250, 251); padding: 1.5rem; border-radius: 0.375rem; border: 1px solid rgb(229, 231, 235);"[31m
+        [36m>[31m
+          [36m<strong[31m
+            [33mstyle[31m=[32m"color: rgb(55, 65, 81);"[31m
+          [36m>[31m
+            [0mAgent Run ID[0m
+          [36m</strong>[31m
+          [36m<span[31m
+            [33mstyle[31m=[32m"color: rgb(107, 114, 128); font-family: monospace;"[31m
+          [36m>[31m
+            [0mrun-pending[0m
+          [36m</span>[31m
+          [36m<strong[31m
+            [33mstyle[31m=[32m"color: rgb(55, 65, 81);"[31m
+          [36m>[31m
+            [0mParent Task ID[0m
+          [36m</strong>[31m
+          [36m<span[31m
+            [33mstyle[31m=[32m"color: rgb(107, 114, 128); font-family: monospace;"[31m
+          [36m>[31m
+            [36m<a[31m
+              [33mhref[31m=[32m"/tasks/task-1"[31m
+              [33mstyle[31m=[32m"color: rgb(59, 130, 246); text-decoration: none;"[31m
+            [36m>[31m
+              [0mtask-1[0m
+            [36m</a>[31m
+          [36m</span>[31m
+          [36m<strong[31m
+            [33mstyle[31m=[32m"color: rgb(55, 65, 81);"[31m
+          [36m>[31m
+            [0mIterations Complete[0m
+          [36m</strong>[31m
+          [36m<span[31m
+            [33mstyle[31m=[32m"color: rgb(17, 24, 39); font-weight: 500;"[31m
+          [36m>[31m
+            [0m0[0m
+            [0m / Γê₧[0m
+          [36m</span>[31m
+          [36m<strong[31m
+            [33mstyle[31m=[32m"color: rgb(55, 65, 81);"[31m
+          [36m>[31m
+            [0mStarted At[0m
+          [36m</strong>[31m
+          [36m<span[31m
+            [33mstyle[31m=[32m"color: rgb(107, 114, 128);"[31m
+          [36m>[31m
+            [0m1/1/2023, 5:30:00 am[0m
+          [36m</span>[31m
+          [36m<strong[31m
+            [33mstyle[31m=[32m"color: rgb(55, 65, 81);"[31m
+          [36m>[31m
+            [0mCompleted At[0m
+          [36m</strong>[31m
+          [36m<span[31m
+            [33mstyle[31m=[32m"color: rgb(107, 114, 128);"[31m
+          [36m>[31m
+            [0mΓÇö[0m
+          [36m</span>[31m
+          [36m<strong[31m
+            [33mstyle[31m=[32m"color: rgb(55, 65, 81);"[31m
+          [36m>[31m
+            [0mLive Updates[0m
+          [36m</strong>[31m
+          [36m<span[31m
+            [33mstyle[31m=[32m"color: rgb(37, 99, 235);"[31m
+          [36m>[31m
+            [0mPolling for status updates every 3s...[0m
+          [36m</span>[31m
+        [36m</div>[31m
+      [36m</div>[31m
+    [36m</div>[31m
+  [36m</div>[31m
+[36m</body>[31m
+
+Ignored nodes: comments, script, style
+[36m<html>[31m
+  [36m<head />[31m
+  [36m<body>[31m
+    [36m<div>[31m
+      [36m<div[31m
+        [33mstyle[31m=[32m"padding: 2rem; font-family: sans-serif; max-width: 800px; margin: 0px auto;"[31m
+      [36m>[31m
+        [36m<div[31m
+          [33mstyle[31m=[32m"margin-bottom: 1.5rem;"[31m
+        [36m>[31m
+          [36m<a[31m
+            [33mhref[31m=[32m"/tasks/task-1"[31m
+            [33mstyle[31m=[32m"color: rgb(59, 130, 246); text-decoration: none;"[31m
+          [36m>[31m
+            [0mΓåÉ Back to Parent Task[0m
+          [36m</a>[31m
+        [36m</div>[31m
+        [36m<div[31m
+          [33mstyle[31m=[32m"background-color: rgb(255, 255, 255); padding: 1.5rem; border-radius: 0.5rem; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1); border-top: 4px solid rgb(146, 64, 14);"[31m
+        [36m>[31m
+          [36m<div[31m
+            [33mstyle[31m=[32m"display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;"[31m
+          [36m>[31m
+            [36m<div>[31m
+              [36m<h1[31m
+                [33mstyle[31m=[32m"margin: 0px 0px 0.25rem 0px; color: rgb(17, 24, 39); font-size: 1.5rem;"[31m
+              [36m>[31m
+                [0mAgent Execution Details[0m
+              [36m</h1>[31m
+              [36m<span[31m
+                [33mstyle[31m=[32m"color: rgb(107, 114, 128); font-size: 0.875rem;"[31m
+              [36m>[31m
+                [0mWaiting for agent execution[0m
+              [36m</span>[31m
+            [36m</div>[31m
+            [36m<div[31m
+              [33mstyle[31m=[32m"display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; border-radius: 9999px; background-color: rgb(254, 243, 199); color: rgb(146, 64, 14); font-weight: bold;"[31m
+            [36m>[31m
+              [36m<span>[31m
+                [0mΓÅ│[0m
+              [36m</span>[31m
+              [36m<span>[31m
+                [0mPENDING[0m
+              [36m</span>[31m
+              [36m<span[31m
+                [33mclass[31m=[32m"animate-pulse"[31m
+                [33mstyle[31m=[32m"width: 8px; height: 8px; background-color: rgb(146, 64, 14); border-radius: 50%; display: inline-block; margin-left: 0.25rem;"[31m
+              [36m/>[31m
+            [36m</div>[31m
+          [36m</div>[31m
+          [36m<div[31m
+            [33mstyle[31m=[32m"display: grid; grid-template-columns: minmax(140px, auto) 1fr; gap: 1rem 2rem; font-size: 0.875rem; background-color: rgb(249, 250, 251); padding: 1.5rem; border-radius: 0.375rem; border: 1px solid rgb(229, 231, 235);"[31m
+          [36m>[31m
+            [36m<strong[31m
+              [33mstyle[31m=[32m"color: rgb(55, 65, 81);"[31m
+            [36m>[31m
+              [0mAgent Run ID[0m
+            [36m</strong>[31m
+            [36m<span[31m
+              [33mstyle[31m=[32m"color: rgb(107, 114, 128); font-family: monospace;"[31m
+            [36m>[31m
+              [0mrun-pending[0m
+            [36m</span>[31m
+            [36m<strong[31m
+              [33mstyle[31m=[32m"color: rgb(55, 65, 81);"[31m
+            [36m>[31m
+              [0mParent Task ID[0m
+            [36m</strong>[31m
+            [36m<span[31m
+              [33mstyle[31m=[32m"color: rgb(107, 114, 128); font-family: monospace;"[31m
+            [36m>[31m
+              [36m<a[31m
+                [33mhref[31m=[32m"/tasks/task-1"[31m
+                [33mstyle[31m=[32m"color: rgb(59, 130, 246); text-decoration: none;"[31m
+              [36m>[31m
+                [0mtask-1[0m
+              [36m</a>[31m
+            [36m</span>[31m
+            [36m<strong[31m
+              [33mstyle[31m=[32m"color: rgb(55, 65, 81);"[31m
+            [36m>[31m
+              [0mIterations Complete[0m
+            [36m</strong>[31m
+            [36m<span[31m
+              [33mstyle[31m=[32m"color: rgb(17, 24, 39); font-weight: 500;"[31m
+            [36m>[31m
+              [0m0[0m
+              [0m / Γê₧[0m
+            [36m</span>[31m
+            [36m<strong[31m
+              [33mstyle[31m=[32m"color: rgb(55, 65, 81);"[31m
+            [36m>[31m
+              [0mStarted At[0m
+            [36m</strong>[31m
+            [36m<span[31m
+              [33mstyle[31m=[32m"color: rgb(107, 114, 128);"[31m
+            [36m>[31m
+              [0m1/1/2023, 5:30:00 am[0m
+            [36m</span>[31m
+            [36m<strong[31m
+              [33mstyle[31m=[32m"color: rgb(55, 65, 81);"[31m
+            [36m>[31m
+              [0mCompleted At[0m
+            [36m</strong>[31m
+            [36m<span[31m
+              [33mstyle[31m=[32m"color: rgb(107, 114, 128);"[31m
+            [36m>[31m
+              [0mΓÇö[0m
+            [36m</span>[31m
+            [36m<strong[31m
+              [33mstyle[31m=[32m"color: rgb(55, 65, 81);"[31m
+            [36m>[31m
+              [0mLive Updates[0m
+            [36m</strong>[31m
+            [36m<span[31m
+              [33mstyle[31m=[32m"color: rgb(37, 99, 235);"[31m
+            [36m>[31m
+              [0mPolling for status updates every 3s...[0m
+            [36m</span>[31m
+          [36m</div>[31m
+        [36m</div>[31m
+      [36m</div>[31m
+    [36m</div>[31m
+  [36m</body>[31m
+[36m</html>[31m[39m
+ [31m├ù[39m src/pages/AgentRunPage.test.tsx[2m > [22mAgentRunPage Polling Tests[2m > [22mclears polling upon terminal state COMPLETED[33m 1004[2mms[22m[39m
+[31m   ΓåÆ Found multiple elements with the text: /COMPLETED/i
+
+Here are the matching elements:
+
+Ignored nodes: comments, script, style
+[36m<span[31m
+  [33mstyle[31m=[32m"color: rgb(107, 114, 128); font-size: 0.875rem;"[31m
+[36m>[31m
+  [0mAgent completed successfully[0m
+[36m</span>[31m
+
+Ignored nodes: comments, script, style
+[36m<span>[31m
+  [0mCOMPLETED[0m
+[36m</span>[31m
+
+Ignored nodes: comments, script, style
+[36m<strong[31m
+  [33mstyle[31m=[32m"color: rgb(55, 65, 81);"[31m
+[36m>[31m
+  [0mCompleted At[0m
+[36m</strong>[31m
+
+(If this is intentional, then use the `*AllBy*` variant of the query (like `queryAllByText`, `getAllByText`, or `findAllByText`)).
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div>[31m
+    [36m<div[31m
+      [33mstyle[31m=[32m"padding: 2rem; font-family: sans-serif; max-width: 800px; margin: 0px auto;"[31m
+    [36m>[31m
+      [36m<div[31m
+        [33mstyle[31m=[32m"margin-bottom: 1.5rem;"[31m
+      [36m>[31m
+        [36m<a[31m
+          [33mhref[31m=[32m"/tasks/task-1"[31m
+          [33mstyle[31m=[32m"color: rgb(59, 130, 246); text-decoration: none;"[31m
+        [36m>[31m
+          [0mΓåÉ Back to Parent Task[0m
+        [36m</a>[31m
+      [36m</div>[31m
+      [36m<div[31m
+        [33mstyle[31m=[32m"background-color: rgb(255, 255, 255); padding: 1.5rem; border-radius: 0.5rem; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1); border-top: 4px solid rgb(6, 95, 70);"[31m
+      [36m>[31m
+        [36m<div[31m
+          [33mstyle[31m=[32m"display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;"[31m
+        [36m>[31m
+          [36m<div>[31m
+            [36m<h1[31m
+              [33mstyle[31m=[32m"margin: 0px 0px 0.25rem 0px; color: rgb(17, 24, 39); font-size: 1.5rem;"[31m
+            [36m>[31m
+              [0mAgent Execution Details[0m
+            [36m</h1>[31m
+            [36m<span[31m
+              [33mstyle[31m=[32m"color: rgb(107, 114, 128); font-size: 0.875rem;"[31m
+            [36m>[31m
+              [0mAgent completed successfully[0m
+            [36m</span>[31m
+          [36m</div>[31m
+          [36m<div[31m
+            [33mstyle[31m=[32m"display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; border-radius: 9999px; background-color: rgb(209, 250, 229); color: rgb(6, 95, 70); font-weight: bold;"[31m
+          [36m>[31m
+            [36m<span>[31m
+              [0mΓ£à[0m
+            [36m</span>[31m
+            [36m<span>[31m
+              [0mCOMPLETED[0m
+            [36m</span>[31m
+          [36m</div>[31m
+        [36m</div>[31m
+        [36m<div[31m
+          [33mstyle[31m=[32m"display: grid; grid-template-columns: minmax(140px, auto) 1fr; gap: 1rem 2rem; font-size: 0.875rem; background-color: rgb(249, 250, 251); padding: 1.5rem; border-radius: 0.375rem; border: 1px solid rgb(229, 231, 235);"[31m
+        [36m>[31m
+          [36m<strong[31m
+            [33mstyle[31m=[32m"color: rgb(55, 65, 81);"[31m
+          [36m>[31m
+            [0mAgent Run ID[0m
+          [36m</strong>[31m
+          [36m<span[31m
+            [33mstyle[31m=[32m"color: rgb(107, 114, 128); font-family: monospace;"[31m
+          [36m>[31m
+            [0mrun-comp[0m
+          [36m</span>[31m
+          [36m<strong[31m
+            [33mstyle[31m=[32m"color: rgb(55, 65, 81);"[31m
+          [36m>[31m
+            [0mParent Task ID[0m
+          [36m</strong>[31m
+          [36m<span[31m
+            [33mstyle[31m=[32m"color: rgb(107, 114, 128); font-family: monospace;"[31m
+          [36m>[31m
+            [36m<a[31m
+              [33mhref[31m=[32m"/tasks/task-1"[31m
+              [33mstyle[31m=[32m"color: rgb(59, 130, 246); text-decoration: none;"[31m
+            [36m>[31m
+              [0mtask-1[0m
+            [36m</a>[31m
+          [36m</span>[31m
+          [36m<strong[31m
+            [33mstyle[31m=[32m"color: rgb(55, 65, 81);"[31m
+          [36m>[31m
+            [0mIterations Complete[0m
+          [36m</strong>[31m
+          [36m<span[31m
+            [33mstyle[31m=[32m"color: rgb(17, 24, 39); font-weight: 500;"[31m
+          [36m>[31m
+            [0m4[0m
+            [0m / Γê₧[0m
+          [36m</span>[31m
+          [36m<strong[31m
+            [33mstyle[31m=[32m"color: rgb(55, 65, 81);"[31m
+          [36m>[31m
+            [0mStarted At[0m
+          [36m</strong>[31m
+          [36m<span[31m
+            [33mstyle[31m=[32m"color: rgb(107, 114, 128);"[31m
+          [36m>[31m
+            [0m1/1/2023, 5:30:00 am[0m
+          [36m</span>[31m
+          [36m<strong[31m
+            [33mstyle[31m=[32m"color: rgb(55, 65, 81);"[31m
+          [36m>[31m
+            [0mCompleted At[0m
+          [36m</strong>[31m
+          [36m<span[31m
+            [33mstyle[31m=[32m"color: rgb(107, 114, 128);"[31m
+          [36m>[31m
+            [0m1/1/2023, 5:35:00 am[0m
+          [36m</span>[31m
+          [36m<strong[31m
+            [33mstyle[31m=[32m"color: rgb(55, 65, 81);"[31m
+          [36m>[31m
+            [0mLive Updates[0m
+          [36m</strong>[31m
+          [36m<span[31m
+            [33mstyle[31m=[32m"color: rgb(6, 95, 70);"[31m
+          [36m>[31m
+            [0mPolling concluded.[0m
+          [36m</span>[31m
+        [36m</div>[31m
+      [36m</div>[31m
+    [36m</div>[31m
+  [36m</div>[31m
+[36m</body>[31m
+
+Ignored nodes: comments, script, style
+[36m<html>[31m
+  [36m<head />[31m
+  [36m<body>[31m
+    [36m<div>[31m
+      [36m<div[31m
+        [33mstyle[31m=[32m"padding: 2rem; font-family: sans-serif; max-width: 800px; margin: 0px auto;"[31m
+      [36m>[31m
+        [36m<div[31m
+          [33mstyle[31m=[32m"margin-bottom: 1.5rem;"[31m
+        [36m>[31m
+          [36m<a[31m
+            [33mhref[31m=[32m"/tasks/task-1"[31m
+            [33mstyle[31m=[32m"color: rgb(59, 130, 246); text-decoration: none;"[31m
+          [36m>[31m
+            [0mΓåÉ Back to Parent Task[0m
+          [36m</a>[31m
+        [36m</div>[31m
+        [36m<div[31m
+          [33mstyle[31m=[32m"background-color: rgb(255, 255, 255); padding: 1.5rem; border-radius: 0.5rem; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1); border-top: 4px solid rgb(6, 95, 70);"[31m
+        [36m>[31m
+          [36m<div[31m
+            [33mstyle[31m=[32m"display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;"[31m
+          [36m>[31m
+            [36m<div>[31m
+              [36m<h1[31m
+                [33mstyle[31m=[32m"margin: 0px 0px 0.25rem 0px; color: rgb(17, 24, 39); font-size: 1.5rem;"[31m
+              [36m>[31m
+                [0mAgent Execution Details[0m
+              [36m</h1>[31m
+              [36m<span[31m
+                [33mstyle[31m=[32m"color: rgb(107, 114, 128); font-size: 0.875rem;"[31m
+              [36m>[31m
+                [0mAgent completed successfully[0m
+              [36m</span>[31m
+            [36m</div>[31m
+            [36m<div[31m
+              [33mstyle[31m=[32m"display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; border-radius: 9999px; background-color: rgb(209, 250, 229); color: rgb(6, 95, 70); font-weight: bold;"[31m
+            [36m>[31m
+              [36m<span>[31m
+                [0mΓ£à[0m
+              [36m</span>[31m
+              [36m<span>[31m
+                [0mCOMPLETED[0m
+              [36m</span>[31m
+            [36m</div>[31m
+          [36m</div>[31m
+          [36m<div[31m
+            [33mstyle[31m=[32m"display: grid; grid-template-columns: minmax(140px, auto) 1fr; gap: 1rem 2rem; font-size: 0.875rem; background-color: rgb(249, 250, 251); padding: 1.5rem; border-radius: 0.375rem; border: 1px solid rgb(229, 231, 235);"[31m
+          [36m>[31m
+            [36m<strong[31m
+              [33mstyle[31m=[32m"color: rgb(55, 65, 81);"[31m
+            [36m>[31m
+              [0mAgent Run ID[0m
+            [36m</strong>[31m
+            [36m<span[31m
+              [33mstyle[31m=[32m"color: rgb(107, 114, 128); font-family: monospace;"[31m
+            [36m>[31m
+              [0mrun-comp[0m
+            [36m</span>[31m
+            [36m<strong[31m
+              [33mstyle[31m=[32m"color: rgb(55, 65, 81);"[31m
+            [36m>[31m
+              [0mParent Task ID[0m
+            [36m</strong>[31m
+            [36m<span[31m
+              [33mstyle[31m=[32m"color: rgb(107, 114, 128); font-family: monospace;"[31m
+            [36m>[31m
+              [36m<a[31m
+                [33mhref[31m=[32m"/tasks/task-1"[31m
+                [33mstyle[31m=[32m"color: rgb(59, 130, 246); text-decoration: none;"[31m
+              [36m>[31m
+                [0mtask-1[0m
+              [36m</a>[31m
+            [36m</span>[31m
+            [36m<strong[31m
+              [33mstyle[31m=[32m"color: rgb(55, 65, 81);"[31m
+            [36m>[31m
+              [0mIterations Complete[0m
+            [36m</strong>[31m
+            [36m<span[31m
+              [33mstyle[31m=[32m"color: rgb(17, 24, 39); font-weight: 500;"[31m
+            [36m>[31m
+              [0m4[0m
+              [0m / Γê₧[0m
+            [36m</span>[31m
+            [36m<strong[31m
+              [33mstyle[31m=[32m"color: rgb(55, 65, 81);"[31m
+            [36m>[31m
+              [0mStarted At[0m
+            [36m</strong>[31m
+            [36m<span[31m
+              [33mstyle[31m=[32m"color: rgb(107, 114, 128);"[31m
+            [36m>[31m
+              [0m1/1/2023, 5:30:00 am[0m
+            [36m</span>[31m
+            [36m<strong[31m
+              [33mstyle[31m=[32m"color: rgb(55, 65, 81);"[31m
+            [36m>[31m
+              [0mCompleted At[0m
+            [36m</strong>[31m
+            [36m<span[31m
+              [33mstyle[31m=[32m"color: rgb(107, 114, 128);"[31m
+            [36m>[31m
+              [0m1/1/2023, 5:35:00 am[0m
+            [36m</span>[31m
+            [36m<strong[31m
+              [33mstyle[31m=[32m"color: rgb(55, 65, 81);"[31m
+            [36m>[31m
+              [0mLive Updates[0m
+            [36m</strong>[31m
+            [36m<span[31m
+              [33mstyle[31m=[32m"color: rgb(6, 95, 70);"[31m
+            [36m>[31m
+              [0mPolling concluded.[0m
+            [36m</span>[31m
+          [36m</div>[31m
+        [36m</div>[31m
+      [36m</div>[31m
+    [36m</div>[31m
+  [36m</body>[31m
+[36m</html>[31m[39m
+ [32mΓ£ô[39m src/pages/AgentRunPage.test.tsx[2m > [22mAgentRunPage Polling Tests[2m > [22mclears polling gracefully upon API resolution errors
+ [32mΓ£ô[39m src/pages/AgentRunPage.test.tsx[2m > [22mAgentRunPage Polling Tests[2m > [22mclears polling upon terminal state FAILED
+
+[31mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»
+ΓÄ»[1m[7m Failed 
+Tests 2 [27m[22mΓÄ»ΓÄ
+»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[39m
+
+[31m[1m[7m FAIL 
+[27m[22m[39m src/pag
+es/AgentRunPage.test.ts
+x[2m > 
+[22mAgentRunPage 
+Polling Tests[2m > 
+[22mrenders PENDING 
+status and polls while 
+RUNNING
+[31m[1mTestingLibrary
+ElementError[22m[39m:
+ Found multiple 
+elements with the 
+text: /PENDING/i
+
+Here are the matching 
+elements:
+
+Ignored nodes: 
+comments, script, style
+[36m<span>[39m
+  [0mPENDING[0m
+[36m</span>[39m
+
+Ignored nodes: 
+comments, script, style
+[36m<span[39m
+  [33mstyle[39m=[32m
+"color: rgb(107, 114, 
+128); font-family: 
+monospace;"[39m
+[36m>[39m
+  [0mrun-pending[0m
+[36m</span>[39m
+
+(If this is 
+intentional, then use 
+the `*AllBy*` variant 
+of the query (like 
+`queryAllByText`, 
+`getAllByText`, or 
+`findAllByText`)).
+
+Ignored nodes: 
+comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<div[39m
+      [33mstyle[39m=
+[32m"padding: 2rem; 
+font-family: 
+sans-serif; max-width: 
+800px; margin: 0px 
+auto;"[39m
+    [36m>[39m
+      [36m<div[39m
+        [33mstyle[39m
+=[32m"margin-bottom: 
+1.5rem;"[39m
+      [36m>[39m
+        [36m<a[39m
+          [33mhref[39
+m=[32m"/tasks/task-1"
+[39m
+          [33mstyle[3
+9m=[32m"color: 
+rgb(59, 130, 246); 
+text-decoration: 
+none;"[39m
+        [36m>[39m
+          [0mΓåÉ Back 
+to Parent Task[0m
+        [36m</a>[39m
+      [36m</div>[39m
+      [36m<div[39m
+        [33mstyle[39m
+=[32m"background-color
+: rgb(255, 255, 255); 
+padding: 1.5rem; 
+border-radius: 0.5rem; 
+box-shadow: 0 1px 3px 
+0 rgba(0, 0, 0, 0.1); 
+border-top: 4px solid 
+rgb(146, 64, 14);"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mstyle[3
+9m=[32m"display: 
+flex; justify-content: 
+space-between; 
+align-items: center; 
+margin-bottom: 
+2rem;"[39m
+        [36m>[39m
+          
+[36m<div>[39m
+            
+[36m<h1[39m
+              [33mstyl
+e[39m=[32m"margin: 
+0px 0px 0.25rem 0px; 
+color: rgb(17, 24, 
+39); font-size: 
+1.5rem;"[39m
+            [36m>[39m
+              
+[0mAgent Execution 
+Details[0m
+            
+[36m</h1>[39m
+            
+[36m<span[39m
+              [33mstyl
+e[39m=[32m"color: 
+rgb(107, 114, 128); 
+font-size: 
+0.875rem;"[39m
+            [36m>[39m
+              
+[0mWaiting for agent 
+execution[0m
+            
+[36m</span>[39m
+          
+[36m</div>[39m
+          
+[36m<div[39m
+            [33mstyle
+[39m=[32m"display: 
+flex; align-items: 
+center; gap: 0.5rem; 
+padding: 0.5rem 1rem; 
+border-radius: 9999px; 
+background-color: 
+rgb(254, 243, 199); 
+color: rgb(146, 64, 
+14); font-weight: 
+bold;"[39m
+          [36m>[39m
+            
+[36m<span>[39m
+              
+[0mΓÅ│[0m
+            
+[36m</span>[39m
+            
+[36m<span>[39m
+              
+[0mPENDING[0m
+            
+[36m</span>[39m
+            
+[36m<span[39m
+              [33mclas
+s[39m=[32m"animate-pu
+lse"[39m
+              [33mstyl
+e[39m=[32m"width: 
+8px; height: 8px; 
+background-color: 
+rgb(146, 64, 14); 
+border-radius: 50%; 
+display: inline-block; 
+margin-left: 
+0.25rem;"[39m
+            
+[36m/>[39m
+          
+[36m</div>[39m
+        
+[36m</div>[39m
+        [36m<div[39m
+          [33mstyle[3
+9m=[32m"display: 
+grid; 
+grid-template-columns: 
+minmax(140px, auto) 
+1fr; gap: 1rem 2rem; 
+font-size: 0.875rem; 
+background-color: 
+rgb(249, 250, 251); 
+padding: 1.5rem; 
+border-radius: 
+0.375rem; border: 1px 
+solid rgb(229, 231, 
+235);"[39m
+        [36m>[39m
+          
+[36m<strong[39m
+            [33mstyle
+[39m=[32m"color: 
+rgb(55, 65, 81);"[39m
+          [36m>[39m
+            [0mAgent 
+Run ID[0m
+          
+[36m</strong>[39m
+          
+[36m<span[39m
+            [33mstyle
+[39m=[32m"color: 
+rgb(107, 114, 128); 
+font-family: 
+monospace;"[39m
+          [36m>[39m
+            
+[0mrun-pending[0m
+          
+[36m</span>[39m
+          
+[36m<strong[39m
+            [33mstyle
+[39m=[32m"color: 
+rgb(55, 65, 81);"[39m
+          [36m>[39m
+            [0mParent 
+Task ID[0m
+          
+[36m</strong>[39m
+          
+[36m<span[39m
+            [33mstyle
+[39m=[32m"color: 
+rgb(107, 114, 128); 
+font-family: 
+monospace;"[39m
+          [36m>[39m
+            
+[36m<a[39m
+              [33mhref
+[39m=[32m"/tasks/task
+-1"[39m
+              [33mstyl
+e[39m=[32m"color: 
+rgb(59, 130, 246); 
+text-decoration: 
+none;"[39m
+            [36m>[39m
+              
+[0mtask-1[0m
+            
+[36m</a>[39m
+          
+[36m</span>[39m
+          
+[36m<strong[39m
+            [33mstyle
+[39m=[32m"color: 
+rgb(55, 65, 81);"[39m
+          [36m>[39m
+            
+[0mIterations 
+Complete[0m
+          
+[36m</strong>[39m
+          
+[36m<span[39m
+            [33mstyle
+[39m=[32m"color: 
+rgb(17, 24, 39); 
+font-weight: 500;"[39m
+          [36m>[39m
+            [0m0[0m
+            [0m / 
+Γê₧[0m
+          
+[36m</span>[39m
+          
+[36m<strong[39m
+            [33mstyle
+[39m=[32m"color: 
+rgb(55, 65, 81);"[39m
+          [36m>[39m
+            
+[0mStarted At[0m
+          
+[36m</strong>[39m
+          
+[36m<span[39m
+            [33mstyle
+[39m=[32m"color: 
+rgb(107, 114, 
+128);"[39m
+          [36m>[39m
+            
+[0m1/1/2023, 5:30:00 
+am[0m
+          
+[36m</span>[39m
+          
+[36m<strong[39m
+            [33mstyle
+[39m=[32m"color: 
+rgb(55, 65, 81);"[39m
+          [36m>[39m
+            
+[0mCompleted At[0m
+          
+[36m</strong>[39m
+          
+[36m<span[39m
+            [33mstyle
+[39m=[32m"color: 
+rgb(107, 114, 
+128);"[39m
+          [36m>[39m
+            [0mΓÇö[0m
+          
+[36m</span>[39m
+          
+[36m<strong[39m
+            [33mstyle
+[39m=[32m"color: 
+rgb(55, 65, 81);"[39m
+          [36m>[39m
+            [0mLive 
+Updates[0m
+          
+[36m</strong>[39m
+          
+[36m<span[39m
+            [33mstyle
+[39m=[32m"color: 
+rgb(37, 99, 235);"[39m
+          [36m>[39m
+            
+[0mPolling for status 
+updates every 3s...[0m
+          
+[36m</span>[39m
+        
+[36m</div>[39m
+      [36m</div>[39m
+    [36m</div>[39m
+  [36m</div>[39m
+[36m</body>[39m
+
+Ignored nodes: 
+comments, script, style
+[36m<html>[39m
+  [36m<head />[39m
+  [36m<body>[39m
+    [36m<div>[39m
+      [36m<div[39m
+        [33mstyle[39m
+=[32m"padding: 2rem; 
+font-family: 
+sans-serif; max-width: 
+800px; margin: 0px 
+auto;"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mstyle[3
+9m=[32m"margin-bottom:
+ 1.5rem;"[39m
+        [36m>[39m
+          [36m<a[39m
+            [33mhref[
+39m=[32m"/tasks/task-1
+"[39m
+            [33mstyle
+[39m=[32m"color: 
+rgb(59, 130, 246); 
+text-decoration: 
+none;"[39m
+          [36m>[39m
+            [0mΓåÉ 
+Back to Parent Task[0m
+          
+[36m</a>[39m
+        
+[36m</div>[39m
+        [36m<div[39m
+          [33mstyle[3
+9m=[32m"background-col
+or: rgb(255, 255, 
+255); padding: 1.5rem; 
+border-radius: 0.5rem; 
+box-shadow: 0 1px 3px 
+0 rgba(0, 0, 0, 0.1); 
+border-top: 4px solid 
+rgb(146, 64, 14);"[39m
+        [36m>[39m
+          
+[36m<div[39m
+            [33mstyle
+[39m=[32m"display: 
+flex; justify-content: 
+space-between; 
+align-items: center; 
+margin-bottom: 
+2rem;"[39m
+          [36m>[39m
+            
+[36m<div>[39m
+              
+[36m<h1[39m
+                [33mst
+yle[39m=[32m"margin: 
+0px 0px 0.25rem 0px; 
+color: rgb(17, 24, 
+39); font-size: 
+1.5rem;"[39m
+              
+[36m>[39m
+                
+[0mAgent Execution 
+Details[0m
+              
+[36m</h1>[39m
+              
+[36m<span[39m
+                [33mst
+yle[39m=[32m"color: 
+rgb(107, 114, 128); 
+font-size: 
+0.875rem;"[39m
+              
+[36m>[39m
+                
+[0mWaiting for agent 
+execution[0m
+              
+[36m</span>[39m
+            
+[36m</div>[39m
+            
+[36m<div[39m
+              [33mstyl
+e[39m=[32m"display: 
+flex; align-items: 
+center; gap: 0.5rem; 
+padding: 0.5rem 1rem; 
+border-radius: 9999px; 
+background-color: 
+rgb(254, 243, 199); 
+color: rgb(146, 64, 
+14); font-weight: 
+bold;"[39m
+            [36m>[39m
+              
+[36m<span>[39m
+                
+[0mΓÅ│[0m
+              
+[36m</span>[39m
+              
+[36m<span>[39m
+                
+[0mPENDING[0m
+              
+[36m</span>[39m
+              
+[36m<span[39m
+                [33mcl
+ass[39m=[32m"animate-
+pulse"[39m
+                [33mst
+yle[39m=[32m"width: 
+8px; height: 8px; 
+background-color: 
+rgb(146, 64, 14); 
+border-radius: 50%; 
+display: inline-block; 
+margin-left: 
+0.25rem;"[39m
+              
+[36m/>[39m
+            
+[36m</div>[39m
+          
+[36m</div>[39m
+          
+[36m<div[39m
+            [33mstyle
+[39m=[32m"display: 
+grid; 
+grid-template-columns: 
+minmax(140px, auto) 
+1fr; gap: 1rem 2rem; 
+font-size: 0.875rem; 
+background-color: 
+rgb(249, 250, 251); 
+padding: 1.5rem; 
+border-radius: 
+0.375rem; border: 1px 
+solid rgb(229, 231, 
+235);"[39m
+          [36m>[39m
+            
+[36m<strong[39m
+              [33mstyl
+e[39m=[32m"color: 
+rgb(55, 65, 81);"[39m
+            [36m>[39m
+              
+[0mAgent Run ID[0m
+            
+[36m</strong>[39m
+            
+[36m<span[39m
+              [33mstyl
+e[39m=[32m"color: 
+rgb(107, 114, 128); 
+font-family: 
+monospace;"[39m
+            [36m>[39m
+              
+[0mrun-pending[0m
+            
+[36m</span>[39m
+            
+[36m<strong[39m
+              [33mstyl
+e[39m=[32m"color: 
+rgb(55, 65, 81);"[39m
+            [36m>[39m
+              
+[0mParent Task ID[0m
+            
+[36m</strong>[39m
+            
+[36m<span[39m
+              [33mstyl
+e[39m=[32m"color: 
+rgb(107, 114, 128); 
+font-family: 
+monospace;"[39m
+            [36m>[39m
+              
+[36m<a[39m
+                [33mhr
+ef[39m=[32m"/tasks/ta
+sk-1"[39m
+                [33mst
+yle[39m=[32m"color: 
+rgb(59, 130, 246); 
+text-decoration: 
+none;"[39m
+              
+[36m>[39m
+                
+[0mtask-1[0m
+              
+[36m</a>[39m
+            
+[36m</span>[39m
+            
+[36m<strong[39m
+              [33mstyl
+e[39m=[32m"color: 
+rgb(55, 65, 81);"[39m
+            [36m>[39m
+              
+[0mIterations 
+Complete[0m
+            
+[36m</strong>[39m
+            
+[36m<span[39m
+              [33mstyl
+e[39m=[32m"color: 
+rgb(17, 24, 39); 
+font-weight: 500;"[39m
+            [36m>[39m
+              [0m0[0m
+              [0m / 
+Γê₧[0m
+            
+[36m</span>[39m
+            
+[36m<strong[39m
+              [33mstyl
+e[39m=[32m"color: 
+rgb(55, 65, 81);"[39m
+            [36m>[39m
+              
+[0mStarted At[0m
+            
+[36m</strong>[39m
+            
+[36m<span[39m
+              [33mstyl
+e[39m=[32m"color: 
+rgb(107, 114, 
+128);"[39m
+            [36m>[39m
+              
+[0m1/1/2023, 5:30:00 
+am[0m
+            
+[36m</span>[39m
+            
+[36m<strong[39m
+              [33mstyl
+e[39m=[32m"color: 
+rgb(55, 65, 81);"[39m
+            [36m>[39m
+              
+[0mCompleted At[0m
+            
+[36m</strong>[39m
+            
+[36m<span[39m
+              [33mstyl
+e[39m=[32m"color: 
+rgb(107, 114, 
+128);"[39m
+            [36m>[39m
+              
+[0mΓÇö[0m
+            
+[36m</span>[39m
+            
+[36m<strong[39m
+              [33mstyl
+e[39m=[32m"color: 
+rgb(55, 65, 81);"[39m
+            [36m>[39m
+              [0mLive 
+Updates[0m
+            
+[36m</strong>[39m
+            
+[36m<span[39m
+              [33mstyl
+e[39m=[32m"color: 
+rgb(37, 99, 235);"[39m
+            [36m>[39m
+              
+[0mPolling for status 
+updates every 3s...[0m
+            
+[36m</span>[39m
+          
+[36m</div>[39m
+        
+[36m</div>[39m
+      [36m</div>[39m
+    [36m</div>[39m
+  [36m</body>[39m
+[36m</html>[39m
+[90m [2mΓ¥»[22m 
+Proxy.waitForWrapper no
+de_modules/@testing-lib
+rary/dom/dist/wait-for.
+js:[2m163:27[22m[39m
+[36m [2mΓ¥»[22m src/
+pages/AgentRunPage.test
+.tsx:[2m176:15[22m[3
+9m
+    [90m174| [39m    
+    [34mrenderWithRout
+er[39m([33m<[39m[33
+mAgentRunPage[39m [33
+m/[39m[33m>[39m)[33
+m;[39m
+    [90m175| [39m
+    [90m176| [39m    
+    [35mawait[39m 
+[34mwaitFor[39m(() 
+[33m=>[39m [34mexpec
+t[39m(screen[33m.[39
+m[34mgetByText[39m([
+36m/PENDING/i[39m))[3
+3m.[39m[34mtoBeI[39m
+ΓÇª
+    [90m   | [39m    
+          [31m^[39m
+    [90m177| [39m
+    [90m178| [39m    
+    [90m// Manually 
+invoke the polling 
+callback (simulating 
+setInterva[39mΓÇª
+
+[31m[2mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ
+»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»Γ
+Ä»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»[1/2]ΓÄ»[2
+2m[39m
+
+[31m[1m[7m FAIL 
+[27m[22m[39m src/pag
+es/AgentRunPage.test.ts
+x[2m > 
+[22mAgentRunPage 
+Polling Tests[2m > 
+[22mclears polling 
+upon terminal state 
+COMPLETED
+[31m[1mTestingLibrary
+ElementError[22m[39m:
+ Found multiple 
+elements with the 
+text: /COMPLETED/i
+
+Here are the matching 
+elements:
+
+Ignored nodes: 
+comments, script, style
+[36m<span[39m
+  [33mstyle[39m=[32m
+"color: rgb(107, 114, 
+128); font-size: 
+0.875rem;"[39m
+[36m>[39m
+  [0mAgent completed 
+successfully[0m
+[36m</span>[39m
+
+Ignored nodes: 
+comments, script, style
+[36m<span>[39m
+  [0mCOMPLETED[0m
+[36m</span>[39m
+
+Ignored nodes: 
+comments, script, style
+[36m<strong[39m
+  [33mstyle[39m=[32m
+"color: rgb(55, 65, 
+81);"[39m
+[36m>[39m
+  [0mCompleted At[0m
+[36m</strong>[39m
+
+(If this is 
+intentional, then use 
+the `*AllBy*` variant 
+of the query (like 
+`queryAllByText`, 
+`getAllByText`, or 
+`findAllByText`)).
+
+Ignored nodes: 
+comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<div[39m
+      [33mstyle[39m=
+[32m"padding: 2rem; 
+font-family: 
+sans-serif; max-width: 
+800px; margin: 0px 
+auto;"[39m
+    [36m>[39m
+      [36m<div[39m
+        [33mstyle[39m
+=[32m"margin-bottom: 
+1.5rem;"[39m
+      [36m>[39m
+        [36m<a[39m
+          [33mhref[39
+m=[32m"/tasks/task-1"
+[39m
+          [33mstyle[3
+9m=[32m"color: 
+rgb(59, 130, 246); 
+text-decoration: 
+none;"[39m
+        [36m>[39m
+          [0mΓåÉ Back 
+to Parent Task[0m
+        [36m</a>[39m
+      [36m</div>[39m
+      [36m<div[39m
+        [33mstyle[39m
+=[32m"background-color
+: rgb(255, 255, 255); 
+padding: 1.5rem; 
+border-radius: 0.5rem; 
+box-shadow: 0 1px 3px 
+0 rgba(0, 0, 0, 0.1); 
+border-top: 4px solid 
+rgb(6, 95, 70);"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mstyle[3
+9m=[32m"display: 
+flex; justify-content: 
+space-between; 
+align-items: center; 
+margin-bottom: 
+2rem;"[39m
+        [36m>[39m
+          
+[36m<div>[39m
+            
+[36m<h1[39m
+              [33mstyl
+e[39m=[32m"margin: 
+0px 0px 0.25rem 0px; 
+color: rgb(17, 24, 
+39); font-size: 
+1.5rem;"[39m
+            [36m>[39m
+              
+[0mAgent Execution 
+Details[0m
+            
+[36m</h1>[39m
+            
+[36m<span[39m
+              [33mstyl
+e[39m=[32m"color: 
+rgb(107, 114, 128); 
+font-size: 
+0.875rem;"[39m
+            [36m>[39m
+              
+[0mAgent completed 
+successfully[0m
+            
+[36m</span>[39m
+          
+[36m</div>[39m
+          
+[36m<div[39m
+            [33mstyle
+[39m=[32m"display: 
+flex; align-items: 
+center; gap: 0.5rem; 
+padding: 0.5rem 1rem; 
+border-radius: 9999px; 
+background-color: 
+rgb(209, 250, 229); 
+color: rgb(6, 95, 70); 
+font-weight: 
+bold;"[39m
+          [36m>[39m
+            
+[36m<span>[39m
+              
+[0mΓ£à[0m
+            
+[36m</span>[39m
+            
+[36m<span>[39m
+              
+[0mCOMPLETED[0m
+            
+[36m</span>[39m
+          
+[36m</div>[39m
+        
+[36m</div>[39m
+        [36m<div[39m
+          [33mstyle[3
+9m=[32m"display: 
+grid; 
+grid-template-columns: 
+minmax(140px, auto) 
+1fr; gap: 1rem 2rem; 
+font-size: 0.875rem; 
+background-color: 
+rgb(249, 250, 251); 
+padding: 1.5rem; 
+border-radius: 
+0.375rem; border: 1px 
+solid rgb(229, 231, 
+235);"[39m
+        [36m>[39m
+          
+[36m<strong[39m
+            [33mstyle
+[39m=[32m"color: 
+rgb(55, 65, 81);"[39m
+          [36m>[39m
+            [0mAgent 
+Run ID[0m
+          
+[36m</strong>[39m
+          
+[36m<span[39m
+            [33mstyle
+[39m=[32m"color: 
+rgb(107, 114, 128); 
+font-family: 
+monospace;"[39m
+          [36m>[39m
+            
+[0mrun-comp[0m
+          
+[36m</span>[39m
+          
+[36m<strong[39m
+            [33mstyle
+[39m=[32m"color: 
+rgb(55, 65, 81);"[39m
+          [36m>[39m
+            [0mParent 
+Task ID[0m
+          
+[36m</strong>[39m
+          
+[36m<span[39m
+            [33mstyle
+[39m=[32m"color: 
+rgb(107, 114, 128); 
+font-family: 
+monospace;"[39m
+          [36m>[39m
+            
+[36m<a[39m
+              [33mhref
+[39m=[32m"/tasks/task
+-1"[39m
+              [33mstyl
+e[39m=[32m"color: 
+rgb(59, 130, 246); 
+text-decoration: 
+none;"[39m
+            [36m>[39m
+              
+[0mtask-1[0m
+            
+[36m</a>[39m
+          
+[36m</span>[39m
+          
+[36m<strong[39m
+            [33mstyle
+[39m=[32m"color: 
+rgb(55, 65, 81);"[39m
+          [36m>[39m
+            
+[0mIterations 
+Complete[0m
+          
+[36m</strong>[39m
+          
+[36m<span[39m
+            [33mstyle
+[39m=[32m"color: 
+rgb(17, 24, 39); 
+font-weight: 500;"[39m
+          [36m>[39m
+            [0m4[0m
+            [0m / 
+Γê₧[0m
+          
+[36m</span>[39m
+          
+[36m<strong[39m
+            [33mstyle
+[39m=[32m"color: 
+rgb(55, 65, 81);"[39m
+          [36m>[39m
+            
+[0mStarted At[0m
+          
+[36m</strong>[39m
+          
+[36m<span[39m
+            [33mstyle
+[39m=[32m"color: 
+rgb(107, 114, 
+128);"[39m
+          [36m>[39m
+            
+[0m1/1/2023, 5:30:00 
+am[0m
+          
+[36m</span>[39m
+          
+[36m<strong[39m
+            [33mstyle
+[39m=[32m"color: 
+rgb(55, 65, 81);"[39m
+          [36m>[39m
+            
+[0mCompleted At[0m
+          
+[36m</strong>[39m
+          
+[36m<span[39m
+            [33mstyle
+[39m=[32m"color: 
+rgb(107, 114, 
+128);"[39m
+          [36m>[39m
+            
+[0m1/1/2023, 5:35:00 
+am[0m
+[2m Test Files [22m [1m[31m1 failed[39m[22m[2m | [22m[1m[32m5 passed[39m[22m[90m (6)[39m
+[2m      Tests [22m [1m[31m2 failed[39m[22m[2m | [22m[1m[32m36 passed[39m[22m[90m (38)[39m
+[2m   Start at [22m 11:03:43
+[2m   Duration [22m 4.51s[2m (transform 685ms, setup 888ms, collect 2.60s, tests 3.56s, environment 5.79s, prepare 1.43s)[22m
+
+          
+[36m</span>[39m
+          
+[36m<strong[39m
+            [33mstyle
+[39m=[32m"color: 
+rgb(55, 65, 81);"[39m
+          [36m>[39m
+            [0mLive 
+Updates[0m
+          
+[36m</strong>[39m
+          
+[36m<span[39m
+            [33mstyle
+[39m=[32m"color: 
+rgb(6, 95, 70);"[39m
+          [36m>[39m
+            
+[0mPolling 
+concluded.[0m
+          
+[36m</span>[39m
+        
+[36m</div>[39m
+      [36m</div>[39m
+    [36m</div>[39m
+  [36m</div>[39m
+[36m</body>[39m
+
+Ignored nodes: 
+comments, script, style
+[36m<html>[39m
+  [36m<head />[39m
+  [36m<body>[39m
+    [36m<div>[39m
+      [36m<div[39m
+        [33mstyle[39m
+=[32m"padding: 2rem; 
+font-family: 
+sans-serif; max-width: 
+800px; margin: 0px 
+auto;"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mstyle[3
+9m=[32m"margin-bottom:
+ 1.5rem;"[39m
+        [36m>[39m
+          [36m<a[39m
+            [33mhref[
+39m=[32m"/tasks/task-1
+"[39m
+            [33mstyle
+[39m=[32m"color: 
+rgb(59, 130, 246); 
+text-decoration: 
+none;"[39m
+          [36m>[39m
+            [0mΓåÉ 
+Back to Parent Task[0m
+          
+[36m</a>[39m
+        
+[36m</div>[39m
+        [36m<div[39m
+          [33mstyle[3
+9m=[32m"background-col
+or: rgb(255, 255, 
+255); padding: 1.5rem; 
+border-radius: 0.5rem; 
+box-shadow: 0 1px 3px 
+0 rgba(0, 0, 0, 0.1); 
+border-top: 4px solid 
+rgb(6, 95, 70);"[39m
+        [36m>[39m
+          
+[36m<div[39m
+            [33mstyle
+[39m=[32m"display: 
+flex; justify-content: 
+space-between; 
+align-items: center; 
+margin-bottom: 
+2rem;"[39m
+          [36m>[39m
+            
+[36m<div>[39m
+              
+[36m<h1[39m
+                [33mst
+yle[39m=[32m"margin: 
+0px 0px 0.25rem 0px; 
+color: rgb(17, 24, 
+39); font-size: 
+1.5rem;"[39m
+              
+[36m>[39m
+                
+[0mAgent Execution 
+Details[0m
+              
+[36m</h1>[39m
+              
+[36m<span[39m
+                [33mst
+yle[39m=[32m"color: 
+rgb(107, 114, 128); 
+font-size: 
+0.875rem;"[39m
+              
+[36m>[39m
+                
+[0mAgent completed 
+successfully[0m
+              
+[36m</span>[39m
+            
+[36m</div>[39m
+            
+[36m<div[39m
+              [33mstyl
+e[39m=[32m"display: 
+flex; align-items: 
+center; gap: 0.5rem; 
+padding: 0.5rem 1rem; 
+border-radius: 9999px; 
+background-color: 
+rgb(209, 250, 229); 
+color: rgb(6, 95, 70); 
+font-weight: 
+bold;"[39m
+            [36m>[39m
+              
+[36m<span>[39m
+                
+[0mΓ£à[0m
+              
+[36m</span>[39m
+              
+[36m<span>[39m
+                
+[0mCOMPLETED[0m
+              
+[36m</span>[39m
+            
+[36m</div>[39m
+          
+[36m</div>[39m
+          
+[36m<div[39m
+            [33mstyle
+[39m=[32m"display: 
+grid; 
+grid-template-columns: 
+minmax(140px, auto) 
+1fr; gap: 1rem 2rem; 
+font-size: 0.875rem; 
+background-color: 
+rgb(249, 250, 251); 
+padding: 1.5rem; 
+border-radius: 
+0.375rem; border: 1px 
+solid rgb(229, 231, 
+235);"[39m
+          [36m>[39m
+            
+[36m<strong[39m
+              [33mstyl
+e[39m=[32m"color: 
+rgb(55, 65, 81);"[39m
+            [36m>[39m
+              
+[0mAgent Run ID[0m
+            
+[36m</strong>[39m
+            
+[36m<span[39m
+              [33mstyl
+e[39m=[32m"color: 
+rgb(107, 114, 128); 
+font-family: 
+monospace;"[39m
+            [36m>[39m
+              
+[0mrun-comp[0m
+            
+[36m</span>[39m
+            
+[36m<strong[39m
+              [33mstyl
+e[39m=[32m"color: 
+rgb(55, 65, 81);"[39m
+            [36m>[39m
+              
+[0mParent Task ID[0m
+            
+[36m</strong>[39m
+            
+[36m<span[39m
+              [33mstyl
+e[39m=[32m"color: 
+rgb(107, 114, 128); 
+font-family: 
+monospace;"[39m
+            [36m>[39m
+              
+[36m<a[39m
+                [33mhr
+ef[39m=[32m"/tasks/ta
+sk-1"[39m
+                [33mst
+yle[39m=[32m"color: 
+rgb(59, 130, 246); 
+text-decoration: 
+none;"[39m
+              
+[36m>[39m
+                
+[0mtask-1[0m
+              
+[36m</a>[39m
+            
+[36m</span>[39m
+            
+[36m<strong[39m
+              [33mstyl
+e[39m=[32m"color: 
+rgb(55, 65, 81);"[39m
+            [36m>[39m
+              
+[0mIterations 
+Complete[0m
+            
+[36m</strong>[39m
+            
+[36m<span[39m
+              [33mstyl
+e[39m=[32m"color: 
+rgb(17, 24, 39); 
+font-weight: 500;"[39m
+            [36m>[39m
+              [0m4[0m
+              [0m / 
+Γê₧[0m
+            
+[36m</span>[39m
+            
+[36m<strong[39m
+              [33mstyl
+e[39m=[32m"color: 
+rgb(55, 65, 81);"[39m
+            [36m>[39m
+              
+[0mStarted At[0m
+            
+[36m</strong>[39m
+            
+[36m<span[39m
+              [33mstyl
+e[39m=[32m"color: 
+rgb(107, 114, 
+128);"[39m
+            [36m>[39m
+              
+[0m1/1/2023, 5:30:00 
+am[0m
+            
+[36m</span>[39m
+            
+[36m<strong[39m
+              [33mstyl
+e[39m=[32m"color: 
+rgb(55, 65, 81);"[39m
+            [36m>[39m
+              
+[0mCompleted At[0m
+            
+[36m</strong>[39m
+            
+[36m<span[39m
+              [33mstyl
+e[39m=[32m"color: 
+rgb(107, 114, 
+128);"[39m
+            [36m>[39m
+              
+[0m1/1/2023, 5:35:00 
+am[0m
+            
+[36m</span>[39m
+            
+[36m<strong[39m
+              [33mstyl
+e[39m=[32m"color: 
+rgb(55, 65, 81);"[39m
+            [36m>[39m
+              [0mLive 
+Updates[0m
+            
+[36m</strong>[39m
+            
+[36m<span[39m
+              [33mstyl
+e[39m=[32m"color: 
+rgb(6, 95, 70);"[39m
+            [36m>[39m
+              
+[0mPolling 
+concluded.[0m
+            
+[36m</span>[39m
+          
+[36m</div>[39m
+        
+[36m</div>[39m
+      [36m</div>[39m
+    [36m</div>[39m
+  [36m</body>[39m
+[36m</html>[39m
+[90m [2mΓ¥»[22m 
+Proxy.waitForWrapper no
+de_modules/@testing-lib
+rary/dom/dist/wait-for.
+js:[2m163:27[22m[39m
+[36m [2mΓ¥»[22m src/
+pages/AgentRunPage.test
+.tsx:[2m198:15[22m[3
+9m
+    [90m196| [39m    
+    [34mrenderWithRout
+er[39m([33m<[39m[33
+mAgentRunPage[39m [33
+m/[39m[33m>[39m)[33
+m;[39m
+    [90m197| [39m
+    [90m198| [39m    
+    [35mawait[39m 
+[34mwaitFor[39m(() 
+[33m=>[39m [34mexpec
+t[39m(screen[33m.[39
+m[34mgetByText[39m([
+36m/COMPLETED/i[39m))
+[33m.[39m[34mtoB[39m
+ΓÇª
+    [90m   | [39m    
+          [31m^[39m
+    [90m199| [39m
+    [90m200| [39m    
+    [90m// 
+clearInterval should 
+have been called to 
+stop polling[39m
+
+[31m[2mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ
+»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»Γ
+Ä»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»[2/2]ΓÄ»[2
+2m[39m
+

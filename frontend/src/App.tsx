@@ -5,7 +5,7 @@ import HomePage from './pages/HomePage';
 import ProjectsPage from './pages/ProjectsPage';
 import ProjectDetailsPage from './pages/ProjectDetailsPage';
 import TasksPage from './pages/TasksPage';
-import AgentPage from './pages/AgentPage';
+import AgentRunPage from './pages/AgentRunPage';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 import { AuthProvider } from './auth/AuthContext';
@@ -25,7 +25,8 @@ const App: React.FC = () => {
                         <Route path="/projects/:projectId" element={<ProtectedRoute><ProjectDetailsPage /></ProtectedRoute>} />
                         <Route path="/tasks" element={<ProtectedRoute><TasksPage /></ProtectedRoute>} />
                         <Route path="/tasks/:taskId" element={<ProtectedRoute><TasksPage /></ProtectedRoute>} />
-                        <Route path="/agent" element={<ProtectedRoute><AgentPage /></ProtectedRoute>} />
+                        <Route path="/agent" element={<ProtectedRoute><AgentRunPage /></ProtectedRoute>} />
+                        <Route path="/agent/:runId" element={<ProtectedRoute><AgentRunPage /></ProtectedRoute>} />
                     </Routes>
                 </Layout>
             </BrowserRouter>

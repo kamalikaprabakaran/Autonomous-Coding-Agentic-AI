@@ -1,0 +1,513 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.11.9, pytest-9.1.1, pluggy-1.6.0 -- D:\Autonomous Coding Agentic AI\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: D:\Autonomous Coding Agentic AI
+configfile: pytest.ini
+plugins: anyio-4.15.1, langsmith-0.12.1, asyncio-1.4.0
+asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 180 items
+
+tests\fixtures\fixture_project\tests\test_main.py::test_dummy PASSED     [  0%]
+tests\test_agent.py::test_get_agent_run_status PASSED                    [  1%]
+tests\test_agent.py::test_get_nonexistent_agent_run PASSED               [  1%]
+tests\test_agent_graph.py::test_graph_executes_successfully_with_mock PASSED [  2%]
+tests\test_agent_graph.py::test_graph_executes_fails_then_corrects PASSED [  2%]
+tests\test_agent_graph.py::test_graph_exhausts_retries PASSED            [  3%]
+tests\test_agent_graph.py::test_graph_executor_failure_handled PASSED    [  3%]
+tests\test_agent_llm.py::test_mock_llm_provider_determinisitic PASSED    [  4%]
+tests\test_agent_llm.py::test_mock_llm_system_prompting PASSED           [  5%]
+tests\test_agent_nodes.py::test_planner_node_receives_task PASSED        [  5%]
+tests\test_agent_nodes.py::test_explorer_uses_analyzer FAILED            [  6%]
+tests\test_agent_nodes.py::test_coder_produces_proposal PASSED           [  6%]
+tests\test_agent_state.py::test_agent_state_initialization PASSED        [  7%]
+tests\test_agent_state.py::test_state_updates PASSED                     [  7%]
+tests\test_analyzer_discovery.py::test_resolve_safe_path_success FAILED  [  8%]
+tests\test_analyzer_discovery.py::test_resolve_safe_path_escape_attempt FAILED [  8%]
+tests\test_analyzer_discovery.py::test_is_ignored PASSED                 [  9%]
+tests\test_analyzer_discovery.py::test_is_binary FAILED                  [ 10%]
+tests\test_analyzer_discovery.py::test_list_files FAILED                 [ 10%]
+tests\test_analyzer_discovery.py::test_build_file_tree FAILED            [ 11%]
+tests\test_analyzer_integration.py::test_full_repository_analysis FAILED [ 11%]
+tests\test_analyzer_integration.py::test_api_endpoint_integration FAILED [ 12%]
+tests\test_analyzer_integration.py::test_api_endpoint_no_repository PASSED [ 12%]
+tests\test_analyzer_parser.py::test_analyze_valid_python_file FAILED     [ 13%]
+tests\test_analyzer_parser.py::test_analyze_malformed_python_file FAILED [ 13%]
+tests\test_analyzer_parser.py::test_analyze_large_file FAILED            [ 14%]
+tests\test_analyzer_parser.py::test_analyze_binary_file FAILED           [ 15%]
+tests\test_analyzer_search.py::test_search_code_finds_term FAILED        [ 15%]
+tests\test_analyzer_search.py::test_search_code_not_found FAILED         [ 16%]
+tests\test_analyzer_search.py::test_python_fallback_search FAILED        [ 16%]
+tests\test_analyzer_search.py::test_fallback_search_ignores_huge PASSED  [ 17%]
+tests\test_api_auth.py::test_api_unauthenticated_test_mode PASSED        [ 17%]
+tests\test_api_auth.py::test_api_authenticated_project_creation PASSED   [ 18%]
+tests\test_api_auth.py::test_api_cross_user_isolation PASSED             [ 18%]
+tests\test_api_auth.py::test_api_authenticated_task_creation PASSED      [ 19%]
+tests\test_app_startup.py::test_create_app_returns_fastapi_instance PASSED [ 20%]
+tests\test_app_startup.py::test_app_has_health_route PASSED              [ 20%]
+tests\test_app_startup.py::test_app_metadata PASSED                      [ 21%]
+tests\test_auth.py::test_verify_valid_token PASSED                       [ 21%]
+tests\test_auth.py::test_verify_expired_token PASSED                     [ 22%]
+tests\test_auth.py::test_verify_invalid_token PASSED                     [ 22%]
+tests\test_auth.py::test_verify_revoked_token PASSED                     [ 23%]
+tests\test_auth.py::test_get_current_user_optional_missing_in_test_mode PASSED [ 23%]
+tests\test_auth.py::test_get_current_user_optional_missing_in_prod PASSED [ 24%]
+tests\test_auth.py::test_get_current_user_optional_valid PASSED          [ 25%]
+tests\test_auth.py::test_get_current_user_strictly_required PASSED       [ 25%]
+tests\test_config.py::test_default_settings PASSED                       [ 26%]
+tests\test_config.py::test_settings_from_env PASSED                      [ 26%]
+tests\test_docker_executor.py::test_executor_successful_command PASSED   [ 27%]
+tests\test_docker_executor.py::test_executor_failing_command PASSED      [ 27%]
+tests\test_docker_executor.py::test_executor_timeout PASSED              [ 28%]
+tests\test_docker_executor.py::test_executor_invalid_repo FAILED         [ 28%]
+tests\test_execution_api.py::test_api_run_success PASSED                 [ 29%]
+tests\test_execution_api.py::test_api_run_service_failure PASSED         [ 30%]
+tests\test_execution_models.py::test_execution_request_fields PASSED     [ 30%]
+tests\test_execution_models.py::test_execution_result_fields PASSED      [ 31%]
+tests\test_execution_security.py::test_execution_blocks_host_directories PASSED [ 31%]
+tests\test_execution_security.py::test_execution_network_disabled PASSED [ 32%]
+tests\test_firebase_config.py::test_firebase_testing_blocks_init PASSED  [ 32%]
+tests\test_firebase_config.py::test_initialize_firebase_idempotent PASSED [ 33%]
+tests\test_firebase_config.py::test_missing_credentials_warns_but_initializes PASSED [ 33%]
+tests\test_firebase_config.py::test_get_firestore_client PASSED          [ 34%]
+tests\test_firestore_repositories.py::test_project_repo_add PASSED       [ 35%]
+tests\test_firestore_repositories.py::test_project_repo_get_exists PASSED [ 35%]
+tests\test_firestore_repositories.py::test_project_repo_get_missing PASSED [ 36%]
+tests\test_firestore_repositories.py::test_project_repo_list_by_owner PASSED [ 36%]
+tests\test_firestore_repositories.py::test_task_repo_add PASSED          [ 37%]
+tests\test_firestore_repositories.py::test_task_repo_list_by_owner PASSED [ 37%]
+tests\test_firestore_repositories.py::test_agent_run_repo_add PASSED     [ 38%]
+tests\test_firestore_repositories.py::test_agent_run_repo_list_by_owner PASSED [ 38%]
+tests\test_git_service.py::test_is_git_repository_true PASSED            [ 39%]
+tests\test_git_service.py::test_is_git_repository_false PASSED           [ 40%]
+tests\test_git_service.py::test_get_current_branch PASSED                [ 40%]
+tests\test_git_service.py::test_get_current_branch_not_repo PASSED       [ 41%]
+tests\test_git_service.py::test_get_status_returns_git_status PASSED     [ 41%]
+tests\test_git_service.py::test_get_status_non_repo PASSED               [ 42%]
+tests\test_git_service.py::test_clean_repository PASSED                  [ 42%]
+tests\test_git_service.py::test_modified_file_detected PASSED            [ 43%]
+tests\test_git_service.py::test_untracked_file_detected PASSED           [ 43%]
+tests\test_git_service.py::test_staged_file_detected PASSED              [ 44%]
+tests\test_git_service.py::test_working_tree_diff PASSED                 [ 45%]
+tests\test_git_service.py::test_working_tree_diff_clean PASSED           [ 45%]
+tests\test_git_service.py::test_staged_diff PASSED                       [ 46%]
+tests\test_git_service.py::test_staged_diff_empty_when_nothing_staged PASSED [ 46%]
+tests\test_git_service.py::test_create_branch PASSED                     [ 47%]
+tests\test_git_service.py::test_create_branch_invalid_name_dot_dot PASSED [ 47%]
+tests\test_git_service.py::test_create_branch_invalid_name_space PASSED  [ 48%]
+tests\test_git_service.py::test_create_branch_invalid_name_empty PASSED  [ 48%]
+tests\test_git_service.py::test_create_branch_invalid_name_leading_dash PASSED [ 49%]
+tests\test_git_service.py::test_create_branch_invalid_name_shell_chars PASSED [ 50%]
+tests\test_git_service.py::test_create_branch_already_exists PASSED      [ 50%]
+tests\test_git_service.py::test_checkout_branch_clean PASSED             [ 51%]
+tests\test_git_service.py::test_checkout_blocked_when_dirty PASSED       [ 51%]
+tests\test_git_service.py::test_stage_valid_file PASSED                  [ 52%]
+tests\test_git_service.py::test_stage_path_traversal_blocked PASSED      [ 52%]
+tests\test_git_service.py::test_stage_empty_paths_rejected PASSED        [ 53%]
+tests\test_git_service.py::test_commit_success PASSED                    [ 53%]
+tests\test_git_service.py::test_commit_empty_message_rejected PASSED     [ 54%]
+tests\test_git_service.py::test_commit_whitespace_message_rejected PASSED [ 55%]
+tests\test_git_service.py::test_commit_no_staged_changes_rejected PASSED [ 55%]
+tests\test_git_service.py::test_no_arbitrary_git_command_api PASSED      [ 56%]
+tests\test_git_service.py::test_subprocess_shell_true_not_used PASSED    [ 56%]
+tests\test_git_service.py::test_invalid_path_nonexistent PASSED          [ 57%]
+tests\test_git_service.py::test_invalid_path_empty_string PASSED         [ 57%]
+tests\test_git_service.py::test_is_git_repository_nonexistent_path PASSED [ 58%]
+tests\test_git_service.py::test_git_error_is_base_for_command_error PASSED [ 58%]
+tests\test_git_service.py::test_get_diff_not_repo_raises PASSED          [ 59%]
+tests\test_git_service.py::test_stage_files_not_repo_raises PASSED       [ 60%]
+tests\test_git_service.py::test_commit_not_repo_raises PASSED            [ 60%]
+tests\test_git_tools.py::test_git_status_tool_success PASSED             [ 61%]
+tests\test_git_tools.py::test_git_status_tool_non_repo PASSED            [ 61%]
+tests\test_git_tools.py::test_git_status_tool_dirty_repo PASSED          [ 62%]
+tests\test_git_tools.py::test_git_status_tool_invalid_path PASSED        [ 62%]
+tests\test_git_tools.py::test_git_diff_tool_clean_repo PASSED            [ 63%]
+tests\test_git_tools.py::test_git_diff_tool_with_changes PASSED          [ 63%]
+tests\test_git_tools.py::test_git_diff_tool_staged PASSED                [ 64%]
+tests\test_git_tools.py::test_git_diff_tool_non_repo PASSED              [ 65%]
+tests\test_git_tools.py::test_git_diff_tool_default_args PASSED          [ 65%]
+tests\test_git_tools.py::test_git_branch_tool_success PASSED             [ 66%]
+tests\test_git_tools.py::test_git_branch_tool_non_repo PASSED            [ 66%]
+tests\test_git_tools.py::test_git_stage_tool_success PASSED              [ 67%]
+tests\test_git_tools.py::test_git_stage_tool_path_traversal_blocked PASSED [ 67%]
+tests\test_git_tools.py::test_git_stage_tool_empty_paths PASSED          [ 68%]
+tests\test_git_tools.py::test_git_stage_tool_non_repo PASSED             [ 68%]
+tests\test_git_tools.py::test_git_commit_tool_success PASSED             [ 69%]
+tests\test_git_tools.py::test_git_commit_tool_empty_message_rejected PASSED [ 70%]
+tests\test_git_tools.py::test_git_commit_tool_no_staged_changes PASSED   [ 70%]
+tests\test_git_tools.py::test_git_commit_tool_non_repo PASSED            [ 71%]
+tests\test_git_tools.py::test_all_git_tools_register_in_registry PASSED  [ 71%]
+tests\test_git_tools.py::test_git_tools_appear_in_list_tools PASSED      [ 72%]
+tests\test_git_tools.py::test_git_tools_have_input_schemas PASSED        [ 72%]
+tests\test_git_tools.py::test_git_tools_all_return_tool_result PASSED    [ 73%]
+tests\test_health.py::test_health_endpoint_returns_200 PASSED            [ 73%]
+tests\test_health.py::test_health_endpoint_returns_healthy_status PASSED [ 74%]
+tests\test_projects.py::test_create_project PASSED                       [ 75%]
+tests\test_projects.py::test_get_project PASSED                          [ 75%]
+tests\test_projects.py::test_list_projects PASSED                        [ 76%]
+tests\test_projects.py::test_get_nonexistent_project PASSED              [ 76%]
+tests\test_projects.py::test_create_project_invalid_input PASSED         [ 77%]
+tests\test_projects.py::test_create_project_empty_name PASSED            [ 77%]
+tests\test_services.py::TestProjectService::test_create_project PASSED   [ 78%]
+tests\test_services.py::TestProjectService::test_get_project_exists PASSED [ 78%]
+tests\test_services.py::TestProjectService::test_get_project_not_found PASSED [ 79%]
+tests\test_services.py::TestProjectService::test_list_projects PASSED    [ 80%]
+tests\test_services.py::TestTaskService::test_create_task PASSED         [ 80%]
+tests\test_services.py::TestTaskService::test_create_task_nonexistent_project PASSED [ 81%]
+tests\test_services.py::TestTaskService::test_get_task_not_found PASSED  [ 81%]
+tests\test_services.py::TestAgentRunService::test_create_run PASSED      [ 82%]
+tests\test_services.py::TestAgentRunService::test_get_run_not_found PASSED [ 82%]
+tests\test_tasks.py::test_create_task PASSED                             [ 83%]
+tests\test_tasks.py::test_get_task PASSED                                [ 83%]
+tests\test_tasks.py::test_get_nonexistent_task PASSED                    [ 84%]
+tests\test_tasks.py::test_create_task_invalid_input PASSED               [ 85%]
+tests\test_tasks.py::test_create_task_nonexistent_project PASSED         [ 85%]
+tests\test_tools_files.py::test_list_files ERROR                         [ 86%]
+tests\test_tools_files.py::test_read_file_success ERROR                  [ 86%]
+tests\test_tools_files.py::test_read_file_missing ERROR                  [ 87%]
+tests\test_tools_files.py::test_read_file_binary ERROR                   [ 87%]
+tests\test_tools_files.py::test_read_file_oversized ERROR                [ 88%]
+tests\test_tools_files.py::test_read_file_path_traversal ERROR           [ 88%]
+tests\test_tools_files.py::test_read_file_absolute_path_outside ERROR    [ 89%]
+tests\test_tools_files.py::test_write_file_new ERROR                     [ 90%]
+tests\test_tools_files.py::test_write_file_overwrite ERROR               [ 90%]
+tests\test_tools_files.py::test_write_file_traversal ERROR               [ 91%]
+tests\test_tools_files.py::test_edit_file_success ERROR                  [ 91%]
+tests\test_tools_files.py::test_edit_file_not_found ERROR                [ 92%]
+tests\test_tools_files.py::test_edit_file_ambiguous ERROR                [ 92%]
+tests\test_tools_files.py::test_edit_file_missing_file ERROR             [ 93%]
+tests\test_tools_files.py::test_get_file_info_file ERROR                 [ 93%]
+tests\test_tools_files.py::test_get_file_info_directory ERROR            [ 94%]
+tests\test_tools_files.py::test_get_file_info_missing ERROR              [ 95%]
+tests\test_tools_files.py::test_mixed_separator_attack ERROR             [ 95%]
+tests\test_tools_registry.py::test_registry_register_and_get PASSED      [ 96%]
+tests\test_tools_registry.py::test_registry_get_unknown PASSED           [ 96%]
+tests\test_tools_registry.py::test_registry_list_tools PASSED            [ 97%]
+tests\test_tools_registry.py::test_tool_execute PASSED                   [ 97%]
+tests\test_tools_search.py::test_search_tool_success FAILED              [ 98%]
+tests\test_tools_search.py::test_search_tool_not_found FAILED            [ 98%]
+tests\test_tools_search.py::test_search_tool_traversal_attack PASSED     [ 99%]
+tests\test_tools_search.py::test_search_tool_nonexistent_repo PASSED     [100%]
+
+=================================== ERRORS ====================================
+______________________ ERROR at setup of test_list_files ______________________
+tests\test_tools_files.py:18: in temp_repo
+    shutil.copytree(FIXTURE_PATH, repo_copy)
+C:\Program Files\Python311\Lib\shutil.py:571: in copytree
+    with os.scandir(src) as itr:
+         ^^^^^^^^^^^^^^^
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\Autonomous Coding Agentic AI\\backend\\backend\\tests\\fixtures\\fixture_project'
+__________________ ERROR at setup of test_read_file_success ___________________
+tests\test_tools_files.py:18: in temp_repo
+    shutil.copytree(FIXTURE_PATH, repo_copy)
+C:\Program Files\Python311\Lib\shutil.py:571: in copytree
+    with os.scandir(src) as itr:
+         ^^^^^^^^^^^^^^^
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\Autonomous Coding Agentic AI\\backend\\backend\\tests\\fixtures\\fixture_project'
+__________________ ERROR at setup of test_read_file_missing ___________________
+tests\test_tools_files.py:18: in temp_repo
+    shutil.copytree(FIXTURE_PATH, repo_copy)
+C:\Program Files\Python311\Lib\shutil.py:571: in copytree
+    with os.scandir(src) as itr:
+         ^^^^^^^^^^^^^^^
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\Autonomous Coding Agentic AI\\backend\\backend\\tests\\fixtures\\fixture_project'
+___________________ ERROR at setup of test_read_file_binary ___________________
+tests\test_tools_files.py:18: in temp_repo
+    shutil.copytree(FIXTURE_PATH, repo_copy)
+C:\Program Files\Python311\Lib\shutil.py:571: in copytree
+    with os.scandir(src) as itr:
+         ^^^^^^^^^^^^^^^
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\Autonomous Coding Agentic AI\\backend\\backend\\tests\\fixtures\\fixture_project'
+_________________ ERROR at setup of test_read_file_oversized __________________
+tests\test_tools_files.py:18: in temp_repo
+    shutil.copytree(FIXTURE_PATH, repo_copy)
+C:\Program Files\Python311\Lib\shutil.py:571: in copytree
+    with os.scandir(src) as itr:
+         ^^^^^^^^^^^^^^^
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\Autonomous Coding Agentic AI\\backend\\backend\\tests\\fixtures\\fixture_project'
+_______________ ERROR at setup of test_read_file_path_traversal _______________
+tests\test_tools_files.py:18: in temp_repo
+    shutil.copytree(FIXTURE_PATH, repo_copy)
+C:\Program Files\Python311\Lib\shutil.py:571: in copytree
+    with os.scandir(src) as itr:
+         ^^^^^^^^^^^^^^^
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\Autonomous Coding Agentic AI\\backend\\backend\\tests\\fixtures\\fixture_project'
+___________ ERROR at setup of test_read_file_absolute_path_outside ____________
+tests\test_tools_files.py:18: in temp_repo
+    shutil.copytree(FIXTURE_PATH, repo_copy)
+C:\Program Files\Python311\Lib\shutil.py:571: in copytree
+    with os.scandir(src) as itr:
+         ^^^^^^^^^^^^^^^
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\Autonomous Coding Agentic AI\\backend\\backend\\tests\\fixtures\\fixture_project'
+____________________ ERROR at setup of test_write_file_new ____________________
+tests\test_tools_files.py:18: in temp_repo
+    shutil.copytree(FIXTURE_PATH, repo_copy)
+C:\Program Files\Python311\Lib\shutil.py:571: in copytree
+    with os.scandir(src) as itr:
+         ^^^^^^^^^^^^^^^
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\Autonomous Coding Agentic AI\\backend\\backend\\tests\\fixtures\\fixture_project'
+_________________ ERROR at setup of test_write_file_overwrite _________________
+tests\test_tools_files.py:18: in temp_repo
+    shutil.copytree(FIXTURE_PATH, repo_copy)
+C:\Program Files\Python311\Lib\shutil.py:571: in copytree
+    with os.scandir(src) as itr:
+         ^^^^^^^^^^^^^^^
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\Autonomous Coding Agentic AI\\backend\\backend\\tests\\fixtures\\fixture_project'
+_________________ ERROR at setup of test_write_file_traversal _________________
+tests\test_tools_files.py:18: in temp_repo
+    shutil.copytree(FIXTURE_PATH, repo_copy)
+C:\Program Files\Python311\Lib\shutil.py:571: in copytree
+    with os.scandir(src) as itr:
+         ^^^^^^^^^^^^^^^
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\Autonomous Coding Agentic AI\\backend\\backend\\tests\\fixtures\\fixture_project'
+__________________ ERROR at setup of test_edit_file_success ___________________
+tests\test_tools_files.py:18: in temp_repo
+    shutil.copytree(FIXTURE_PATH, repo_copy)
+C:\Program Files\Python311\Lib\shutil.py:571: in copytree
+    with os.scandir(src) as itr:
+         ^^^^^^^^^^^^^^^
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\Autonomous Coding Agentic AI\\backend\\backend\\tests\\fixtures\\fixture_project'
+_________________ ERROR at setup of test_edit_file_not_found __________________
+tests\test_tools_files.py:18: in temp_repo
+    shutil.copytree(FIXTURE_PATH, repo_copy)
+C:\Program Files\Python311\Lib\shutil.py:571: in copytree
+    with os.scandir(src) as itr:
+         ^^^^^^^^^^^^^^^
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\Autonomous Coding Agentic AI\\backend\\backend\\tests\\fixtures\\fixture_project'
+_________________ ERROR at setup of test_edit_file_ambiguous __________________
+tests\test_tools_files.py:18: in temp_repo
+    shutil.copytree(FIXTURE_PATH, repo_copy)
+C:\Program Files\Python311\Lib\shutil.py:571: in copytree
+    with os.scandir(src) as itr:
+         ^^^^^^^^^^^^^^^
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\Autonomous Coding Agentic AI\\backend\\backend\\tests\\fixtures\\fixture_project'
+________________ ERROR at setup of test_edit_file_missing_file ________________
+tests\test_tools_files.py:18: in temp_repo
+    shutil.copytree(FIXTURE_PATH, repo_copy)
+C:\Program Files\Python311\Lib\shutil.py:571: in copytree
+    with os.scandir(src) as itr:
+         ^^^^^^^^^^^^^^^
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\Autonomous Coding Agentic AI\\backend\\backend\\tests\\fixtures\\fixture_project'
+__________________ ERROR at setup of test_get_file_info_file __________________
+tests\test_tools_files.py:18: in temp_repo
+    shutil.copytree(FIXTURE_PATH, repo_copy)
+C:\Program Files\Python311\Lib\shutil.py:571: in copytree
+    with os.scandir(src) as itr:
+         ^^^^^^^^^^^^^^^
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\Autonomous Coding Agentic AI\\backend\\backend\\tests\\fixtures\\fixture_project'
+_______________ ERROR at setup of test_get_file_info_directory ________________
+tests\test_tools_files.py:18: in temp_repo
+    shutil.copytree(FIXTURE_PATH, repo_copy)
+C:\Program Files\Python311\Lib\shutil.py:571: in copytree
+    with os.scandir(src) as itr:
+         ^^^^^^^^^^^^^^^
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\Autonomous Coding Agentic AI\\backend\\backend\\tests\\fixtures\\fixture_project'
+________________ ERROR at setup of test_get_file_info_missing _________________
+tests\test_tools_files.py:18: in temp_repo
+    shutil.copytree(FIXTURE_PATH, repo_copy)
+C:\Program Files\Python311\Lib\shutil.py:571: in copytree
+    with os.scandir(src) as itr:
+         ^^^^^^^^^^^^^^^
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\Autonomous Coding Agentic AI\\backend\\backend\\tests\\fixtures\\fixture_project'
+________________ ERROR at setup of test_mixed_separator_attack ________________
+tests\test_tools_files.py:18: in temp_repo
+    shutil.copytree(FIXTURE_PATH, repo_copy)
+C:\Program Files\Python311\Lib\shutil.py:571: in copytree
+    with os.scandir(src) as itr:
+         ^^^^^^^^^^^^^^^
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\Autonomous Coding Agentic AI\\backend\\backend\\tests\\fixtures\\fixture_project'
+================================== FAILURES ===================================
+_________________________ test_explorer_uses_analyzer _________________________
+tests\test_agent_nodes.py:33: in test_explorer_uses_analyzer
+    assert out["repository_summary"]["repository_path"] == FIXTURE_PATH
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'repository_summary'
+_______________________ test_resolve_safe_path_success ________________________
+tests\test_analyzer_discovery.py:13: in test_resolve_safe_path_success
+    resolved = resolve_safe_path(str(FIXTURE_PATH), str(target))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app\services\analyzer\discovery.py:22: in resolve_safe_path
+    base = Path(repo_path).resolve(strict=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Program Files\Python311\Lib\pathlib.py:993: in resolve
+    s = os.path.realpath(self, strict=strict)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen ntpath>:696: in realpath
+    ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\Autonomous Coding Agentic AI\\backend\\backend\\tests\\fixtures\\fixture_project'
+____________________ test_resolve_safe_path_escape_attempt ____________________
+tests\test_analyzer_discovery.py:20: in test_resolve_safe_path_escape_attempt
+    resolve_safe_path(str(FIXTURE_PATH), str(target))
+app\services\analyzer\discovery.py:22: in resolve_safe_path
+    base = Path(repo_path).resolve(strict=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Program Files\Python311\Lib\pathlib.py:993: in resolve
+    s = os.path.realpath(self, strict=strict)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen ntpath>:696: in realpath
+    ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\Autonomous Coding Agentic AI\\backend\\backend\\tests\\fixtures\\fixture_project'
+_______________________________ test_is_binary ________________________________
+tests\test_analyzer_discovery.py:33: in test_is_binary
+    assert is_binary(FIXTURE_PATH / "app" / "main.py") is False
+E   AssertionError: assert True is False
+E    +  where True = is_binary(((WindowsPath('D:/Autonomous Coding Agentic AI/backend/backend/tests/fixtures/fixture_project') / 'app') / 'main.py'))
+_______________________________ test_list_files _______________________________
+tests\test_analyzer_discovery.py:37: in test_list_files
+    files = list_files(str(FIXTURE_PATH))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app\services\analyzer\discovery.py:67: in list_files
+    base = Path(repo_path).resolve(strict=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Program Files\Python311\Lib\pathlib.py:993: in resolve
+    s = os.path.realpath(self, strict=strict)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen ntpath>:696: in realpath
+    ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\Autonomous Coding Agentic AI\\backend\\backend\\tests\\fixtures\\fixture_project'
+____________________________ test_build_file_tree _____________________________
+tests\test_analyzer_discovery.py:52: in test_build_file_tree
+    tree = build_file_tree(str(FIXTURE_PATH))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app\services\analyzer\discovery.py:104: in build_file_tree
+    base = Path(repo_path).resolve(strict=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Program Files\Python311\Lib\pathlib.py:993: in resolve
+    s = os.path.realpath(self, strict=strict)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen ntpath>:696: in realpath
+    ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\Autonomous Coding Agentic AI\\backend\\backend\\tests\\fixtures\\fixture_project'
+________________________ test_full_repository_analysis ________________________
+tests\test_analyzer_integration.py:17: in test_full_repository_analysis
+    analysis = analyzer.analyze_repository(FIXTURE_PATH)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app\services\analyzer\analyzer.py:38: in analyze_repository
+    base = Path(repository_path).resolve(strict=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Program Files\Python311\Lib\pathlib.py:993: in resolve
+    s = os.path.realpath(self, strict=strict)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen ntpath>:696: in realpath
+    ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\Autonomous Coding Agentic AI\\backend\\backend\\tests\\fixtures\\fixture_project'
+________________________ test_api_endpoint_integration ________________________
+tests\test_analyzer_integration.py:56: in test_api_endpoint_integration
+    assert analyze_rsp.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+_______________________ test_analyze_valid_python_file ________________________
+tests\test_analyzer_parser.py:14: in test_analyze_valid_python_file
+    assert analysis.success is True
+E   AssertionError: assert False is True
+E    +  where False = PythonFileAnalysis(success=False, file_path='app/main.py', classes=[], functions=[], imports=[], error='File does not exist').success
+_____________________ test_analyze_malformed_python_file ______________________
+tests\test_analyzer_parser.py:48: in test_analyze_malformed_python_file
+    assert analysis.error == "Unable to parse Python source"
+E   AssertionError: assert 'File does not exist' == 'Unable to pa...Python source'
+E     
+E     - Unable to parse Python source
+E     + File does not exist
+___________________________ test_analyze_large_file ___________________________
+tests\test_analyzer_parser.py:55: in test_analyze_large_file
+    assert analysis.error == "File size exceeds limit"
+E   AssertionError: assert 'File does not exist' == 'File size exceeds limit'
+E     
+E     - File size exceeds limit
+E     + File does not exist
+__________________________ test_analyze_binary_file ___________________________
+tests\test_analyzer_parser.py:62: in test_analyze_binary_file
+    assert analysis.error == "File is binary"
+E   AssertionError: assert 'File does not exist' == 'File is binary'
+E     
+E     - File is binary
+E     + File does not exist
+_________________________ test_search_code_finds_term _________________________
+tests\test_analyzer_search.py:11: in test_search_code_finds_term
+    results = search_code(str(FIXTURE_PATH), "UNIQUE_SEARCH_TERM")
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app\services\analyzer\search.py:19: in search_code
+    base = Path(repo_path).resolve(strict=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Program Files\Python311\Lib\pathlib.py:993: in resolve
+    s = os.path.realpath(self, strict=strict)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen ntpath>:696: in realpath
+    ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\Autonomous Coding Agentic AI\\backend\\backend\\tests\\fixtures\\fixture_project'
+_________________________ test_search_code_not_found __________________________
+tests\test_analyzer_search.py:24: in test_search_code_not_found
+    results = search_code(str(FIXTURE_PATH), "THIS_WILL_NEVER_EXIST_99999")
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app\services\analyzer\search.py:19: in search_code
+    base = Path(repo_path).resolve(strict=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Program Files\Python311\Lib\pathlib.py:993: in resolve
+    s = os.path.realpath(self, strict=strict)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen ntpath>:696: in realpath
+    ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\Autonomous Coding Agentic AI\\backend\\backend\\tests\\fixtures\\fixture_project'
+_________________________ test_python_fallback_search _________________________
+tests\test_analyzer_search.py:30: in test_python_fallback_search
+    assert len(results) == 1
+E   assert 0 == 1
+E    +  where 0 = len([])
+_________________________ test_executor_invalid_repo __________________________
+tests\test_docker_executor.py:115: in test_executor_invalid_repo
+    assert "does not exist" in res.error
+E   AssertionError: assert 'does not exist' in 'Docker engine is unavailable on host.'
+E    +  where 'Docker engine is unavailable on host.' = ExecutionResult(success=False, exit_code=None, stdout='', stderr='', timed_out=False, duration_seconds=0.0, error='Docker engine is unavailable on host.').error
+__________________________ test_search_tool_success ___________________________
+tests\test_tools_search.py:14: in test_search_tool_success
+    assert res.success is True
+E   AssertionError: assert False is True
+E    +  where False = ToolResult(success=False, data=None, error='Repository path does not exist.').success
+_________________________ test_search_tool_not_found __________________________
+tests\test_tools_search.py:27: in test_search_tool_not_found
+    assert res.success is True
+E   AssertionError: assert False is True
+E    +  where False = ToolResult(success=False, data=None, error='Repository path does not exist.').success
+============================== warnings summary ===============================
+..\venv\Lib\site-packages\starlette\testclient.py:53
+  D:\Autonomous Coding Agentic AI\venv\Lib\site-packages\starlette\testclient.py:53: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = Callable[[], AbstractContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED tests\test_agent_nodes.py::test_explorer_uses_analyzer - KeyError: 're...
+FAILED tests\test_analyzer_discovery.py::test_resolve_safe_path_success - Fil...
+FAILED tests\test_analyzer_discovery.py::test_resolve_safe_path_escape_attempt
+FAILED tests\test_analyzer_discovery.py::test_is_binary - AssertionError: ass...
+FAILED tests\test_analyzer_discovery.py::test_list_files - FileNotFoundError:...
+FAILED tests\test_analyzer_discovery.py::test_build_file_tree - FileNotFoundE...
+FAILED tests\test_analyzer_integration.py::test_full_repository_analysis - Fi...
+FAILED tests\test_analyzer_integration.py::test_api_endpoint_integration - as...
+FAILED tests\test_analyzer_parser.py::test_analyze_valid_python_file - Assert...
+FAILED tests\test_analyzer_parser.py::test_analyze_malformed_python_file - As...
+FAILED tests\test_analyzer_parser.py::test_analyze_large_file - AssertionErro...
+FAILED tests\test_analyzer_parser.py::test_analyze_binary_file - AssertionErr...
+FAILED tests\test_analyzer_search.py::test_search_code_finds_term - FileNotFo...
+FAILED tests\test_analyzer_search.py::test_search_code_not_found - FileNotFou...
+FAILED tests\test_analyzer_search.py::test_python_fallback_search - assert 0 ...
+FAILED tests\test_docker_executor.py::test_executor_invalid_repo - AssertionE...
+FAILED tests\test_tools_search.py::test_search_tool_success - AssertionError:...
+FAILED tests\test_tools_search.py::test_search_tool_not_found - AssertionErro...
+ERROR tests\test_tools_files.py::test_list_files - FileNotFoundError: [WinErr...
+ERROR tests\test_tools_files.py::test_read_file_success - FileNotFoundError: ...
+ERROR tests\test_tools_files.py::test_read_file_missing - FileNotFoundError: ...
+ERROR tests\test_tools_files.py::test_read_file_binary - FileNotFoundError: [...
+ERROR tests\test_tools_files.py::test_read_file_oversized - FileNotFoundError...
+ERROR tests\test_tools_files.py::test_read_file_path_traversal - FileNotFound...
+ERROR tests\test_tools_files.py::test_read_file_absolute_path_outside - FileN...
+ERROR tests\test_tools_files.py::test_write_file_new - FileNotFoundError: [Wi...
+ERROR tests\test_tools_files.py::test_write_file_overwrite - FileNotFoundErro...
+ERROR tests\test_tools_files.py::test_write_file_traversal - FileNotFoundErro...
+ERROR tests\test_tools_files.py::test_edit_file_success - FileNotFoundError: ...
+ERROR tests\test_tools_files.py::test_edit_file_not_found - FileNotFoundError...
+ERROR tests\test_tools_files.py::test_edit_file_ambiguous - FileNotFoundError...
+ERROR tests\test_tools_files.py::test_edit_file_missing_file - FileNotFoundEr...
+ERROR tests\test_tools_files.py::test_get_file_info_file - FileNotFoundError:...
+ERROR tests\test_tools_files.py::test_get_file_info_directory - FileNotFoundE...
+ERROR tests\test_tools_files.py::test_get_file_info_missing - FileNotFoundErr...
+ERROR tests\test_tools_files.py::test_mixed_separator_attack - FileNotFoundEr...
+============ 18 failed, 144 passed, 1 warning, 18 errors in 19.11s ============
