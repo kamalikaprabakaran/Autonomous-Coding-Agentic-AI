@@ -55,7 +55,7 @@ def execute_agent_background(run_id: str, request: Request, task_desc: str, repo
         from backend.app.agents.graph import run_agent
         from backend.app.tools.registry import ToolRegistry
         from backend.app.tools.file_tools import ReadFileTool, WriteFileTool, EditFileTool, ListFilesTool, GetFileInfoTool
-        from backend.app.services.analyzer.search import RipgrepSearchTool
+        from backend.app.tools.search_tools import SearchCodeTool
         
         # Determine LLM to use
         from backend.app.agents.llm import MockLLMProvider
@@ -65,7 +65,7 @@ def execute_agent_background(run_id: str, request: Request, task_desc: str, repo
         executor = request.app.state.execution_service.executor # Resolves DockerExecutor natively
         
         tools = ToolRegistry()
-        for t in [ReadFileTool(), WriteFileTool(), EditFileTool(), ListFilesTool(), GetFileInfoTool(), RipgrepSearchTool()]:
+        for t in [ReadFileTool(), WriteFileTool(), EditFileTool(), ListFilesTool(), GetFileInfoTool(), SearchCodeTool()]:
             tools.register(t)
             
         final_state = run_agent(

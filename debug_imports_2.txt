@@ -1,0 +1,62 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.11.9, pytest-9.1.1, pluggy-1.6.0 -- D:\Autonomous Coding Agentic AI\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: D:\Autonomous Coding Agentic AI
+configfile: pytest.ini
+plugins: anyio-4.15.1, langsmith-0.12.1, asyncio-1.4.0
+asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+backend/tests/test_agent_background_imports.py::test_execute_agent_background_import_regression FAILED [100%]
+
+================================== FAILURES ===================================
+_______________ test_execute_agent_background_import_regression _______________
+
+    def test_execute_agent_background_import_regression():
+        """Verify that execute_agent_background successfully loads all tool abstractions without ImportError."""
+        # We mock out the run_agent call inside the background dispatcher to isolate the import phase
+        import backend.app.api.agent as agent_api
+    
+        # Store original
+        original_run_agent = getattr(agent_api, "run_agent", None)
+        if original_run_agent is None:
+            try:
+                from backend.app.agents.graph import run_agent as orig_ra
+                original_run_agent = orig_ra
+            except ImportError:
+                pytest.fail("Cannot locate run_agent globally.")
+    
+        try:
+            # Mock run_agent natively returning empty final state
+            agent_api.run_agent = MagicMock(return_value={"final_status": "success", "iteration_count": 0, "errors": []})
+    
+            # Setup mocks
+            request_mock = MagicMock()
+            service_mock = MagicMock()
+            run_mock = MagicMock()
+            run_mock.id = "regression-test-id"
+            run_mock.status = AgentRunStatus.PENDING
+            run_mock.error_summary = None
+    
+            service_mock.get_run.return_value = run_mock
+            request_mock.app.state.agent_run_service = service_mock
+            request_mock.app.state.repository_analyzer = MagicMock()
+            request_mock.app.state.execution_service.executor = MagicMock()
+            request_mock.app.state.event_repository = MagicMock()
+    
+            # The execution shouldn't raise any ImportErrors (such as RipgrepSearchTool)
+            execute_agent_background(run_id="regression-test-id", request=request_mock, task_desc="desc", repo_path=".")
+    
+            # Dump error summary explicitly if it fails
+>           assert run_mock.error_summary is None, f"Execution failed internally: {run_mock.error_summary}"
+E           AssertionError: Execution failed internally: Execution failed entirely: 1 validation error for AgentEvent
+E             error
+E               Input should be a valid string [type=string_type, input_value=<MagicMock name='mock.app...t()' id='2398458671248'>, input_type=MagicMock]
+E                 For further information visit https://errors.pydantic.dev/2.13/v/string_type
+E           assert "Execution failed entirely: 1 validation error for AgentEvent\nerror\n  Input should be a valid string [type=string_type, input_value=<MagicMock name='mock.app...t()' id='2398458671248'>, input_type=MagicMock]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type" is None
+E            +  where "Execution failed entirely: 1 validation error for AgentEvent\nerror\n  Input should be a valid string [type=string_type, input_value=<MagicMock name='mock.app...t()' id='2398458671248'>, input_type=MagicMock]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type" = <MagicMock name='mock.app.state.agent_run_service.get_run()' id='2398458081040'>.error_summary
+
+backend\tests\test_agent_background_imports.py:44: AssertionError
+=========================== short test summary info ===========================
+FAILED backend/tests/test_agent_background_imports.py::test_execute_agent_background_import_regression
+============================== 1 failed in 0.56s ==============================
